@@ -21,10 +21,10 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-6">
         <div className="max-w-4xl text-center text-white">
           <h1 className="uppercase text-sm md:text-xl font-bold leading-tight mb-2 md:mb-4 text-emerald-500">
-            Professional Cleaning
+            Professional Cleaning Company
           </h1>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold px-2 leading-tight mb-6">
-            Property Services Throughout GTA
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold px-2 leading-tight mb-6">
+            Property Services Throughout the GTA
           </h1>
           <p className="text-lg md:text-xl mb-10 text-blue-100">
             A full-service property maintenance company providing high quality, conscientious and reliable 

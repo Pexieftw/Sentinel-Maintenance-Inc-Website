@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Sentinel Maintenance Inc. (SMI)",
     images: [
       {
-        url: "https://smi.ca/about1.jpg", // Replace with your actual OG image URL
+        url: "https://smi.ca/about1.jpg",
         width: 1200,
         height: 630,
         alt: "SMI Property Services - Commercial Cleaning, Window Washing, and More",
@@ -78,7 +78,10 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico", 
+    icon: [
+      { url: '/favicon.ico', media: '(prefers-color-scheme: light)' },
+      { url: '/favicon-dark-mode.ico', media: '(prefers-color-scheme: dark)' }
+    ],
     // TBD
     // apple: "/apple-touch-icon.png", // Apple touch icon
   },
@@ -92,6 +95,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
       <body

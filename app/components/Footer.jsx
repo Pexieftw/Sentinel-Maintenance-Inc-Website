@@ -128,7 +128,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="mt-4 text-center text-gray-500 text-xs">
-            <a href="https://www.smi.ca" className="hover:text-primary-100 transition-colors">www.smi.ca</a> | A Property Service Company
+            <a href="https://www.smi.ca" className="hover:text-primary-100 transition-colors">www.smi.ca</a> | A Property Service Company Powered by Mira Visions
           </div>
         </div>
       </div>

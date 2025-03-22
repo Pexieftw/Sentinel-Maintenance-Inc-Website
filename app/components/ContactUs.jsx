@@ -164,10 +164,10 @@ const ContactUs = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Visit Our Office</h3>
+                    <h3 className="text-xl font-bold text-gray-900">Corporate Headquarters</h3>
                   </div>
                   <div className="flex-grow">
-                    <p className="text-gray-600 mb-2">Come say hello at our headquarters</p>
+                    <p className="text-gray-600 mb-2">Located in the heart of Toronto’s creative district</p>
                   </div>
                   <div className="mt-auto">
                     <address className="text-primary-300 font-medium not-italic">
@@ -190,7 +190,7 @@ const ContactUs = () => {
                     <p className="text-gray-600 mb-2">We're available:</p>
                   </div>
                   <div className="mt-auto">
-                    <p className="text-primary-300 font-medium">24/7</p>
+                    <p className="text-primary-300 font-medium">24 hours a day <br/> 7 days a week</p>
                   </div>
                 </div>
               </div>
@@ -264,7 +264,7 @@ const ContactUs = () => {
                         value={formData.address}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
-                        placeholder="123 Main St, City, State"
+                        placeholder="123 Main St, City, Postal Code"
                       />
                     </div>
                     

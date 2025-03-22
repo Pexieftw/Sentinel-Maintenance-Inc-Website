@@ -1,10 +1,11 @@
 "use client"
 
 import React, { useEffect } from 'react';
-import { HeartPulse, Award, AlertTriangle, BookOpen, CheckCircle, ChevronRight, Lightbulb, Presentation, ShieldCheck } from 'lucide-react';
+import { HeartPulse, AlertTriangle, BookOpen, CheckCircle, ChevronRight, Lightbulb, Presentation, ShieldCheck, UsersRound, Star } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import SectionHeader from '../utils/SectionHeader';
+import Link from 'next/link';
 
 const HealthSafety = () => {
   // Initialize AOS
@@ -66,10 +67,13 @@ const HealthSafety = () => {
                 </div>
                 
                 <div className="mt-8 flex justify-end">
-                  <button className="cursor-pointer flex items-center text-primary-300 font-semibold hover:underline">
+                  <Link
+                    href="/health-and-safety"
+                    className="cursor-pointer flex items-center text-primary-300 font-semibold hover:underline"
+                  >
                     Learn more
                     <ChevronRight className="w-4 h-4 ml-1" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -112,10 +116,13 @@ const HealthSafety = () => {
                 </div>
                 
                 <div className="mt-8 flex justify-end">
-                  <button className="cursor-pointer flex items-center text-primary-300 font-semibold hover:underline">
-                    Learn More
+                  <Link
+                    href="/health-and-safety"
+                    className="cursor-pointer flex items-center text-primary-300 font-semibold hover:underline"
+                  >
+                    Learn more
                     <ChevronRight className="w-4 h-4 ml-1" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -126,42 +133,42 @@ const HealthSafety = () => {
         <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="400">
           <div className="bg-primary-300 bg-opacity-20 backdrop-filter backdrop-blur-lg p-6">
             <div className="flex justify-between items-start">
-              <ShieldCheck className="w-10 h-10 text-white" />
-              <span className="text-4xl font-bold text-white">
+              <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-white" />
+              <span className="text-3xl md:text-4xl font-bold text-white">
                 100%
               </span>
             </div>
-            <p className="text-white mt-4 font-medium">Safety Compliance</p>
+            <p className="text-white mt-4 font-medium">Fully Compliant</p>
           </div>
           
           <div className="bg-primary-300 bg-opacity-20 backdrop-filter backdrop-blur-lg p-6">
             <div className="flex justify-between items-start">
-              <Award className="w-10 h-10 text-white" />
-              <span className="text-4xl font-bold text-white">
-                80%
+              <UsersRound className="w-8 h-8 md:w-10 md:h-10 text-white" />
+              <span className="text-3xl md:text-4xl font-bold text-white">
+                50+
               </span>
             </div>
-            <p className="text-white mt-4 font-medium">Minimum Score Required</p>
+            <p className="text-white mt-4 font-medium">Certified & Qualified Staff</p>
           </div>
           
           <div className="bg-primary-300 bg-opacity-20 backdrop-filter backdrop-blur-lg p-6">
             <div className="flex justify-between items-start">
-              <AlertTriangle className="w-10 h-10 text-white" />
-              <span className="text-4xl font-bold text-white">
+              <AlertTriangle className="w-8 h-8 md:w-10 md:h-10 text-white" />
+              <span className="text-3xl md:text-4xl font-bold text-white">
                 24/7
               </span>
             </div>
-            <p className="text-white mt-4 font-medium">Hazard Prevention</p>
+            <p className="text-white mt-4 font-medium">Hazard Monitoring</p>
           </div>
           
           <div className="bg-primary-300 bg-opacity-20 backdrop-filter backdrop-blur-lg p-6">
-            <div className="flex justify-between items-start">
-              <BookOpen className="w-10 h-10 text-white" />
-              <span className="text-4xl font-bold text-white">
+            <div className="flex justify-between items-center">
+              <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-white" />
+              <span className="text-3xl md:text-4xl font-bold text-white">
                 100%
               </span>
             </div>
-            <p className="text-white mt-4 font-medium">Documentation Coverage</p>
+            <p className="text-white mt-4 font-medium">Paperwork Compliance</p>
           </div>
         </div>
       </div>
