@@ -35,7 +35,7 @@ const Hero = () => {
             <Link href="/services" className="w-[80%] md:w-auto border-2 border-primary-100 hover:border-primary-200 bg-primary-100 text-white hover:bg-primary-200 font-semibold py-3 px-6 transition-all duration-300 shadow-lg">
               Explore Our Services
             </Link>
-            <Link href="/contact" className="w-[80%] md:w-auto border-2 border-white text-white hover:bg-white hover:text-gray-800 font-semibold py-3 px-6 transition-all duration-300">
+            <Link href="/contact-us" className="w-[80%] md:w-auto border-2 border-white text-white hover:bg-white hover:text-gray-800 font-semibold py-3 px-6 transition-all duration-300">
               Get A Free Estimate
             </Link>
           </div>

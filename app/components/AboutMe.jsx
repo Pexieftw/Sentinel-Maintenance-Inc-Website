@@ -7,6 +7,12 @@ import { Building2 } from 'lucide-react';
 import Image from 'next/image';
 import SectionHeader from '../utils/SectionHeader';
 
+import aboutImage1 from "@/public/about1.jpg"; 
+import aboutImage2 from "@/public/about2.jpg"; 
+import aboutImage3 from "@/public/about3.jpg"; 
+import aboutImage4 from "@/public/about4.jpg"; 
+
+
 const AboutMe = () => {
   useEffect(() => {
     AOS.init({
@@ -33,8 +39,10 @@ const AboutMe = () => {
 
                 <div className="row-span-2 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
                   <Image
-                    src="/about1.jpg"
+                    src={aboutImage1}
                     alt="Modern Cleaning Interior"
+                    placeholder="blur"
+                    quality={100}
                     className="object-cover"
                     fill
                     sizes="(max-width: 768px) 100vw, 25vw"
@@ -45,8 +53,10 @@ const AboutMe = () => {
                 {/* Third Image */}
                 <div className="row-span-1 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
                   <Image
-                    src="/about3.jpg"
+                    src={aboutImage3}
                     alt="Additional Cleaning Service"
+                    placeholder="blur"
+                    quality={100}
                     className="object-cover"
                     fill
                     sizes="(max-width: 768px) 100vw, 25vw"
@@ -60,8 +70,10 @@ const AboutMe = () => {
                 {/* Second Image */}
                 <div className="row-span-1 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
                   <Image
-                    src="/about2.jpg"
+                    src={aboutImage2}
                     alt="SMI Property Service"
+                    placeholder="blur"
+                    quality={100}
                     className="object-cover"
                     fill
                     sizes="(max-width: 768px) 100vw, 25vw"
@@ -72,8 +84,10 @@ const AboutMe = () => {
                 {/* Fourth Image */}
                 <div className="row-span-2 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
                   <Image
-                    src="/about4.jpg"
+                    src={aboutImage4}
                     alt="Additional Cleaning Service"
+                    placeholder="blur"
+                    quality={100}
                     className="object-cover"
                     fill
                     sizes="(max-width: 768px) 100vw, 25vw"

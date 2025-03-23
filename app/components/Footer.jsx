@@ -41,15 +41,15 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
         {/* Company Info and Services Grid */}
         <div className="flex flex-col text-center md:grid md:grid-cols-6 md:gap-8 md:text-left">
-          {/* Company Info - Left Side (2 columns on md screens) */}
+          {/* Company Info - Left Side*/}
           <div className="md:col-span-2">
             <div className="text-4xl font-bold flex items-center justify-center mb-6 md:justify-start">
               <Image
-                src="/icons/SMI-LOGO-MINI.svg" // Path to your green logo
+                src="/icons/SMI-LOGO-MINI.svg"
                 alt="Logo"
-                width={96} // Set the width
-                height={96} // Set the height
-                className="brightness-0 invert" // Apply Tailwind filters
+                width={96} 
+                height={37}
+                className="brightness-0 invert"
               />
             </div>
             <p className="text-gray-300 mb-4">

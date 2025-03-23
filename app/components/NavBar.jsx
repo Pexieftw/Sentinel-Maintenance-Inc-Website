@@ -142,7 +142,7 @@ const Navbar = () => {
           <div className="cursor-pointer lg:hidden items-center">
             <Link href="/">
               <img
-                src="/SMI-LOGO-MINI.svg"
+                src="/icons/SMI-LOGO-MINI.svg"
                 alt="SMI Logo"
                 className="h-10 w-auto filter brightness-0 invert" 
               />
