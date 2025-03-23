@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="text-4xl font-bold flex items-center justify-center mb-6 md:justify-start">
               <Image
-                src="/SMI-LOGO-MINI.svg" // Path to your green logo
+                src="/icons/SMI-LOGO-MINI.svg" // Path to your green logo
                 alt="Logo"
                 width={96} // Set the width
                 height={96} // Set the height

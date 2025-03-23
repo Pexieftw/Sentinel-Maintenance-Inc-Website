@@ -79,14 +79,45 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', media: '(prefers-color-scheme: light)' },
-      { url: '/favicon-dark-mode.ico', media: '(prefers-color-scheme: dark)' }
+      {
+        rel: "icon",
+        media: "(prefers-color-scheme: light)",
+        type: "image/x-icon",
+        url: "/icons/favicon.ico",
+      },
+      {
+        rel: "icon",
+        media: "(prefers-color-scheme: dark)",
+        type: "image/x-icon",
+        url: "/icons/favicon-dark-mode.ico",
+      },
+      {
+        url: "/icons/favicon-96x96.png",
+        type: "image/png",
+        sizes: "96x96",
+      },
+      {
+        url: "/icons/favicon.svg",
+        type: "image/svg+xml",
+      },
     ],
-    // TBD
-    // apple: "/apple-touch-icon.png", // Apple touch icon
+    apple: [
+      {
+        url: "/icons/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+    other: [
+      {
+        rel: "manifest",
+        url: "/icons/site.webmanifest",
+      },
+    ],
   },
-  // TBD
-  // manifest: "/site.webmanifest", // Web app manifest for PWA support
+  appleWebApp: {
+    title: "SMI",
+  },
 };
 
 

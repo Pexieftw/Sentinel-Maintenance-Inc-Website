@@ -37,7 +37,7 @@ const TopBar = () => {
         {/* Logo Section */}
         <div className="hidden lg:flex items-center">
           <img
-            src="/SMI-LOGO-MINI.svg" 
+            src="/icons/SMI-LOGO-MINI.svg" 
             alt="SMI Logo"
             className="h-12 w-auto" 
           />
