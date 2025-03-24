@@ -6,6 +6,8 @@ import { ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
 import { areas } from "../utils/data";
 import BreadCrumbsSection from '../utils/BreadCrumbsSection';
 
+
+
 const AreasWeServe = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);

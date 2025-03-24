@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'; // Import Lucide icons
 import Link from 'next/link';
 import Image from 'next/image';
-import { services } from '../utils/data'; // Import the services object
+import { services } from '../utils/data'; 
 
 const Footer = () => {
   const locations = [
@@ -118,9 +117,6 @@ const Footer = () => {
             <div className="flex space-x-6">
               <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm">
                 Privacy Policy
-              </Link>
-              <Link href="/terms-of-service" className="text-gray-400 hover:text-white text-sm">
-                Terms of Service
               </Link>
               <Link href="/contact-us" className="text-gray-400 hover:text-white text-sm">
                 Contact Us

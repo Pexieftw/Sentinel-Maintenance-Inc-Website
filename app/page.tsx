@@ -1,7 +1,7 @@
 // pages/index.js
 import React from 'react';
 import Hero from './components/Hero';
-import AboutMe from './components/AboutMe';
+import AboutUs from './components/AboutUs';
 import Services from './components/Services';
 import AreasWeServe from './components/AreasWeServe';
 import TeamworkCulture from './components/TeamworkCulture';
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="">
       <Hero />
-      <AboutMe />
+      <AboutUs />
       <Services />
       <AreasWeServe />
       <TeamworkCulture/>

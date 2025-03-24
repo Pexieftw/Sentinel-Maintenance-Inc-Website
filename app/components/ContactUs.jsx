@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react'; // Import useEffect
+import { useState, useEffect } from 'react';
 import { Mail } from 'lucide-react';
 import SectionHeader from '../utils/SectionHeader';
 import BreadCrumbsSection from '../utils/BreadCrumbsSection';
-import AOS from 'aos'; // Import AOS
-import 'aos/dist/aos.css'; // Import AOS CSS
-
+import AOS from 'aos'; 
+import 'aos/dist/aos.css'; 
+import Link from 'next/link';
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -234,7 +234,7 @@ const ContactUs = () => {
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
+                          className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-primary-300 focus:border-primary-300 shadow-sm"
                           placeholder="John Doe"
                         />
                       </div>
@@ -248,7 +248,7 @@ const ContactUs = () => {
                           required
                           value={formData.number}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
+                          className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-primary-300 focus:border-primary-300 shadow-sm"
                           placeholder="(123) 456-7890"
                         />
                       </div>
@@ -263,7 +263,7 @@ const ContactUs = () => {
                         required
                         value={formData.address}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
+                        className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-primary-300 focus:border-primary-300 shadow-sm"
                         placeholder="123 Main St, City, Postal Code"
                       />
                     </div>
@@ -277,7 +277,7 @@ const ContactUs = () => {
                         required
                         value={formData.subject}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
+                        className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-primary-300 focus:border-primary-300 shadow-sm"
                         placeholder="How can we help you?"
                       />
                     </div>
@@ -291,7 +291,7 @@ const ContactUs = () => {
                         required
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm"
+                        className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-primary-300 focus:border-primary-300 shadow-sm"
                         placeholder="Please provide details about your inquiry..."
                       />
                     </div>
@@ -302,13 +302,20 @@ const ContactUs = () => {
                         name="privacy-policy"
                         type="checkbox"
                         required
-                        className="h-4 w-4 text-primary-300 focus:ring-indigo-500 border-gray-300 rounded"
+                        className="h-4 w-4 text-primary-300 focus:ring-primary-300 border-gray-300 rounded"
                       />
                       <label htmlFor="privacy-policy" className="ml-2 block text-sm text-gray-700">
-                        I agree to the <a href="#" className="text-primary-300 hover:text-indigo-800">Privacy Policy</a> and <a href="#" className="text-primary-300 hover:text-indigo-800">Terms of Service</a>
+                        I agree to the{' '}
+                        <Link 
+                          href="/privacy-policy" 
+                          className="text-primary-300 hover:text-primary-400 hover:font-medium"
+                          target="_blank"  // Opens in new tab (optional)
+                        >
+                          Privacy Policy
+                        </Link>
                       </label>
                     </div>
-                    
+                                        
                     <button
                       type="submit"
                       disabled={formStatus.isSubmitting}

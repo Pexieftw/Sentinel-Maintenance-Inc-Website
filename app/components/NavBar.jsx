@@ -245,7 +245,7 @@ const Navbar = () => {
                       {Object.entries(item.dropdown).map(([category, services]) => (
                         <div 
                           key={category} 
-                          className={`flex flex-col justify-center items-center transition-all duration-500`}
+                          className={`flex flex-col justify-center items-center transition-all duration-500 w-full`}
                         >
                           {activeCategoryTab === category && (
                             <ul className="space-y-2 w-full mt-4">

@@ -13,7 +13,7 @@ import aboutImage3 from "@/public/about3.jpg";
 import aboutImage4 from "@/public/about4.jpg"; 
 
 
-const AboutMe = () => {
+const AboutUs = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -29,14 +29,13 @@ const AboutMe = () => {
   return (
     <section className="pt-10 md:pt-20 bg-gradient-to-b from-white to-gray-100">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row  items-stretch gap-12" data-aos="fade-up">
+        <div className="flex flex-col md:flex-row items-stretch gap-12" data-aos="fade-up">
           {/* Images Section */}
-          <div className="md:w-1/2  md:top-0 md:self-start h-full">
+          <div className="md:w-1/2 h-auto flex">
             {/* Custom Grid */}
-            <div className="grid grid-cols-2 gap-6 h-[50vh] md:h-[600px] ">
+            <div className="grid grid-cols-2 gap-6 h-[50vh] md:h-full w-full">
               {/* Left column */}
               <div className="grid grid-rows-3 gap-6 h-full">
-
                 <div className="row-span-2 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
                   <Image
                     src={aboutImage1}
@@ -45,7 +44,7 @@ const AboutMe = () => {
                     quality={100}
                     className="object-cover"
                     fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     priority
                   />
                 </div>
@@ -59,7 +58,7 @@ const AboutMe = () => {
                     quality={100}
                     className="object-cover"
                     fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     priority
                   />
                 </div>
@@ -76,7 +75,7 @@ const AboutMe = () => {
                     quality={100}
                     className="object-cover"
                     fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     priority
                   />
                 </div>
@@ -90,7 +89,7 @@ const AboutMe = () => {
                     quality={100}
                     className="object-cover"
                     fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     priority
                   />
                 </div>
@@ -100,7 +99,7 @@ const AboutMe = () => {
 
           {/* Text Section */}
           <div className="md:w-1/2" data-aos="fade-up" data-aos-delay="200">
-            <div className="flex flex-col justify-between h-full">
+            <div className="flex flex-col h-full gap-4 lg:gap-8">
               <div>
                 {/* Icon */}
                 <SectionHeader
@@ -117,7 +116,6 @@ const AboutMe = () => {
                 </h2>
               </div>
 
-              
               {/* Smaller text with details */}
               <div className="text-gray-700 space-y-4 text-md md:text-lg text-center md:text-left">
                 <p>
@@ -158,4 +156,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default AboutUs;
