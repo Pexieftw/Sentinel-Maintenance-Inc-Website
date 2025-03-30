@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from 'react';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
+import smiLogoMini from '@/public/icons/SMI-LOGO-MINI.svg';
 
 import { services, navItems } from "../utils/data";
 
@@ -55,7 +57,7 @@ const Navbar = () => {
                               }}
                             >
                               <Link 
-                                href={`/services#service-${service.toLowerCase().replace(/\s+/g, '-')}`}
+                                href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
                                 className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
                               >
                                 {service}
@@ -79,7 +81,7 @@ const Navbar = () => {
                                 }}
                               >
                                 <Link 
-                                  href={`/services#service-${service.toLowerCase().replace(/\s+/g, '-')}`}
+                                  href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
                                   className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                                 >
                                   {service}
@@ -97,7 +99,7 @@ const Navbar = () => {
                                 }}
                               >
                                 <Link 
-                                  href={`/services#service-${service.toLowerCase().replace(/\s+/g, '-')}`}
+                                  href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
                                   className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                                 >
                                   {service}
@@ -121,7 +123,7 @@ const Navbar = () => {
                               }}
                             >
                               <Link 
-                                href={`/services#service-${service.toLowerCase().replace(/\s+/g, '-')}`}
+                                href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
                                 className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                               >
                                 {service}
@@ -141,10 +143,12 @@ const Navbar = () => {
 
           <div className="cursor-pointer lg:hidden items-center">
             <Link href="/">
-              <img
-                src="/icons/SMI-LOGO-MINI.svg"
+              <Image
+                src={smiLogoMini}
                 alt="SMI Logo"
-                className="h-10 w-auto filter brightness-0 invert" 
+                className="h-10 w-auto filter brightness-0 invert"
+                width={104}
+                height={40} 
               />
             </Link>
           </div>
@@ -262,7 +266,7 @@ const Navbar = () => {
                                       }}
                                     >
                                       <Link 
-                                        href={`/services#service-${service.toLowerCase().replace(/\s+/g, '-')}`}
+                                        href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
                                         className="block w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                                         onClick={() => setIsMenuOpen(false)}
                                       >
@@ -281,7 +285,7 @@ const Navbar = () => {
                                       }}
                                     >
                                       <Link 
-                                        href={`/services#service-${service.toLowerCase().replace(/\s+/g, '-')}`}
+                                        href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
                                         className="block w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                                         onClick={() => setIsMenuOpen(false)}
                                       >
@@ -302,7 +306,7 @@ const Navbar = () => {
                                     }}
                                   >
                                     <Link 
-                                      href={`/services#service-${service.toLowerCase().replace(/\s+/g, '-')}`}
+                                      href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
                                       className="block w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                                       onClick={() => setIsMenuOpen(false)}
                                     >

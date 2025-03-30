@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Building2, Info, MapPin, Mail } from 'lucide-react';
-
+import Image from 'next/image';
+import smiLogoMini from '@/public/icons/SMI-LOGO-MINI.svg';
+import Link from 'next/link';
 const TopBar = () => {
 
   const [activeSection, setActiveSection] = useState(0);
@@ -36,13 +38,17 @@ const TopBar = () => {
         
         {/* Logo Section */}
         <div className="hidden lg:flex items-center">
-          <img
-            src="/icons/SMI-LOGO-MINI.svg" 
-            alt="SMI Logo"
-            className="h-12 w-auto" 
-          />
+          <Link href="/">
+            <Image
+              src={smiLogoMini}
+              alt="SMI Logo"
+              className="h-12 w-auto"
+              width={125}  
+              height={48}
+              priority 
+            />
+          </Link>
         </div>
-
         {/* Informations Section */}
         <div className="hidden md:flex justify-center items-center space-x-4 ">
           <div className="flex items-center space-x-2">

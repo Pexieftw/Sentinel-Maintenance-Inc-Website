@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import TeamworkCulture from "../pages/TeamworkCulture";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import PageTitle from '../utils/PageTitle';
 const AreasWeServePage= () => {
 
   useEffect(() => {
@@ -19,6 +19,7 @@ const AreasWeServePage= () => {
 
   return (
     <div className="">
+      <PageTitle mytext="Teamwork & Work Culture" />
       <TeamworkCulture/>
     </div>
   );

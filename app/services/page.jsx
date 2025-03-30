@@ -1,12 +1,13 @@
 import React from 'react';
 
 import PageTitle from '../utils/PageTitle';
+import Services from '../pages/Services';
 
 const AreasWeServePage= () => {
   return (
-    <div className="py-20 flex justify-center">
+    <div className="">
       <PageTitle mytext="Services" />
-      <h1>Services Section</h1>
+      <Services/>
     </div>
   );
 };

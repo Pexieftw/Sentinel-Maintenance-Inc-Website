@@ -1,23 +1,22 @@
-"use client"; // Ensure this is a Client Component
+"use client";
 
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import { useEffect } from 'react'; // Import useEffect
-import AOS from 'aos'; // Import AOS
-import 'aos/dist/aos.css'; // Import AOS styles
+import { useEffect } from 'react'; 
+import AOS from 'aos'; 
+import 'aos/dist/aos.css';
 
 const NotFound = () => {
-  // Initialize AOS when the component mounts
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      once: true, // Whether animation should happen only once
+      duration: 1000,
+      once: true, 
     });
   }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br">
-      <div className="w-full max-w-3xl px-6 py-16 text-center">
+      <div className="w-full max-w-3xl text-center">
         {/* Animate the 404 circle */}
         <div
           className="mb-8 inline-flex items-center justify-center"
@@ -57,7 +56,7 @@ const NotFound = () => {
         >
           <Link
             href="/"
-            className="inline-flex items-center justify-center rounded-lg bg-primary-300 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ease 0.3"
+            className="inline-flex items-center justify-center bg-primary-300 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ease 0.3"
             data-aos="zoom-in"
             data-aos-delay="800"
           >
@@ -67,7 +66,7 @@ const NotFound = () => {
 
           <button
             onClick={() => window.history.back()}
-            className="cursor-pointer inline-flex items-center justify-center rounded-lg border border-primary-300 bg-transparent px-6 py-3 text-base font-medium text-primary-300 transition-colors hover:bg-primary-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+            className="cursor-pointer inline-flex items-center justify-center border border-primary-300 bg-transparent px-6 py-3 text-base font-medium text-primary-300 transition-colors hover:bg-primary-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             data-aos="zoom-in"
             data-aos-delay="1000"
           >

@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import { Building2, Users, Award, Briefcase, MapPin, ChevronDown, Timer, User } from 'lucide-react';
+import { Users, Award, Briefcase, Timer, User } from 'lucide-react';
 import BreadCrumbsSection from '../utils/BreadCrumbsSection';
+import aboutImage1 from "@/public/about1.jpg"; 
 
-const AboutUs= () => {
+const AboutUs = () => {
   return (
     <div className="w-full">
       <BreadCrumbsSection 
@@ -11,8 +12,6 @@ const AboutUs= () => {
           { label: 'Home', href: '/' },
           { label: 'About Us', href: '/about-us' },
         ]}
-        imageSrc="/breadcrumbs-bg.jpg"
-        imageAlt="Custom Cleaning Background"
       />
 
       {/* SECTION 1: COMPANY BACKGROUND */}
@@ -20,7 +19,6 @@ const AboutUs= () => {
         className="mx-auto max-w-7xl pt-16 md:pt-20 relative overflow-hidden"
         data-aos="fade-up"
       >
-        
         <h2 className="text-center text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-gray-900">
           <span className="mb-2">
             Your trust starts with {" "}
@@ -38,10 +36,11 @@ const AboutUs= () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-100/20 to-primary-300/20 transform -rotate-3"></div>
                 <div className="relative shadow-2xl w-full h-64 md:h-96 transform rotate-3 hover:rotate-0 transition-all duration-500 overflow-hidden">
                   <Image 
-                    src="/about1.jpg" 
+                    src={aboutImage1} 
                     alt="Office building" 
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
                 <div className="absolute -bottom-8 left-[10] bg-white p-3 md:p-4 shadow-xl">
@@ -59,7 +58,6 @@ const AboutUs= () => {
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 text-primary-200 flex items-center">
                   <span className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center bg-primary-200 text-white rounded-full mr-3 text-sm md:text-base">I</span>
                   <div className="w-4 h-1 mr-3 bg-primary-200"></div>
-                  
                   Introduction
                 </h3>
                 <div className="bg-gradient-to-r from-slate-50 to-white p-4 md:p-6 shadow-sm border border-slate-100">
@@ -115,7 +113,6 @@ const AboutUs= () => {
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 text-primary-200 flex items-center">
                   <span className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center bg-primary-200 text-white rounded-full mr-3 text-sm md:text-base">II</span>
                   <div className="w-4 h-1 mr-3 bg-primary-200"></div>
-                  
                   Organization
                 </h3>
                 
@@ -153,10 +150,11 @@ const AboutUs= () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-100/20 to-primary-300/20 transform -rotate-3"></div>
                 <div className="relative shadow-2xl w-full h-64 md:h-96 transform rotate-3 hover:rotate-0 transition-all duration-500 overflow-hidden">
                   <Image 
-                    src="/about1.jpg" 
+                    src={aboutImage1} 
                     alt="Team collaboration" 
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
                 <div className="absolute -bottom-8 right-[10] bg-white p-3 md:p-4 shadow-xl">
@@ -173,10 +171,10 @@ const AboutUs= () => {
           <div className="mb-8 md:mb-12 pt-10">
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-gray-900">
               <span className="block mb-2">
-                Our Perosnnel
+                Our Personnel
               </span>
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-primary-100 to-primary-300">
-              Hierarchy
+                Hierarchy
               </span>
             </h2>
             <div className="flex flex-col space-y-6 max-w-4xl mx-auto text-left">
@@ -187,7 +185,13 @@ const AboutUs= () => {
               >
                 <div className="flex flex-col md:flex-row h-full">
                   <div className="w-full md:w-1/4 h-48 md:h-auto bg-primary-300 relative overflow-hidden">
-                    <Image src="/about1.jpg" alt="Senior Management" fill className="object-cover opacity-30" />
+                    <Image 
+                      src={aboutImage1} 
+                      alt="Senior Management" 
+                      fill 
+                      className="object-cover opacity-30" 
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <Award size={40} className="text-white" />
                     </div>
@@ -212,7 +216,13 @@ const AboutUs= () => {
               >
                 <div className="flex flex-col md:flex-row h-full">
                   <div className="w-full md:w-1/4 h-48 md:h-auto bg-primary-300 relative overflow-hidden">
-                    <img src="/about1.jpg" alt="Area Supervisor" className="w-full h-full object-cover opacity-30" />
+                    <Image 
+                      src={aboutImage1} 
+                      alt="Area Supervisor" 
+                      fill 
+                      className="object-cover opacity-30" 
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <Users size={40} className="text-white" />
                     </div>
@@ -237,7 +247,13 @@ const AboutUs= () => {
               >
                 <div className="flex flex-col md:flex-row h-full">
                   <div className="w-full md:w-1/4 h-48 md:h-auto bg-primary-300 relative overflow-hidden">
-                    <img src="/about1.jpg" alt="Job Foreperson" className="w-full h-full object-cover opacity-30" />
+                    <Image 
+                      src={aboutImage1} 
+                      alt="Job Foreperson" 
+                      fill 
+                      className="object-cover opacity-30" 
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <Briefcase size={40} className="text-white" />
                     </div>
@@ -262,7 +278,13 @@ const AboutUs= () => {
               >
                 <div className="flex flex-col md:flex-row h-full">
                   <div className="w-full md:w-1/4 h-48 md:h-auto bg-primary-300 relative overflow-hidden">
-                    <img src="/about1.jpg" alt="Cleaners" className="w-full h-full object-cover opacity-30" />
+                    <Image 
+                      src={aboutImage1} 
+                      alt="Cleaners" 
+                      fill 
+                      className="object-cover opacity-30" 
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <User size={40} className="text-white" />
                     </div>
@@ -287,4 +309,4 @@ const AboutUs= () => {
   );
 };
 
-export default AboutUs
+export default AboutUs;

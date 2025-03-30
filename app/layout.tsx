@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sentinel Maintenance Inc. (SMI) | Top Property Services & Cleaning Solutions in GTA",
+  title: "Sentinel Maintenance Inc | Home | SMI.ca`",
   description: "SMI offers professional property services, including commercial cleaning, window washing, power washing, COVID-19 disinfection, and restoration. Trusted in Toronto, Mississauga, Vaughan, and across the GTA. Contact us for a free quote!",
   keywords: [
     "commercial cleaning services",
