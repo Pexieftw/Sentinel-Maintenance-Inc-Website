@@ -192,74 +192,137 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="h-full lg:hidden bg-primary-300 w-full top-42 left-0 right-0 shadow-lg">
-          {navItems.map((item, index) => (
-            <div 
-              key={index} 
-              className={`border-b border-primary-400 ${index === 0 ? 'border-t' : ''}`}
-              style={{
-                opacity: 0,
-                animation: `fadeIn 0.3s ease-out forwards ${0.1 + index * 0.1}s`,
-                transform: 'translateY(10px)',
-                animationFillMode: 'forwards'
-              }}
+      <div 
+        className={`fixed inset-0 z-50 lg:hidden transition-all duration-500 ${isMenuOpen ? 'visible' : 'invisible'}`}
+        style={{
+          pointerEvents: isMenuOpen ? 'auto' : 'none',
+        }}
+      >
+        <div 
+          className="absolute inset-0 bg-black transition-opacity duration-500 ease-in-out"
+          style={{
+            opacity: isMenuOpen ? 0.6 : 0,
+          }}
+          onClick={() => setIsMenuOpen(false)}
+        />
+        
+        <div 
+          className="relative h-full w-full bg-primary-300 shadow-xl overflow-y-auto transform transition-transform duration-500 ease-in-out"
+          style={{
+            transform: isMenuOpen ? 'translateX(0)' : 'translateX(-100%)',
+            transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
+          }}
+        >
+          <div className="flex justify-end p-4 border-b border-primary-400">
+            <button 
+              onClick={() => setIsMenuOpen(false)}
+              className="text-white hover:text-gray-200 transition-colors duration-300"
             >
-              {item.dropdown ? (
-                <div>
-                  <div
-                    className="px-4 py-3 text-white flex justify-center items-center hover:bg-primary-400 cursor-pointer transition duration-200"
-                    onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                  >
-                    {item.label}
-                    <ChevronDown
-                      className={`ml-2 w-5 h-5 transform transition-transform duration-300 ${
-                        activeDropdown === item.label ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </div>
+              <X className="w-6 h-6" />
+            </button>
+          </div>
 
-                  {activeDropdown === item.label && (
-                    <div className="min-h-fit flex flex-col justify-center items-center bg-gray-50 p-4" 
-                      style={{
-                        animation: 'slideDown 0.3s ease-out forwards'
-                      }}
+          <div className="overflow-hidden">
+            {navItems.map((item, index) => (
+              <div 
+                key={index} 
+                className={`border-b border-primary-400 transform transition-all duration-500`}
+                style={{
+                  opacity: isMenuOpen ? 1 : 0,
+                  transform: isMenuOpen ? 'translateX(0)' : 'translateX(-20px)',
+                  transitionDelay: `${index * 0.05}s`,
+                }}
+              >
+                {item.dropdown ? (
+                  <div>
+                    <div
+                      className="px-4 py-3 text-white flex justify-center items-center hover:bg-primary-400 cursor-pointer transition duration-200"
+                      onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
                     >
-                      {/* Service Categories */}
-                      <div className="grid grid-cols-3 gap-2 w-full my-2">
-                        {Object.keys(item.dropdown).map((category, catIndex) => (
-                          <button
-                            key={category}
-                            className={`cursor-pointer py-2 px-3 rounded-md text-sm font-medium transition-all duration-300 ${
-                              activeCategoryTab === category
-                                ? 'bg-primary-300 text-white shadow-md'
-                                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                            }`}
-                            onClick={() => setActiveCategoryTab(activeCategoryTab === category ? null : category)}
-                            style={{
-                              animation: `fadeIn 0.3s ease-out forwards ${0.1 + catIndex * 0.1}s`
-                            }}
-                          >
-                            {category}
-                          </button>
-                        ))}
-                      </div>
+                      {item.label}
+                      <ChevronDown
+                        className={`ml-2 w-5 h-5 transform transition-transform duration-300 ${
+                          activeDropdown === item.label ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </div>
 
-                      {/* Service Items by Category */}
-                      {Object.entries(item.dropdown).map(([category, services]) => (
-                        <div 
-                          key={category} 
-                          className={`flex flex-col justify-center items-center transition-all duration-500 w-full`}
-                        >
-                          {activeCategoryTab === category && (
-                            <ul className="space-y-2 w-full mt-4">
-                              {/* Handle Specialized Services differently */}
-                              {category === 'Specialized Services' ? (
-                                <>
-                                  {/* Render column1 */}
-                                  {services.column1.map((service, serviceIndex) => (
+                    {activeDropdown === item.label && (
+                      <div className="min-h-fit flex flex-col justify-center items-center bg-gray-50 p-4" 
+                        style={{
+                          animation: 'slideDown 0.3s ease-out forwards'
+                        }}
+                      >
+                        <div className="grid grid-cols-3 gap-2 w-full my-2">
+                          {Object.keys(item.dropdown).map((category, catIndex) => (
+                            <button
+                              key={category}
+                              className={`cursor-pointer py-2 px-3 rounded-md text-sm font-medium transition-all duration-300 ${
+                                activeCategoryTab === category
+                                  ? 'bg-primary-300 text-white shadow-md'
+                                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                              }`}
+                              onClick={() => setActiveCategoryTab(activeCategoryTab === category ? null : category)}
+                              style={{
+                                animation: `fadeIn 0.3s ease-out forwards ${0.1 + catIndex * 0.1}s`
+                              }}
+                            >
+                              {category}
+                            </button>
+                          ))}
+                        </div>
+
+                        {Object.entries(item.dropdown).map(([category, services]) => (
+                          <div 
+                            key={category} 
+                            className={`flex flex-col justify-center items-center transition-all duration-500 w-full`}
+                          >
+                            {activeCategoryTab === category && (
+                              <ul className="space-y-2 w-full mt-4">
+                                {category === 'Specialized Services' ? (
+                                  <>
+                                    {services.column1.map((service, serviceIndex) => (
+                                      <li
+                                        key={`col1-${serviceIndex}`}
+                                        style={{
+                                          opacity: 0,
+                                          animation: `slideInRight 0.3s ease-out forwards ${serviceIndex * 0.05}s`
+                                        }}
+                                      >
+                                        <Link 
+                                          href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+                                          className="block w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
+                                          onClick={() => setIsMenuOpen(false)}
+                                        >
+                                          {service}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                    {/* Render column2 */}
+                                    {services.column2.map((service, serviceIndex) => (
+                                      <li
+                                        key={`col2-${serviceIndex}`}
+                                        className="w-full"
+                                        style={{
+                                          opacity: 0,
+                                          animation: `slideInRight 0.3s ease-out forwards ${(services.column1.length + serviceIndex) * 0.05}s`
+                                        }}
+                                      >
+                                        <Link 
+                                          href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+                                          className="block w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
+                                          onClick={() => setIsMenuOpen(false)}
+                                        >
+                                          {service}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </>
+                                ) : (
+                                  services.map((service, serviceIndex) => (
                                     <li
-                                      key={`col1-${serviceIndex}`}
+                                      key={serviceIndex}
+                                      className="w-full"
                                       style={{
                                         opacity: 0,
                                         animation: `slideInRight 0.3s ease-out forwards ${serviceIndex * 0.05}s`
@@ -273,68 +336,29 @@ const Navbar = () => {
                                         {service}
                                       </Link>
                                     </li>
-                                  ))}
-                                  {/* Render column2 */}
-                                  {services.column2.map((service, serviceIndex) => (
-                                    <li
-                                      key={`col2-${serviceIndex}`}
-                                      className="w-full"
-                                      style={{
-                                        opacity: 0,
-                                        animation: `slideInRight 0.3s ease-out forwards ${(services.column1.length + serviceIndex) * 0.05}s`
-                                      }}
-                                    >
-                                      <Link 
-                                        href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                        className="block w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
-                                        onClick={() => setIsMenuOpen(false)}
-                                      >
-                                        {service}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </>
-                              ) : (
-                                // Handle other categories (Cleaning Services, Restoration)
-                                services.map((service, serviceIndex) => (
-                                  <li
-                                    key={serviceIndex}
-                                    className="w-full"
-                                    style={{
-                                      opacity: 0,
-                                      animation: `slideInRight 0.3s ease-out forwards ${serviceIndex * 0.05}s`
-                                    }}
-                                  >
-                                    <Link 
-                                      href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                      className="block w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
-                                      onClick={() => setIsMenuOpen(false)}
-                                    >
-                                      {service}
-                                    </Link>
-                                  </li>
-                                ))
-                              )}
-                            </ul>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  href={item.link}
-                  className="flex justify-center px-4 py-3 text-white hover:bg-primary-400 transition duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              )}
-            </div>
-          ))}
+                                  ))
+                                )}
+                              </ul>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.link}
+                    className="flex justify-center px-4 py-3 text-white hover:bg-primary-400 transition duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
