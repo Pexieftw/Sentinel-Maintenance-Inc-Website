@@ -1,74 +1,26 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Building2, Info, MapPin, Mail } from 'lucide-react';
-import Image from 'next/image';
-import smiLogoMini from '@/public/icons/SMI-LOGO-MINI.svg';
-import Link from 'next/link';
-const TopBar = () => {
+import { topBarSections } from '../utils/data';
 
+const TopBar = () => {
   const [activeSection, setActiveSection] = useState(0);
   
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSection((prev) => (prev + 1) % 3);
-    }, 3000); // Change active section every 3 seconds
+    }, 3000);
     
     return () => clearInterval(interval);
   }, []);
-  
-  const sections = [
-    { 
-      icon: <Building2 className="stroke-current" />, 
-      text: "Sentinel Maintenance Inc", 
-    },
-    { 
-      icon: <MapPin className="stroke-current" />, 
-      text: "401 Richemond St", 
-    },
-    { 
-      icon: <Mail className="stroke-current" />, 
-      text: "info@smi.ca", 
-    }
-  ];
 
   return (
-    <div className="flex justify-center items-center lg:mb-[40px] py-0 md:py-6 lg:py-10 lg:px-0">
-      <div className="w-full max-w-6xl mx-auto flex justify-center lg:justify-between items-center">
-        
-        {/* Logo Section */}
-        <div className="hidden lg:flex items-center">
-          <Link href="/">
-            <Image
-              src={smiLogoMini}
-              alt="SMI Logo"
-              className="h-12 w-auto"
-              width={125}  
-              height={48}
-              priority 
-            />
-          </Link>
-        </div>
-        {/* Informations Section */}
-        <div className="hidden md:flex justify-center items-center space-x-4 ">
-          <div className="flex items-center space-x-2">
-            <Info className="w-5 h-5 text-primary-200" />
-            <span className="text-sm">Sentinel Maintenance Inc</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <MapPin className="w-5 h-5 text-primary-200" />
-            <span className="text-sm">401 Richemond St</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Mail className="w-5 h-5 text-primary-200" />
-            <span className="text-sm">info@smi.ca</span>
-          </div>
-        </div>
-
-
-        <div className="md:hidden w-full border-b-2 border-primary-400 shadow-lg">
+    <div className="bg-primary-300 text-white text-sm">
+      <div className="w-full max-w-6xl mx-auto">
+        {/* Mobile View */}
+        <div className="md:hidden w-full">
           <div className="flex items-center justify-between">
-            {sections.map((section, index) => {
+            {topBarSections.map((section, index) => {
               const isActive = activeSection === index;
               return (
                 <div 
@@ -80,16 +32,17 @@ const TopBar = () => {
                   <div 
                     className={`
                       relative flex items-center justify-center
-                      w-full h-16
+                      w-full h-8
                       ${isActive 
-                        ? `bg-primary-300 pl-3 pr-4` 
-                        : 'bg-white px-3'
+                        ? `bg-white px-2 py-6 text-gray-800` 
+                        : 'bg-primary-300 px-2 py-6 text-white'
                       }
                       transition-all duration-500
                     `}
                   >
                     <div className={`
-                      flex-shrink-0 rounded-full ${isActive ? 'text-white' : 'text-gray-800'}
+                      flex-shrink-0 rounded-full
+                      ${isActive ? 'text-gray-800' : 'text-white'}
                       ${isActive ? '' : 'scale-90'}
                       transition-transform duration-300
                     `}>
@@ -100,20 +53,37 @@ const TopBar = () => {
                       ml-2 whitespace-nowrap overflow-hidden transition-all duration-500
                       ${isActive ? 'max-w-full opacity-100' : 'max-w-0 opacity-0'}
                     `}>
-                      <span className="text-sm font-medium text-white">{section.text}</span>
+                      <span className={`text-xs font-medium ${isActive ? 'text-gray-800' : 'text-white'}`}>
+                        {section.text}
+                      </span>
                     </div>
-      
                   </div>
                 </div>
               );
             })}
           </div>
         </div>
-        {/* CTA Button - Hidden on Mobile */}
-        <div className="hidden lg:flex items-center">
-          <a
-            href="tel:+14169184122"
-            className="bg-primary-200 text-white px-6 py-2 hover:bg-primary-300 transition"
+
+        {/* Desktop View */}
+        <div className="hidden md:flex justify-between items-center px-4 lg:px-0">
+          <div className="flex items-center">
+            {topBarSections.map((section, index) => (
+              <React.Fragment key={index}>
+                <div className="flex items-center py-4">
+                  {section.icon}
+                  <span className="ml-2">{section.text}</span>
+                </div>
+                {index < topBarSections.length - 1 && (
+                  <div className="h-4 w-px bg-white bg-opacity-50 mx-4"></div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+          
+          {/* Call us now button */}
+          <a 
+            href="tel:+14169184122" 
+            className="bg-white text-gray-800 px-4 py-2 hover:bg-gray-100 transition-colors duration-200 font-medium"
           >
             Call us now
           </a>

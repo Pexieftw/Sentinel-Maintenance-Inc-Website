@@ -21,10 +21,10 @@ export const services = {
       'COVID-19 Cleaning',
       'Graffiti Removal',
       'Hand Stone Staining for Colour Matching',
-      'Natural Stone Restoration'
+      'Natural Stone Restoration',
+      'Tile & Grout Cleaning & Colour Sealing',
     ],
     column2: [
-      'Tile & Grout Cleaning & Colour Sealing',
       'Landscaping',
       'Snow Removal',
       'Lobby and Entrance Walk-off Matting Installation',
@@ -32,7 +32,9 @@ export const services = {
       'HVAC Cleaning',
       'Fan Coil Cleaning',
       'Laundry and Kitchen Exhaust Fan Cleaning',
-      'Industrial Kitchen Vent Cleaning'
+      'Industrial Kitchen Vent Cleaning',
+      'Moving Services',
+      'Junk Removal'
     ]
   },
   'Restoration': [
@@ -43,6 +45,24 @@ export const services = {
   ]
 };
 
+// TopBar Infomatrions
+
+import { Phone, MapPin, Mail } from 'lucide-react';
+  
+export const topBarSections = [
+  { 
+    icon: <Phone className="stroke-current" size={16} />, 
+    text: "+1 416-918-4177" 
+  },
+  { 
+    icon: <MapPin className="stroke-current" size={16} />, 
+    text: "401 Richemond St" 
+  },
+  { 
+    icon: <Mail className="stroke-current" size={16} />, 
+    text: "info@smi.ca" 
+  }
+];
 
 // Navbar Informations
 export const navItems = [

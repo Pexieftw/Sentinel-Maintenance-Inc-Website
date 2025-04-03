@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import smiLogoMini from '@/public/icons/SMI-LOGO-MINI.svg';
+import smiLogo from '@/public/icons/SMI NEW FONT.svg';
 
 import { services, navItems } from "../utils/data";
 
@@ -13,32 +13,41 @@ const Navbar = () => {
   const [activeCategoryTab, setActiveCategoryTab] = useState(null);
 
   return (
-  <nav className="w-full max-w-6xl mx-auto bg-primary-300 shadow-md z-50 lg:absolute left-0 right-0 top-[66px] lg:top-[128px]">
-    <div className="px-4 sm:px-6 lg:px-8">
-      <div className="flex items-center justify-between lg:justify-center h-20">
-
+    <nav className="w-full bg-white shadow-md z-50 sticky top-0">
+      <div className="max-w-6xl mx-auto">
+        <div className="relative flex items-center h-20 px-4 lg:px-0">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link href="/">
+              <Image
+                src={smiLogo}
+                alt="SMI Logo"
+                width={121}
+                height={56} 
+              />
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-4 items-center">
+          <div className="hidden lg:flex flex-1 justify-end items-center h-full">
             {navItems.map((item, index) => (
               <div 
                 key={index} 
-                className="relative group"
+                className="group h-full flex items-center"
                 onMouseEnter={() => item.dropdown && setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
                   href={item.link}
-                  className="lg:flex text-white hover:bg-primary-400 px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center"
+                  className="flex text-gray-800 hover:text-primary-500 px-4 h-full items-center text-sm font-medium transition-colors duration-300 hover:bg-gray-50"
                 >
                   {item.label}
                   {item.dropdown && <ChevronDown className="ml-1 w-4 h-4" />}
                 </Link>
-                
                 {/* Dropdown for Services */}
                 {item.dropdown && activeDropdown === item.label && (
                   <div 
-                    className="absolute left-[-316px] top-[36px] w-6xl bg-white shadow-lg"
+                    className="absolute left-0 top-20 w-6xl bg-white shadow-lg border border-gray-200"
                     style={{
                       animation: 'fadeIn 0.5s ease-out forwards'
                     }}
@@ -58,7 +67,7 @@ const Navbar = () => {
                             >
                               <Link 
                                 href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                                className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-50 hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
                               >
                                 {service}
                               </Link>
@@ -82,7 +91,7 @@ const Navbar = () => {
                               >
                                 <Link 
                                   href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                  className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
+                                  className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-50 hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                                 >
                                   {service}
                                 </Link>
@@ -100,7 +109,7 @@ const Navbar = () => {
                               >
                                 <Link 
                                   href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                  className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
+                                  className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-50 hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                                 >
                                   {service}
                                 </Link>
@@ -124,7 +133,7 @@ const Navbar = () => {
                             >
                               <Link 
                                 href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
+                                className="flex justify-center items-center h-14 text-sm w-full text-center py-2 px-4 text-gray-700 bg-gray-50 hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                               >
                                 {service}
                               </Link>
@@ -139,55 +148,34 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Buttons*/}
+          <div className="flex lg:hidden items-center gap-4 ml-auto">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center p-3 bg-primary-300 text-white hover:bg-primary-400 
+                focus:outline-none focus:ring-2 focus:ring-inset cursor-pointer"
+              aria-expanded={isMenuOpen}
+            >
+              <a href="tel:+14169184177">
+                <Phone className="block h-6 w-6" aria-hidden="true" />
+              </a>
+            </button>
 
-          <div className="cursor-pointer lg:hidden items-center">
-            <Link href="/">
-              <Image
-                src={smiLogoMini}
-                alt="SMI Logo"
-                className="h-10 w-auto filter brightness-0 invert"
-                width={104}
-                height={40} 
-              />
-            </Link>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              type="button"
+              className="inline-flex items-center justify-center p-3 bg-primary-300 text-white hover:bg-primary-400 
+                focus:outline-none focus:ring-2 focus:ring-inset cursor-pointer"
+              aria-expanded={isMenuOpen}
+            >
+              <span className="sr-only">Open main menu</span>
+              {isMenuOpen ? (
+                <X className="block h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="block h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
           </div>
-          
-          <div className="flex gap-4">
-
-          <div className="lg:hidden flex items-center">
-              <button
-                type="button"
-                className="inline-flex items-center justify-center p-2 rounded-md text-primary-300 bg-white hover:bg-gray-200 
-                  focus:outline-none focus:ring-2 focus:ring-inset  cursor-pointer"
-                aria-expanded={isMenuOpen}
-              >
-                <a href="tel:+14169184177">
-                  <Phone className="block h-6 w-6" aria-hidden="true" />
-                </a>
-              </button>
-            </div>
-
-            <div className="lg:hidden flex items-center">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                type="button"
-                className="inline-flex items-center justify-center p-2 rounded-md text-primary-300 bg-white hover:bg-gray-200 
-                  focus:outline-none focus:ring-2 focus:ring-inset  cursor-pointer"
-                aria-expanded={isMenuOpen}
-              >
-                <span className="sr-only">Open main menu</span>
-                {isMenuOpen ? (
-                  <X className="block h-6 w-6" aria-hidden="true" />
-                ) : (
-                  <Menu className="block h-6 w-6" aria-hidden="true" />
-                )}
-              </button>
-            </div>
-
-          </div>
-
-
         </div>
       </div>
 
@@ -207,16 +195,16 @@ const Navbar = () => {
         />
         
         <div 
-          className="relative h-full w-full bg-primary-300 shadow-xl overflow-y-auto transform transition-transform duration-500 ease-in-out"
+          className="relative h-full w-full bg-white shadow-xl overflow-y-auto transform transition-transform duration-500 ease-in-out"
           style={{
             transform: isMenuOpen ? 'translateX(0)' : 'translateX(-100%)',
             transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
           }}
         >
-          <div className="flex justify-end p-4 border-b border-primary-400">
+          <div className="flex justify-end p-4 border-b border-gray-200">
             <button 
               onClick={() => setIsMenuOpen(false)}
-              className="text-white hover:text-gray-200 transition-colors duration-300"
+              className="text-gray-800 hover:text-primary-500 transition-colors duration-300"
             >
               <X className="w-6 h-6" />
             </button>
@@ -226,7 +214,7 @@ const Navbar = () => {
             {navItems.map((item, index) => (
               <div 
                 key={index} 
-                className={`border-b border-primary-400 transform transition-all duration-500`}
+                className={`border-b border-gray-200 transform transition-all duration-500`}
                 style={{
                   opacity: isMenuOpen ? 1 : 0,
                   transform: isMenuOpen ? 'translateX(0)' : 'translateX(-20px)',
@@ -236,7 +224,7 @@ const Navbar = () => {
                 {item.dropdown ? (
                   <div>
                     <div
-                      className="px-4 py-3 text-white flex justify-center items-center hover:bg-primary-400 cursor-pointer transition duration-200"
+                      className="px-4 py-3 text-gray-800 flex justify-center items-center hover:bg-gray-100 cursor-pointer transition duration-200"
                       onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
                     >
                       {item.label}
@@ -259,7 +247,7 @@ const Navbar = () => {
                               key={category}
                               className={`cursor-pointer py-2 px-3 rounded-md text-sm font-medium transition-all duration-300 ${
                                 activeCategoryTab === category
-                                  ? 'bg-primary-300 text-white shadow-md'
+                                  ? 'bg-primary-500 text-white shadow-md'
                                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                               }`}
                               onClick={() => setActiveCategoryTab(activeCategoryTab === category ? null : category)}
@@ -291,14 +279,13 @@ const Navbar = () => {
                                       >
                                         <Link 
                                           href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                          className="block w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
+                                          className="block w-full text-center py-2 px-4 text-gray-700 bg-white rounded-md hover:bg-primary-500 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                                           onClick={() => setIsMenuOpen(false)}
                                         >
                                           {service}
                                         </Link>
                                       </li>
                                     ))}
-                                    {/* Render column2 */}
                                     {services.column2.map((service, serviceIndex) => (
                                       <li
                                         key={`col2-${serviceIndex}`}
@@ -310,7 +297,7 @@ const Navbar = () => {
                                       >
                                         <Link 
                                           href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                          className="block w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
+                                          className="block w-full text-center py-2 px-4 text-gray-700 bg-white rounded-md hover:bg-primary-500 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                                           onClick={() => setIsMenuOpen(false)}
                                         >
                                           {service}
@@ -330,7 +317,7 @@ const Navbar = () => {
                                     >
                                       <Link 
                                         href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                        className="block w-full text-center py-2 px-4 text-gray-700 bg-gray-100 rounded-md hover:bg-primary-400 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
+                                        className="block w-full text-center py-2 px-4 text-gray-700 bg-white rounded-md hover:bg-primary-500 hover:text-white hover:shadow-md transition-all duration-200 transform hover:-translate-y-1"
                                         onClick={() => setIsMenuOpen(false)}
                                       >
                                         {service}
@@ -348,7 +335,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     href={item.link}
-                    className="flex justify-center px-4 py-3 text-white hover:bg-primary-400 transition duration-200"
+                    className="flex justify-center px-4 py-3 text-gray-800 hover:bg-gray-100 transition duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
