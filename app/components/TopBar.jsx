@@ -34,8 +34,8 @@ const TopBar = () => {
                       relative flex items-center justify-center
                       w-full h-8
                       ${isActive 
-                        ? `bg-white px-2 py-6 text-gray-800` 
-                        : 'bg-primary-300 px-2 py-6 text-white'
+                        ? `bg-white px-2 pb-7 pt-6 text-gray-800` 
+                        : 'bg-primary-300 px-2 pb-7 pt-6 text-white'
                       }
                       transition-all duration-500
                     `}
