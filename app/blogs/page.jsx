@@ -4,118 +4,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Search, Tag, Calendar, Clock, ChevronRight, ChevronLeft, Filter, TrendingUp, Award } from 'lucide-react';
 
-// Import your images (these would be in your actual code)
 import blogImage1 from "@/public/about1.jpg";
+import { cleaningBlogs } from "../utils/data";
 
-const cleaningBlogs = [
-  {
-    id: 1,
-    title: "The Complete Guide to Commercial Janitorial Cleaning",
-    excerpt: "Discover the essential practices for maintaining pristine commercial spaces. Learn how professional janitorial services can enhance your business environment and employee productivity.",
-    date: "April 3, 2025",
-    readTime: 6,
-    category: "Commercial",
-    tags: ["Office Cleaning", "Janitorial", "Commercial"],
-    image: blogImage1,
-    featured: true,
-    popular: true
-  },
-  {
-    id: 2,
-    title: "Deep Cleaning and Disinfection: Post-COVID Best Practices",
-    excerpt: "Explore the advanced techniques in deep cleaning and disinfection that have evolved since the pandemic. This comprehensive guide covers fogging disinfection and other specialized methods.",
-    date: "March 28, 2025",
-    readTime: 8,
-    category: "Specialized Services",
-    tags: ["Disinfection", "COVID-19", "Deep Cleaning"],
-    image: blogImage1
-  },
-  {
-    id: 3,
-    title: "Condominium Cleaning: Meeting the Unique Needs of Residential Buildings",
-    excerpt: "From common areas to specialized services, learn how professional cleaning services address the unique requirements of condominium buildings and enhance property values.",
-    date: "March 21, 2025",
-    readTime: 5,
-    category: "Residential",
-    tags: ["Condominium", "Residential Cleaning"],
-    image: blogImage1,
-    popular: true
-  },
-  {
-    id: 4,
-    title: "Window Cleaning Techniques for High-Rise Buildings",
-    excerpt: "Safety protocols and advanced techniques for cleaning windows in tall structures. Discover how professionals manage the challenges of high-rise window cleaning.",
-    date: "March 15, 2025",
-    readTime: 7,
-    category: "Specialized Services",
-    tags: ["Window Cleaning", "High-Rise", "Safety"],
-    image: blogImage1
-  },
-  {
-    id: 5,
-    title: "Restoring Natural Stone: Best Practices and Techniques",
-    excerpt: "Learn about the specialized techniques for natural stone restoration and maintenance. Find out how professionals preserve the beauty of marble, granite, and other stone surfaces.",
-    date: "March 7, 2025",
-    readTime: 9,
-    category: "Specialized Services",
-    tags: ["Stone Restoration", "Maintenance", "Surfaces"],
-    image: blogImage1,
-    popular: true
-  },
-  {
-    id: 6,
-    title: "Post-Construction Cleaning: The Final Step to Project Completion",
-    excerpt: "The essential guide to thorough post-construction cleaning services. Discover how professionals handle debris removal, fine dust, and surface protection.",
-    date: "February 28, 2025",
-    readTime: 6,
-    category: "Construction",
-    tags: ["Post-Construction", "Debris Removal", "New Buildings"],
-    image: blogImage1
-  },
-  {
-    id: 7,
-    title: "Medical Office Cleaning: Meeting Healthcare Standards",
-    excerpt: "Understanding the specialized requirements and regulations for cleaning medical facilities. Learn about disinfection protocols and compliance with healthcare standards.",
-    date: "February 21, 2025",
-    readTime: 8,
-    category: "Medical",
-    tags: ["Healthcare", "Disinfection", "Compliance"],
-    image: blogImage1
-  },
-  {
-    id: 8,
-    title: "Eco-Friendly Cleaning Practices for Sustainable Buildings",
-    excerpt: "Implementing green cleaning techniques that protect both the environment and building occupants. Discover sustainable products and methods for modern facilities.",
-    date: "February 14, 2025",
-    readTime: 7,
-    category: "Sustainable",
-    tags: ["Eco-Friendly", "Green Cleaning", "Sustainability"],
-    image: blogImage1,
-    popular: true
-  },
-  {
-    id: 9,
-    title: "Emergency Cleaning Services: Responding to Water and Fire Damage",
-    excerpt: "How professional cleaning teams address emergency situations and restore properties after water or fire damage. Learn about rapid response protocols and restoration techniques.",
-    date: "February 7, 2025",
-    readTime: 5,
-    category: "Restoration",
-    tags: ["Emergency", "Restoration", "Damage Control"],
-    image: blogImage1
-  },
-  {
-    id: 10,
-    title: "HVAC and Ventilation System Cleaning: Improving Indoor Air Quality",
-    excerpt: "The importance of regular cleaning for HVAC systems, fan coils, and ventilation ducts. Discover how these services enhance air quality and energy efficiency in buildings.",
-    date: "January 31, 2025",
-    readTime: 6,
-    category: "Specialized Services",
-    tags: ["HVAC", "Air Quality", "Ventilation"],
-    image: blogImage1
-  },
-];
 
-// Extract unique categories and tags for filtering
 const categories = [...new Set(cleaningBlogs.map(blog => blog.category))];
 const tags = [...new Set(cleaningBlogs.flatMap(blog => blog.tags))];
 
@@ -327,13 +219,15 @@ export default function BlogPage() {
                     </div>
                   </div>
                   <h2 className="text-2xl font-bold mb-3 text-gray-800">
-                    The Complete Guide to Commercial Janitorial Cleaning
+                    <Link href={`/blogs/${"The Complete Guide to Commercial Janitorial Cleaning".toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}`}>
+                      The Complete Guide to Commercial Janitorial Cleaning
+                    </Link>
                   </h2>
                   <p className="text-gray-600 mb-4">
                     Discover the essential practices for maintaining pristine commercial spaces. Learn how professional janitorial services can enhance your business environment and employee productivity.
                   </p>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                    <Link href="/blog/1" className="hover:underline inline-flex items-center text-primary-300 font-medium hover:text-primary-400 transition-colors">
+                    <Link href={`/blogs/${"The Complete Guide to Commercial Janitorial Cleaning".toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}`} className="hover:underline inline-flex items-center text-primary-300 font-medium hover:text-primary-400 transition-colors">
                       Read more <ChevronRight size={16} className="ml-1" />
                     </Link>
                     <div className="flex flex-wrap gap-1">
@@ -427,7 +321,7 @@ export default function BlogPage() {
                         </div>
 
                         <h2 className="text-xl font-bold mb-2 text-gray-800transition-colors">
-                          <Link href={`/blog/${blog.id}`}>
+                          <Link href={`/blogs/${blog.title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}`}>
                             {blog.title}
                           </Link>
                         </h2>
@@ -435,7 +329,7 @@ export default function BlogPage() {
                           {blog.excerpt}
                         </p>
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                          <Link href={`/blog/${blog.id}`} className="hover:underline inline-flex items-center text-primary-300 font-medium hover:text-primray-400 transition-colors">
+                          <Link href={`/blogs/${blog.title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}`} className="hover:underline inline-flex items-center text-primary-300 font-medium hover:text-primray-400 transition-colors">
                             Read more <ChevronRight size={16} className="ml-1" />
                           </Link>
                           <div className="flex flex-wrap gap-1">
@@ -480,7 +374,7 @@ export default function BlogPage() {
                   <button 
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
-                    className={`px-3 py-2  ${currentPage === 1 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-700 hover:bg-gray-200'}`}
+                    className={`px-3 py-2 cursor-pointer  ${currentPage === 1 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-700 hover:bg-gray-200'}`}
                     aria-label="Previous page"
                   >
                     <ChevronLeft size={20} />
@@ -498,7 +392,7 @@ export default function BlogPage() {
                         <button
                           key={index}
                           onClick={() => handlePageChange(pageNumber)}
-                          className={`px-4 py-2  ${currentPage === pageNumber ? 'bg-primary-300 text-white' : 'text-gray-700 hover:bg-gray-200'}`}
+                          className={`px-4 py-2 cursor-pointer ${currentPage === pageNumber ? 'bg-primary-300 text-white' : 'text-gray-700 hover:bg-gray-200'}`}
                           aria-label={`Page ${pageNumber}`}
                           aria-current={currentPage === pageNumber ? 'page' : undefined}
                         >
@@ -507,7 +401,7 @@ export default function BlogPage() {
                       );
                     }
                     
-                    // Show ellipsis (but only once between gaps)
+                    // Show ellipsis
                     if (
                       (pageNumber === 2 && currentPage > 3) ||
                       (pageNumber === totalPages - 1 && currentPage < totalPages - 2)
@@ -521,7 +415,7 @@ export default function BlogPage() {
                   <button 
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
-                    className={`px-3 py-2  ${currentPage === totalPages ? 'text-gray-400 cursor-not-allowed' : 'text-gray-700 hover:bg-gray-200'}`}
+                    className={`px-3 py-2 cursor-pointer  ${currentPage === totalPages ? 'text-gray-400 cursor-not-allowed' : 'text-gray-700 hover:bg-gray-200'}`}
                     aria-label="Next page"
                   >
                     <ChevronRight size={20} />
@@ -557,7 +451,7 @@ export default function BlogPage() {
                 </div>
                 <div className="space-y-4">
                   {cleaningBlogs.filter(blog => blog.popular).slice(0, 3).map(blog => (
-                    <Link href={`/blog/${blog.id}`} key={blog.id} className="flex gap-3 group hover:bg-gray-100">
+                    <Link href={`/blogs/${blog.title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}`} key={blog.id} className="flex gap-3 group hover:bg-gray-100">
                       <div className="relative w-20 h-20  overflow-hidden flex-shrink-0">
                         <Image 
                           src={blog.image} 

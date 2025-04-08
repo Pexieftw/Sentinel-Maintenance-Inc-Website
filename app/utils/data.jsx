@@ -961,6 +961,62 @@ export const serviceCategories = [
           "Ensure proper hood and filter maintenance"
         ],
         seasonalNote: "Peak restaurant seasons increase ventilation system stress and cleaning requirements"
+      },
+      {
+        name: 'Moving Services',
+        slug: 'moving-services',
+        description: 'Professional relocation solutions for homes and businesses.',
+        image: '/about1.jpg',
+        fullDescription: 'Our comprehensive moving services handle every aspect of your relocation, from careful packing and secure transportation to efficient unpacking and placement at your new location.',
+        keyFeatures: [
+          'Custom packing solutions for delicate items',
+          'Climate-controlled transportation options',
+          'Professional furniture assembly/disassembly',
+          'Secure loading and unloading protocols'
+        ],
+        serviceDetails: [
+          'Residential and commercial relocations',
+          'Local and long-distance moving capabilities',
+          'Full-service or partial packing options',
+          'Specialized handling for high-value items'
+        ],
+        aftercareTips: [
+          "Inspect items immediately after delivery",
+          "Allow 48 hours for furniture to acclimate to new environment",
+          "Keep moving inventory for reference",
+          "Schedule post-move cleaning for both locations",
+          "Check utilities and appliance connections",
+          "Test smoke detectors and security systems after setup"
+        ],
+        seasonalNote: "Summer months require earlier scheduling due to peak moving season demand"
+      },
+      {
+        name: 'Junk Removal',
+        slug: 'junk-removal',
+        description: 'Efficient disposal and recycling solutions for unwanted items.',
+        image: '/about1.jpg',
+        fullDescription: 'Our junk removal service provides responsible disposal of unwanted items, furniture, and debris with an emphasis on recycling and donation whenever possible to minimize environmental impact.',
+        keyFeatures: [
+          'Same-day removal options',
+          'Eco-friendly disposal practices',
+          'Heavy item handling capabilities',
+          'Property protection protocols'
+        ],
+        serviceDetails: [
+          'Residential and commercial junk removal',
+          'Estate and foreclosure cleanouts',
+          'Construction debris management',
+          'Electronic waste handling and recycling'
+        ],
+        aftercareTips: [
+          "Implement organization systems to prevent future clutter",
+          "Consider donation-first approach for future disposals",
+          "Maintain clear pathways in storage areas",
+          "Schedule regular decluttering sessions",
+          "Use proper waste sorting methods going forward",
+          "Request documentation of donation or recycling for tax purposes"
+        ],
+        seasonalNote: "Spring cleaning season and year-end holidays typically see increased demand for junk removal services"
       }
     ]
   },
@@ -1085,3 +1141,450 @@ export function getAllServicePaths() {
   )
   return paths
 }
+
+// Blogs
+import blogImage1 from "@/public/about1.jpg";
+
+
+export const cleaningBlogs = [
+  {
+    id: 1,
+    title: "The Complete Guide to Commercial Janitorial Cleaning",
+    excerpt: "Discover the essential practices for maintaining pristine commercial spaces. Learn how professional janitorial services can enhance your business environment and employee productivity.",
+    date: "April 3, 2025",
+    readTime: 6,
+    category: "Commercial",
+    tags: ["Office Cleaning", "Janitorial", "Commercial"],
+    image: blogImage1,
+    featured: true,
+    popular: true,
+    author: {
+      name: "Maria Johnson",
+      title: "Head of Commercial Services",
+      avatar: "/images/avatars/maria.jpg"
+    },
+    relatedPosts: [2, 5, 8],
+    sections: [
+      {
+        heading: "Understanding Commercial Cleaning Standards",
+        content: "Commercial spaces require specialized cleaning approaches that differ significantly from residential cleaning...",
+        imageUrl: blogImage1, 
+      },
+      {
+        heading: "The Business Impact of Clean Environments",
+        content: "Studies have shown that clean workspaces can increase productivity by up to 15%...",
+        stats: [
+          { label: "Productivity Increase", value: "15%" },
+          { label: "Reduced Sick Days", value: "30%" },
+          { label: "Client Satisfaction", value: "92%" }
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How often should commercial spaces be cleaned?",
+        answer: "Most commercial spaces benefit from daily maintenance cleaning and weekly deep cleaning..."
+      },
+      {
+        question: "What's included in standard janitorial services?",
+        answer: "Standard janitorial packages typically include floor care, restroom sanitation..."
+      }
+    ],
+  },
+  {
+    id: 2,
+    title: "Deep Cleaning and Disinfection: Post-COVID Best Practices",
+    excerpt: "Explore the advanced techniques in deep cleaning and disinfection that have evolved since the pandemic. This comprehensive guide covers fogging disinfection and other specialized methods.",
+    date: "March 28, 2025",
+    readTime: 8,
+    category: "Specialized Services",
+    tags: ["Disinfection", "COVID-19", "Deep Cleaning"],
+    image: blogImage1,
+    featured: false,
+    popular: false,
+    author: {
+      name: "Robert Chen",
+      title: "Disinfection Specialist",
+      avatar: "/images/avatars/robert.jpg"
+    },
+    relatedPosts: [1, 7, 10],
+    sections: [
+      {
+        heading: "Evolution of Disinfection Protocols",
+        content: "The pandemic fundamentally changed our understanding of surface disinfection and airborne pathogen control...",
+        imageUrl: blogImage1, 
+      },
+      {
+        heading: "Advanced Disinfection Technologies",
+        content: "From electrostatic sprayers to UV-C light treatments, technology has revolutionized how we approach sanitization...",
+        stats: [
+          { label: "Pathogen Reduction", value: "99.9%" },
+          { label: "Application Speed", value: "3x Faster" },
+          { label: "Surface Coverage", value: "Complete" }
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How does fogging disinfection work?",
+        answer: "Fogging disinfection disperses a fine mist of disinfectant solution that reaches all surfaces, including difficult areas..."
+      },
+      {
+        question: "How often should deep disinfection be performed?",
+        answer: "For high-traffic facilities, monthly deep disinfection is recommended, while regular facilities may benefit from quarterly treatments..."
+      }
+    ],
+  },
+  {
+    id: 3,
+    title: "Condominium Cleaning: Meeting the Unique Needs of Residential Buildings",
+    excerpt: "From common areas to specialized services, learn how professional cleaning services address the unique requirements of condominium buildings and enhance property values.",
+    date: "March 21, 2025",
+    readTime: 5,
+    category: "Residential",
+    tags: ["Condominium", "Residential Cleaning"],
+    image: blogImage1,
+    popular: true,
+    featured: false,
+    author: {
+      name: "Sophia Martinez",
+      title: "Residential Services Director",
+      avatar: "/images/avatars/sophia.jpg"
+    },
+    relatedPosts: [5, 8, 9],
+    sections: [
+      {
+        heading: "Common Areas and Shared Spaces",
+        content: "Lobbies, hallways, and amenity spaces require specialized attention to maintain the property's overall impression...",
+        imageUrl: blogImage1,
+      },
+      {
+        heading: "Service Scheduling for Minimal Disruption",
+        content: "Strategic scheduling ensures residents experience minimal disruption while maintaining pristine conditions...",
+        stats: [
+          { label: "Property Value Impact", value: "+7%" },
+          { label: "Resident Satisfaction", value: "94%" },
+          { label: "Maintenance Cost Reduction", value: "22%" }
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How are cleaning schedules determined for condominiums?",
+        answer: "Schedules are typically developed in consultation with the property management, considering resident traffic patterns and building usage..."
+      },
+      {
+        question: "What specialized services do condominiums require?",
+        answer: "Beyond standard cleaning, condominiums often require specialized services like garbage room deodorizing, parkade cleaning, and seasonal window washing..."
+      }
+    ],
+  },
+  {
+    id: 4,
+    title: "Window Cleaning Techniques for High-Rise Buildings",
+    excerpt: "Safety protocols and advanced techniques for cleaning windows in tall structures. Discover how professionals manage the challenges of high-rise window cleaning.",
+    date: "March 15, 2025",
+    readTime: 7,
+    category: "Specialized Services",
+    tags: ["Window Cleaning", "High-Rise", "Safety"],
+    image: blogImage1,
+    featured: false,
+    popular: false,
+    author: {
+      name: "Thomas Wright",
+      title: "Safety and Heights Specialist",
+      avatar: "/images/avatars/thomas.jpg"
+    },
+    relatedPosts: [1, 6, 9],
+    sections: [
+      {
+        heading: "Safety First: Equipment and Protocols",
+        content: "Professional high-rise window cleaning relies on specialized equipment and rigorous safety protocols to protect workers and pedestrians alike...",
+        imageUrl: blogImage1,
+      },
+      {
+        heading: "Pure Water Technology and Reach Systems",
+        content: "Modern window cleaning has evolved beyond traditional squeegees to incorporate deionized water and carbon fiber extension poles...",
+        stats: [
+          { label: "Maximum Working Height", value: "80 stories" },
+          { label: "Safety Compliance Rate", value: "100%" },
+          { label: "UV Protection", value: "Extended 4 years" }
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How often should high-rise windows be cleaned?",
+        answer: "Most commercial high-rises benefit from quarterly exterior window cleaning, though environmental factors may necessitate more frequent service..."
+      },
+      {
+        question: "What weather conditions prevent high-rise window cleaning?",
+        answer: "High winds exceeding 25 mph, electrical storms, freezing temperatures, and heavy precipitation all present safety hazards that would postpone service..."
+      }
+    ],
+  },
+  {
+    id: 5,
+    title: "Restoring Natural Stone: Best Practices and Techniques",
+    excerpt: "Learn about the specialized techniques for natural stone restoration and maintenance. Find out how professionals preserve the beauty of marble, granite, and other stone surfaces.",
+    date: "March 7, 2025",
+    readTime: 9,
+    category: "Specialized Services",
+    tags: ["Stone Restoration", "Maintenance", "Surfaces"],
+    image: blogImage1,
+    popular: true,
+    featured: true,
+    author: {
+      name: "Diana Lewis",
+      title: "Stone Restoration Expert",
+      avatar: "/images/avatars/diana.jpg"
+    },
+    relatedPosts: [1, 3, 8],
+    sections: [
+      {
+        heading: "Understanding Different Stone Types",
+        content: "Each natural stone—from marble and granite to travertine and limestone—requires unique treatment approaches based on composition and porosity...",
+        imageUrl: blogImage1,
+      },
+      {
+        heading: "Diamond Polishing and Honing Techniques",
+        content: "Professional stone restoration often employs diamond abrasives at various grits to achieve the desired finish, from matte to high-gloss...",
+        stats: [
+          { label: "Lifetime Extension", value: "25+ years" },
+          { label: "Gloss Improvement", value: "Up to 95%" },
+          { label: "Value Restoration", value: "87%" }
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Can all stone damage be repaired?",
+        answer: "Most surface damage including etching, scratches, and dullness can be fully restored. Deep cracks may require specialized filling techniques..."
+      },
+      {
+        question: "How long does professional stone restoration last?",
+        answer: "With proper maintenance, professional stone restoration can last 5-10 years before another restoration is needed, depending on traffic and usage..."
+      }
+    ],
+  },
+  {
+    id: 6,
+    title: "Post-Construction Cleaning: The Final Step to Project Completion",
+    excerpt: "The essential guide to thorough post-construction cleaning services. Discover how professionals handle debris removal, fine dust, and surface protection.",
+    date: "February 28, 2025",
+    readTime: 6,
+    category: "Construction",
+    tags: ["Post-Construction", "Debris Removal", "New Buildings"],
+    image: blogImage1,
+    featured: false,
+    popular: false,
+    author: {
+      name: "Michael Torres",
+      title: "Construction Cleaning Manager",
+      avatar: "/images/avatars/michael.jpg"
+    },
+    relatedPosts: [1, 4, 5],
+    sections: [
+      {
+        heading: "The Three Phases of Post-Construction Cleaning",
+        content: "Professional post-construction cleaning follows a methodical approach: rough clean, deep clean, and final detail clean to ensure no residue remains...",
+        imageUrl: blogImage1,
+      },
+      {
+        heading: "Handling Special Surfaces and Materials",
+        content: "New construction presents unique challenges with adhesive residues, grout haze, and protective coating removal requiring specialized solutions...",
+        stats: [
+          { label: "Dust Reduction", value: "99.7%" },
+          { label: "Air Quality Improvement", value: "87%" },
+          { label: "Surface Protection", value: "Complete" }
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "When should post-construction cleaning begin?",
+        answer: "Initial rough cleaning can begin once major construction activities have finished, with final cleaning scheduled after all trades have completed their work..."
+      },
+      {
+        question: "How long does post-construction cleaning take?",
+        answer: "For residential properties, comprehensive post-construction cleaning typically takes 1-2 days, while commercial buildings may require several days to weeks depending on size..."
+      }
+    ],
+  },
+  {
+    id: 7,
+    title: "Medical Office Cleaning: Meeting Healthcare Standards",
+    excerpt: "Understanding the specialized requirements and regulations for cleaning medical facilities. Learn about disinfection protocols and compliance with healthcare standards.",
+    date: "February 21, 2025",
+    readTime: 8,
+    category: "Medical",
+    tags: ["Healthcare", "Disinfection", "Compliance"],
+    image: blogImage1,
+    featured: false,
+    popular: false,
+    author: {
+      name: "Dr. Sarah Williams",
+      title: "Healthcare Sanitation Consultant",
+      avatar: "/images/avatars/sarah.jpg"
+    },
+    relatedPosts: [2, 8, 10],
+    sections: [
+      {
+        heading: "Healthcare Cleaning Standards and Compliance",
+        content: "Medical facilities must adhere to strict guidelines from organizations like CDC, OSHA, and Joint Commission to ensure patient safety and infection control...",
+        imageUrl: blogImage1,
+      },
+      {
+        heading: "Cross-Contamination Prevention Protocols",
+        content: "Healthcare cleaning requires meticulous attention to preventing pathogen transfer between different areas of the facility...",
+        stats: [
+          { label: "HAI Reduction", value: "32%" },
+          { label: "Compliance Rate", value: "100%" },
+          { label: "Patient Confidence", value: "96%" }
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What training do medical facility cleaners receive?",
+        answer: "Specialized technicians undergo rigorous training in bloodborne pathogen handling, regulated medical waste disposal, and healthcare-specific disinfection protocols..."
+      },
+      {
+        question: "How does medical office cleaning differ from standard commercial cleaning?",
+        answer: "Medical cleaning involves hospital-grade disinfectants, specialized equipment to prevent cross-contamination, stricter protocols, and documented cleaning verification..."
+      }
+    ],
+  },
+  {
+    id: 8,
+    title: "Eco-Friendly Cleaning Practices for Sustainable Buildings",
+    excerpt: "Implementing green cleaning techniques that protect both the environment and building occupants. Discover sustainable products and methods for modern facilities.",
+    date: "February 14, 2025",
+    readTime: 7,
+    category: "Sustainable",
+    tags: ["Eco-Friendly", "Green Cleaning", "Sustainability"],
+    image: blogImage1,
+    popular: true,
+    featured: false,
+    author: {
+      name: "Elena Garcia",
+      title: "Sustainability Director",
+      avatar: "/images/avatars/elena.jpg"
+    },
+    relatedPosts: [1, 3, 7],
+    sections: [
+      {
+        heading: "Beyond Green Products: The Sustainable Cleaning Ecosystem",
+        content: "True green cleaning extends beyond eco-friendly chemicals to encompass equipment, processes, and comprehensive waste reduction strategies...",
+        imageUrl: blogImage1,
+      },
+      {
+        heading: "Certifications and Standards in Green Cleaning",
+        content: "Understanding eco certifications like Green Seal, EcoLogo, and LEED helps facilities implement truly sustainable cleaning programs...",
+        stats: [
+          { label: "Chemical Reduction", value: "73%" },
+          { label: "Water Conservation", value: "62%" },
+          { label: "Indoor Air Quality", value: "+45%" }
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Do green cleaning products clean as effectively?",
+        answer: "Modern green cleaning products match or exceed the performance of traditional chemicals while eliminating harmful health impacts and environmental damage..."
+      },
+      {
+        question: "How does green cleaning impact LEED certification?",
+        answer: "Implementing a comprehensive green cleaning program can contribute up to 6 points toward LEED certification under the Indoor Environmental Quality category..."
+      }
+    ],
+  },
+  {
+    id: 9,
+    title: "Emergency Cleaning Services: Responding to Water and Fire Damage",
+    excerpt: "How professional cleaning teams address emergency situations and restore properties after water or fire damage. Learn about rapid response protocols and restoration techniques.",
+    date: "February 7, 2025",
+    readTime: 5,
+    category: "Restoration",
+    tags: ["Emergency", "Restoration", "Damage Control"],
+    image: blogImage1,
+    featured: false,
+    popular: false,
+    author: {
+      name: "James Rodriguez",
+      title: "Emergency Response Director",
+      avatar: "/images/avatars/james.jpg"
+    },
+    relatedPosts: [3, 4, 6],
+    sections: [
+      {
+        heading: "The Critical First 24 Hours After Damage",
+        content: "The initial response window is crucial for preventing secondary damage and begins with comprehensive assessment and immediate containment measures...",
+        imageUrl: blogImage1,
+      },
+      {
+        heading: "Advanced Drying and Decontamination Technology",
+        content: "Modern restoration employs scientific principles and specialized equipment to accelerate recovery and minimize structural damage...",
+        stats: [
+          { label: "Response Time", value: "Under 2 hours" },
+          { label: "Salvage Rate", value: "85%" },
+          { label: "Mold Prevention", value: "98%" }
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is it necessary to hire professionals for water damage?",
+        answer: "Professional response is crucial as standing water can penetrate deeply into structures, causing hidden damage and mold growth that DIY methods cannot address..."
+      },
+      {
+        question: "What should businesses do immediately after fire damage?",
+        answer: "After ensuring everyone's safety and contacting the fire department, businesses should secure the property and contact emergency restoration services before re-entry..."
+      }
+    ],
+  },
+  {
+    id: 10,
+    title: "HVAC and Ventilation System Cleaning: Improving Indoor Air Quality",
+    excerpt: "The importance of regular cleaning for HVAC systems, fan coils, and ventilation ducts. Discover how these services enhance air quality and energy efficiency in buildings.",
+    date: "January 31, 2025",
+    readTime: 6,
+    category: "Specialized Services",
+    tags: ["HVAC", "Air Quality", "Ventilation"],
+    image: blogImage1,
+    featured: false,
+    popular: false,
+    author: {
+      name: "Andrew Patterson",
+      title: "Indoor Air Quality Specialist",
+      avatar: "/images/avatars/andrew.jpg"
+    },
+    relatedPosts: [2, 7, 8],
+    sections: [
+      {
+        heading: "The Hidden Impact of Contaminated HVAC Systems",
+        content: "Dirty ventilation systems not only distribute pollutants throughout facilities but also significantly reduce system efficiency and component lifespan...",
+        imageUrl: blogImage1,
+      },
+      {
+        heading: "Comprehensive Cleaning Methodologies",
+        content: "Professional HVAC cleaning combines mechanical agitation, negative air pressure containment, and specialized vacuuming to ensure complete contaminant removal...",
+        stats: [
+          { label: "Energy Savings", value: "Up to 40%" },
+          { label: "Airborne Particle Reduction", value: "83%" },
+          { label: "System Lifespan Extension", value: "+7 years" }
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How often should commercial HVAC systems be cleaned?",
+        answer: "Most commercial systems benefit from inspection every 6 months and complete cleaning annually, though facilities with high particulate generation may require quarterly service..."
+      },
+      {
+        question: "What are signs that your ventilation system needs cleaning?",
+        answer: "Warning signs include uneven airflow, musty odors, excessive dust accumulation, higher energy bills, and increased respiratory complaints from building occupants..."
+      }
+    ],
+  },
+];

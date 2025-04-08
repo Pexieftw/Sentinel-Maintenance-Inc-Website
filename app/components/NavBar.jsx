@@ -74,6 +74,7 @@ const Navbar = () => {
                     alt="SMI Logo"
                     width={121}
                     height={56} 
+                    priority
                   />
                 </Link>
               </div>

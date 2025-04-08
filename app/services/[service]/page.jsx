@@ -34,7 +34,7 @@ export default async function ServiceDetailPage({ params }) {
               {/* Left side: Text content */}
               <div className="p-8 bg-gradient-to-br from-primary-100 to-primary-300 flex items-center">
                 <div className="max-w-lg">
-                  <p className="text-center md:text-left text-lg md:text-xl lg:text-2xl font-medium text-gray-800 dark:text-white leading-relaxed">
+                  <p className="text-center md:text-left text-lg md:text-xl lg:text-2xl font-medium text-white leading-relaxed">
                     {service.fullDescription}
                   </p>
                 </div>
