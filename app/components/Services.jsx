@@ -7,34 +7,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ClipboardCheck } from 'lucide-react';
 import SectionHeader from '../utils/SectionHeader';
+import { serviceData } from '../utils/data';
 
 const Services = () => {
-  const serviceData = [
-    {
-      id: 'cleaning',
-      title: 'Cleaning Services',
-      description: 'Professional cleaning solutions for residential and commercial properties, ensuring spotless results every time.',
-      image: '/about1.jpg',
-      link: '/services',
-      info: 'Featuring 8 Services'
-    },
-    {
-      id: 'specialized',
-      title: 'Specialized Services',
-      description: 'Custom solutions for unique cleaning challenges, including biohazard cleanup, industrial cleaning, and more.',
-      image: '/about1.jpg',
-      link: '/services',
-      info: 'Featuring 19 Services'
-    },
-    {
-      id: 'restoration',
-      title: 'Restoration',
-      description: 'Complete restoration services for water, fire, and mold damage, helping you recover quickly from disasters.',
-      image: '/about1.jpg',
-      link: '/services',
-      info: 'Featuring 4 Services'
-    }
-  ];
 
   // Initialize AOS
   useEffect(() => {
@@ -63,11 +38,9 @@ const Services = () => {
             <Link
               href={service.link}
               key={service.id}
-              className={`group relative overflow-hidden
-                ${index === 1 ? 'lg:mt-10 md:mt-16 my-0' : 'lg:mb-10 md:mb-16 my-0'} 
-                w-full md:w-[30%] shadow-lg hover:shadow-2xl`}
+              className={`group relative overflow-hidden w-full md:w-[30%] shadow-lg hover:shadow-2xl`}
               data-aos="fade-up" 
-              data-aos-delay={300 + index * 200} // AOS delay
+              data-aos-delay={300 + index * 200}
             >
               <div className="transition-transform duration-300 hover:-translate-y-3">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary-300 opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>

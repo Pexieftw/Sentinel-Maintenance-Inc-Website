@@ -28,7 +28,7 @@ const AboutUs = () => {
 
   return (
     <section className="pt-10 md:pt-20 bg-gradient-to-b from-white to-gray-100">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 lg:px-0">
         <div className="flex flex-col md:flex-row items-stretch gap-12" data-aos="fade-up">
           {/* Images Section */}
           <div className="md:w-1/2 h-auto flex">

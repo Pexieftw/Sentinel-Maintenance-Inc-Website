@@ -170,11 +170,11 @@ const AboutUs = () => {
           </div>
           <div className="mb-8 md:mb-12 pt-10">
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-gray-900">
-              <span className="block mb-2">
-                Our Personnel
+              <span className="mb-2">
+                Our Team {" "}
               </span>
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-primary-100 to-primary-300">
-                Hierarchy
+                Structure
               </span>
             </h2>
             <div className="flex flex-col space-y-6 max-w-4xl mx-auto text-left">

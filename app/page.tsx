@@ -2,9 +2,10 @@ import React from 'react';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
 import Services from './components/Services';
-import AreasWeServe from './components/AreasWeServe';
 import TeamworkCulture from './components/TeamworkCulture';
 import HealthSafety from './components/HealthSafety';
+import AreasWeServe from './components/AreasWeServe';
+import MinimizedContactUs from './components/MinimizedContactUs';
 import SectionDivider from './utils/SectionDivider'
 import PageTitle from './utils/PageTitle';
 
@@ -15,10 +16,11 @@ const Home = () => {
       <Hero />
       <AboutUs />
       <Services />
-      <AreasWeServe />
       <TeamworkCulture/>
       <SectionDivider/>
       <HealthSafety />
+      <AreasWeServe />
+      <MinimizedContactUs />
     </div>
   );
 };

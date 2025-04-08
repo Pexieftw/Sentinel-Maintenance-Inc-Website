@@ -4,19 +4,21 @@ import React, { useState, useEffect } from 'react';
 import { 
   MessageCircle, 
   Users, 
-  GraduationCap,
-  HandHelping,
   CircleUserRound, 
   Target, 
   CheckCircle, 
   Award,
   Handshake
 } from 'lucide-react';
+import Image from 'next/image';
+import Support from "@/public/svg-ui/Support.svg";
+import Expert from "@/public/svg-ui/Expert.svg";
+
 import BreadCrumbsSection from '../utils/BreadCrumbsSection';
 
 const TeamworkCulture = () => {
   // Animation for stats with proper target values
-  const stats = { clients: 98, support: 24, staff: 250 };
+  const stats = { clients: 98, support: 24, staff: 25 };
 
   const Section = ({ icon: Icon, title, children, animationDirection }) => (
     <div 
@@ -108,7 +110,7 @@ const TeamworkCulture = () => {
                           {index + 1}
                         </div>
                       </div>
-                      <h4 className="ml-5 text-2xl font-semibold text-white group-hover:text-green-700 transition-colors duration-300">
+                      <h4 className="ml-5 text-2xl font-semibold text-white transition-colors duration-300">
                         {item.label}
                       </h4>
                     </div>
@@ -132,8 +134,26 @@ const TeamworkCulture = () => {
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
                 {[
-                  { value: stats.clients, label: "Expert Response", suffix: "%", icon: <GraduationCap className="h-8 w-8" /> },
-                  { value: stats.support, label: "Day Support", suffix: "/7", icon: <HandHelping className="h-8 w-8" /> },
+                  { value: stats.clients, label: "Expert Response", suffix: "%", icon: (
+                    <div className="h-8 w-8 relative">
+                      <Image 
+                        src={Expert} 
+                        alt="Expert" 
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  ) },
+                  { value: stats.support, label: "Day Support", suffix: "/7", icon: (
+                    <div className="h-8 w-8 relative">
+                      <Image 
+                        src={Support} 
+                        alt="Support" 
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  ) },
                   { value: stats.staff, label: "Trained Staff", suffix: "+", icon: <CircleUserRound className="h-8 w-8" /> }
                 ].map((stat, index) => (
                   <div 
@@ -142,7 +162,7 @@ const TeamworkCulture = () => {
                     data-aos="fade-up"
                     data-aos-delay={100 + (index * 150)}
                   >
-                    <div className="bg-white p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-primary-300 shadow-sm">
+                    <div className="bg-white p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-sm">
                       {stat.icon}
                     </div>
                     <p className="text-4xl text-white font-bold text-priamry-300 mb-1">

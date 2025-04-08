@@ -16,7 +16,7 @@ const TopBar = () => {
 
   return (
     <div className="bg-primary-300 text-white text-sm">
-      <div className="w-full max-w-6xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         {/* Mobile View */}
         <div className="md:hidden w-full">
           <div className="flex items-center justify-between">

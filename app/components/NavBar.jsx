@@ -64,7 +64,7 @@ const Navbar = () => {
           }`}
           style={{ top: 'var(--navbar-top)' }}
         >
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="relative flex items-center h-20 px-4 lg:px-0">
               {/* Logo */}
               <div className="flex items-center">
@@ -97,7 +97,7 @@ const Navbar = () => {
                     {/* Dropdown for Services */}
                     {item.dropdown && activeDropdown === item.label && (
                       <div 
-                        className="absolute left-0 top-20 w-6xl bg-white shadow-lg border border-gray-200"
+                        className="absolute left-0 top-20 w-7xl bg-white shadow-lg border border-gray-200"
                         style={{
                           animation: 'fadeIn 0.5s ease-out forwards'
                         }}

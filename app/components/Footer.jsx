@@ -11,14 +11,12 @@ const Footer = () => {
     "Thornhill", "Richmond Hill", "Markham", "Mississauga", "Brampton"
   ];
 
-  // State to track whether to show all services for each category
   const [showAllServices, setShowAllServices] = useState({
     'Cleaning Services': false,
     'Specialized Services': false,
     'Restoration': false,
   });
 
-  // Function to toggle "Show More" for a specific category
   const toggleShowMore = (category) => {
     setShowAllServices((prev) => ({
       ...prev,
@@ -26,13 +24,11 @@ const Footer = () => {
     }));
   };
 
-  // Helper function to get services for a category
   const getServices = (category, serviceList) => {
     if (category === 'Specialized Services') {
-      // Combine column1 and column2 for Specialized Services
       return [...serviceList.column1, ...serviceList.column2];
     }
-    return serviceList; // For other categories, return the array directly
+    return serviceList;
   };
 
   return (
@@ -42,7 +38,7 @@ const Footer = () => {
         <div className="flex flex-col text-center md:grid md:grid-cols-6 md:gap-8 md:text-left">
           {/* Company Info - Left Side*/}
           <div className="md:col-span-2">
-            <div className="text-4xl font-bold flex items-center justify-center mb-6 md:justify-start">
+            <div className="md:pr-4 text-4xl font-bold flex items-center justify-center mb-6 md:justify-between gap-3">
               <Image
                 src="/icons/SMI-LOGO-MINI.svg"
                 alt="Logo"
@@ -50,10 +46,17 @@ const Footer = () => {
                 height={37}
                 className="brightness-0 invert"
               />
+              <Image
+                src="/svg-ui/MapleLeaf.svg"
+                alt="Canadian Maple Leaf"
+                width={32}
+                height={32}
+                className="hidden md:block brightness-0 invert"
+              />
             </div>
-            <p className="text-gray-300 mb-4">
-              Sentinel Maintenance Inc. (SMI) is a full-service Property Services Company established in 1989. 
-              We provide high quality, conscientious and reliable service through our dedicated team.
+            <p className="text-gray-300 mb-4 leading-relaxed">
+              Sentinel Maintenance Inc. (SMI) is a proudly 100% Canadian, full-service Property Services Company established in 1989. 
+              Based in Canada and serving Canadian communities for over three decades
             </p>
 
             <div>
@@ -115,6 +118,9 @@ const Footer = () => {
               © {new Date().getFullYear()} Sentinel Maintenance Inc. All rights reserved.
             </p>
             <div className="flex space-x-6">
+              <Link href="/blogs" className="text-gray-400 hover:text-white text-sm">
+                Blogs
+              </Link>
               <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm">
                 Privacy Policy
               </Link>

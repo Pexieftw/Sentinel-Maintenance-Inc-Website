@@ -79,6 +79,34 @@ export const navItems = [
   { label: 'Contact Us', link: '/contact-us' }
 ];
 
+// Services Informations
+export const serviceData = [
+  {
+    id: 'cleaning',
+    title: 'Cleaning Services',
+    description: 'Professional cleaning solutions for residential and commercial properties, ensuring spotless results every time.',
+    image: '/about1.jpg',
+    link: '/services',
+    info: 'Featuring 8 Services'
+  },
+  {
+    id: 'specialized',
+    title: 'Specialized Services',
+    description: 'Custom solutions for unique cleaning challenges, including biohazard cleanup, industrial cleaning, and more.',
+    image: '/about1.jpg',
+    link: '/services',
+    info: 'Featuring 21 Services'
+  },
+  {
+    id: 'restoration',
+    title: 'Restoration',
+    description: 'Complete restoration services for water, fire, and mold damage, helping you recover quickly from disasters.',
+    image: '/about1.jpg',
+    link: '/services',
+    info: 'Featuring 4 Services'
+  }
+];
+
 
 // Center of the Greater Toronto Area
 export const GTA_CENTER = [43.7800, -79.4200];
@@ -97,7 +125,6 @@ export const GTA_CITIES = [
   { name: "Concord", coordinates: [43.7935, -79.4858] },
   { name: "Milton", coordinates: [43.5183, -79.8774] },
   { name: "Mississauga", coordinates: [43.5890, -79.6441] },
-  { name: "Newmarket", coordinates: [44.0566, -79.4661] },
   { name: "Brampton", coordinates: [43.7315, -79.7624] },
   { name: "Woodbridge", coordinates: [43.7758, -79.5960] },
   { name: "Oakville", coordinates: [43.4675, -79.6877] },
@@ -165,11 +192,6 @@ export const areas = [
   {
     name: 'Mississauga',
     description: 'Comprehensive coverage across Mississauga with teams strategically located for quick response.',
-    imageSrc: '/about1.jpg'
-  },
-  {
-    name: 'Newmarket',
-    description: 'Reliable service throughout Newmarket with professionals who understand the local landscape.',
     imageSrc: '/about1.jpg'
   },
   {
