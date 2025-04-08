@@ -352,7 +352,7 @@ export default function BlogPage() {
               </div>
             )}
             
-            {/* Sort options above blog list (only on desktop) */}
+            {/* Sort options */}
             <div className="hidden md:flex justify-between items-center mb-6">
               <div className="text-gray-700">
                 <span className="font-medium">{filteredBlogs.length}</span> Articles found
@@ -486,11 +486,9 @@ export default function BlogPage() {
                     <ChevronLeft size={20} />
                   </button>
                   
-                  {/* Show ellipsis for many pages */}
                   {Array.from({ length: totalPages }).map((_, index) => {
                     const pageNumber = index + 1;
                     
-                    // Always show first, last, current and adjacent pages
                     if (
                       pageNumber === 1 ||
                       pageNumber === totalPages ||
