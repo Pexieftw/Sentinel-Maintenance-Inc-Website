@@ -132,95 +132,111 @@ export const GTA_CITIES = [
   { name: "Hamilton", coordinates: [43.2557, -79.8711] }
 ];
 
+import brampton from "@/public/cities/brampton.webp";
+import burlington from "@/public/cities/burlington.webp";
+import concord from "@/public/cities/concord.webp";
+import etobicoke from "@/public/cities/etobicoke.webp";
+import hamilton from "@/public/cities/hamilton.webp";
+import maple from "@/public/cities/maple.webp";
+import markham from "@/public/cities/markham.webp";
+import milton from "@/public/cities/milton.webp";
+import mississauga from "@/public/cities/mississauga.webp";
+import northYork from "@/public/cities/north-york.webp";
+import oakville from "@/public/cities/oakville.webp";
+import richmondHill from "@/public/cities/richmond-hill.webp";
+import scarborough from "@/public/cities/scarborough.webp";
+import thornhill from "@/public/cities/thornhill.webp";
+import toronto from "@/public/cities/toronto.webp";
+import vaughan from "@/public/cities/vaughan.webp";
+import woodbridge from "@/public/cities/woodbridge.webp";
 
 export const areas = [
   {
     name: 'Toronto',
     description: 'Our core service area, covering all neighborhoods in Toronto with prompt and reliable service.',
-    imageSrc: '/about1.jpg'
+    imageSrc: toronto
   },
   {
     name: 'North York',
     description: 'Complete coverage across North York with specialized service teams familiar with the area.',
-    imageSrc: '/about1.jpg'
+    imageSrc: northYork
   },
   {
     name: 'Scarborough',
     description: 'Extending our quality services throughout Scarborough communities with dedicated local teams.',
-    imageSrc: '/about1.jpg'
+    imageSrc: scarborough
   },
   {
     name: 'Etobicoke',
     description: 'Full service coverage in Etobicoke with experienced professionals who know the area well.',
-    imageSrc: '/about1.jpg'
+    imageSrc: etobicoke
   },
   {
     name: 'Vaughan',
     description: 'Reliable service throughout Vaughan with teams that understand the unique needs of this growing region.',
-    imageSrc: '/about1.jpg'
+    imageSrc: vaughan
   },
   {
     name: 'Thornhill',
     description: 'Dedicated service providers covering all of Thornhill with attention to detail and quality.',
-    imageSrc: '/about1.jpg'
+    imageSrc: thornhill
   },
   {
     name: 'Richmond Hill',
     description: 'Expert service teams covering Richmond Hill with comprehensive solutions for all clients.',
-    imageSrc: '/about1.jpg'
+    imageSrc: richmondHill
   },
   {
     name: 'Markham',
     description: 'Full coverage across Markham with specialized teams for both residential and commercial clients.',
-    imageSrc: '/about1.jpg'
+    imageSrc: markham
   },
   {
     name: 'Maple',
     description: 'Serving the Maple community with tailored solutions and responsive service teams.',
-    imageSrc: '/about1.jpg'
+    imageSrc: maple
   },
   {
     name: 'Concord',
     description: 'Dedicated coverage in Concord with professionals who understand local requirements and expectations.',
-    imageSrc: '/about1.jpg'
+    imageSrc: concord
   },
   {
     name: 'Milton',
     description: 'Extending our quality service to Milton with teams that are familiar with this growing community.',
-    imageSrc: '/about1.jpg'
+    imageSrc: milton
   },
   {
     name: 'Mississauga',
     description: 'Comprehensive coverage across Mississauga with teams strategically located for quick response.',
-    imageSrc: '/about1.jpg'
+    imageSrc: mississauga
   },
   {
     name: 'Brampton',
     description: 'Full service coverage in Brampton with teams equipped to handle all client needs efficiently.',
-    imageSrc: '/about1.jpg'
+    imageSrc: brampton
   },
   {
     name: 'Woodbridge',
     description: 'Dedicated service teams covering Woodbridge with attention to detail and customer satisfaction.',
-    imageSrc: '/about1.jpg'
+    imageSrc: woodbridge
   },
   {
     name: 'Oakville',
     description: 'Expert service providers throughout Oakville delivering premium solutions to all clients.',
-    imageSrc: '/about1.jpg'
+    imageSrc: oakville
   },
   {
     name: 'Burlington',
     description: 'Extending our quality service to Burlington with professionals who understand local requirements.',
-    imageSrc: '/about1.jpg'
+    imageSrc: burlington
   },
   {
     name: 'Hamilton',
     description: 'Comprehensive coverage across Hamilton with teams ready to provide exceptional service.',
-    imageSrc: '/about1.jpg'
+    imageSrc: hamilton
   }
 ];
-
 
 export const serviceCategories = [
   {

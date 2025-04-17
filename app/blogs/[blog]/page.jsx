@@ -199,7 +199,7 @@ export default function BlogPost() {
           <h2 className="text-2xl font-bold mb-3">Ready to experience our cleaning services?</h2>
           <p className="mb-6 text-green-50">Professional solutions tailored to your specific needs</p>
           <Link 
-            href="/contact"
+            href="/contact-us"
             className="inline-block bg-white text-gray-800 font-semibold px-6 py-3 hover:bg-gray-100 transition-colors shadow-md"
           >
             Contact Us

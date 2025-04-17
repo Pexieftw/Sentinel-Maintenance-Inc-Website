@@ -1,48 +1,86 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import smiLogo from '@/public/icons/SMI-NEW-FONT.svg';
-
+import { usePathname, useRouter } from 'next/navigation';
 import { services, navItems } from "../utils/data";
 
+import smiLogo from '@/public/icons/SMI-NEW-FONT.svg';
 const Navbar = () => {
+  const pathname = usePathname();
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeCategoryTab, setActiveCategoryTab] = useState(null);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  
+  const navLinksRef = useRef([]);
+  const underlineRef = useRef(null);
+  const [underlineStyle, setUnderlineStyle] = useState({
+    left: 0,
+    width: 0,
+    opacity: 0,
+    transition: 'none',
+  });
+  
+  useEffect(() => {
+    updateUnderlinePosition();
+  }, [pathname]);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      updateUnderlinePosition(false);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
+  
+  // Function to update the underline position
+  const updateUnderlinePosition = (animate = true) => {
+    const activeIndex = navItems.findIndex(item => pathname === item.link);
+    
+    if (activeIndex >= 0 && navLinksRef.current[activeIndex]) {
+      const activeLink = navLinksRef.current[activeIndex];
+      const { offsetLeft, offsetWidth } = activeLink;
+      
+      setUnderlineStyle({
+        left: offsetLeft,
+        width: offsetWidth,
+        opacity: 1,
+        transition: animate ? 'all 0.3s ease-in-out' : 'none',
+      });
+    } else {
+      setUnderlineStyle({
+        ...underlineStyle,
+        opacity: 0,
+        transition: animate ? 'opacity 0.3s ease-in-out' : 'none',
+      });
+    }
+  };
 
   // Handle scroll behavior
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-
       const navbarPosition = currentScrollPos < 52 ? 52 : 0;
       
-      // Set visibility based on scroll direction
       setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 52);
-      
-      // Update the navbar position style
       document.documentElement.style.setProperty('--navbar-top', `${navbarPosition}px`);
       
       setPrevScrollPos(currentScrollPos);
     };
   
-    // Set initial position based on initial scroll position
     const initialScrollPos = window.scrollY;
     const initialPosition = initialScrollPos < 52 ? 52 : 0;
     document.documentElement.style.setProperty('--navbar-top', `${initialPosition}px`);
   
-    // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
-    
-    // Clean up
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
   
-  // Prevent scrolling when menu is open
+  // Handle body scroll when menu is open
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -55,33 +93,67 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
   
+  // Handle link click with animation
+  const handleLinkClick = (e, link) => {
+    if (pathname === link) return;
+    
+    // Get target link element
+    const linkIndex = navItems.findIndex(item => item.link === link);
+    if (linkIndex >= 0 && navLinksRef.current[linkIndex]) {
+      const targetLink = navLinksRef.current[linkIndex];
+      const { offsetLeft, offsetWidth } = targetLink;
+      
+      // Animate underline to new position before navigation
+      setUnderlineStyle({
+        left: offsetLeft,
+        width: offsetWidth,
+        opacity: 1,
+        transition: 'all 0.3s ease-in-out',
+      });
+    }
+  };
+  
   return (
     <>
-      {!isMenuOpen && (
-        <nav 
-          className={`w-full bg-white shadow-md z-40 fixed left-0 right-0 transition-all duration-300 ease-in-out ${
-            visible ? 'translate-y-0' : '-translate-y-full'
-          }`}
-          style={{ top: 'var(--navbar-top)' }}
-        >
-          <div className="max-w-7xl mx-auto">
-            <div className="relative flex items-center h-20 px-4 lg:px-0">
-              {/* Logo */}
-              <div className="flex items-center">
-                <Link href="/">
-                  <Image
-                    src={smiLogo}
-                    alt="SMI Logo"
-                    width={121}
-                    height={56} 
-                    priority
-                  />
-                </Link>
-              </div>
+      <nav 
+        className={`w-full bg-white shadow-md z-40 fixed left-0 right-0 transition-all duration-300 ease-in-out ${
+          visible ? 'translate-y-0' : '-translate-y-full'
+        }`}
+        style={{ top: 'var(--navbar-top)' }}
+      >
+        <div className="relative max-w-7xl mx-auto">
+          <div className="flex items-center h-22 px-4 lg:px-0">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Link href="/">
+                <Image
+                  src={smiLogo}
+                  alt="Logo"
+                  width={160}
+                  height={83} 
+                  priority
+                />
+              </Link>
+            </div>
 
-              {/* Desktop Navigation */}
-              <div className="hidden lg:flex flex-1 justify-end items-center h-full">
-                {navItems.map((item, index) => (
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex flex-1 justify-end items-center h-full">
+              {/* Animated underline element */}
+              <span 
+                ref={underlineRef}
+                className="absolute bottom-4 h-1 bg-primary-300"
+                style={{
+                  left: `${underlineStyle.left}px`,
+                  width: `${underlineStyle.width}px`,
+                  opacity: underlineStyle.opacity,
+                  transition: underlineStyle.transition,
+                }}
+              />
+              
+              {navItems.map((item, index) => {
+                const isActive = pathname === item.link;
+
+                return (
                   <div 
                     key={index} 
                     className="group h-full flex items-center"
@@ -90,15 +162,19 @@ const Navbar = () => {
                   >
                     <Link
                       href={item.link}
-                      className="flex text-gray-800 hover:text-primary-500 px-4 h-full items-center text-sm font-medium transition-colors duration-300 hover:bg-gray-50"
+                      ref={el => navLinksRef.current[index] = el}
+                      onClick={(e) => handleLinkClick(e, item.link)}
+                      className={`${isActive ? 'font-bold text-primary-600' : 'font-normal'} 
+                        flex text-gray-800 hover:text-primary-500 px-4 h-full items-center text-sm 
+                        font-medium transition-colors duration-300 hover:bg-gray-50`}
                     >
                       {item.label}
                       {item.dropdown && <ChevronDown className="ml-1 w-4 h-4" />}
                     </Link>
-                    {/* Dropdown for Services */}
+                    
+                    {/* Dropdown menu */}
                     {item.dropdown && activeDropdown === item.label && (
-                      <div 
-                        className="absolute left-0 top-20 w-7xl bg-white shadow-lg border border-gray-200"
+                      <div className="absolute left-0 top-22 w-7xl bg-white shadow-lg border border-gray-200"
                         style={{
                           animation: 'fadeIn 0.5s ease-out forwards'
                         }}
@@ -196,37 +272,37 @@ const Navbar = () => {
                       </div>
                     )}
                   </div>
-                ))}
-              </div>
+                );
+              })}
+            </div>
 
-              {/* Mobile Menu Buttons*/}
-              <div className="flex lg:hidden items-center gap-4 ml-auto">
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center p-3 bg-primary-300 text-white hover:bg-primary-400 
-                    focus:outline-none focus:ring-2 focus:ring-inset cursor-pointer"
-                  aria-expanded={isMenuOpen}
-                >
-                  <a href="tel:+14169184177">
-                    <Phone className="block h-6 w-6" aria-hidden="true" />
-                  </a>
-                </button>
+            {/* Mobile Menu Buttons (unchanged) */}
+            <div className="flex lg:hidden items-center gap-4 ml-auto">
+              <button
+                type="button"
+                className="inline-flex items-center justify-center p-3 bg-primary-300 text-white hover:bg-primary-400 
+                  focus:outline-none focus:ring-2 focus:ring-inset cursor-pointer"
+                aria-expanded={isMenuOpen}
+              >
+                <a href="tel:+14169184177">
+                  <Phone className="block h-6 w-6" aria-hidden="true" />
+                </a>
+              </button>
 
-                <button
-                  onClick={() => setIsMenuOpen(true)}
-                  type="button"
-                  className="inline-flex items-center justify-center p-3 bg-primary-300 text-white hover:bg-primary-400 
-                    focus:outline-none focus:ring-2 focus:ring-inset cursor-pointer"
-                  aria-expanded={isMenuOpen}
-                >
-                  <span className="sr-only">Open main menu</span>
-                  <Menu className="block h-6 w-6" aria-hidden="true" />
-                </button>
-              </div>
+              <button
+                onClick={() => setIsMenuOpen(true)}
+                type="button"
+                className="inline-flex items-center justify-center p-3 bg-primary-300 text-white hover:bg-primary-400 
+                  focus:outline-none focus:ring-2 focus:ring-inset cursor-pointer"
+                aria-expanded={isMenuOpen}
+              >
+                <span className="sr-only">Open main menu</span>
+                <Menu className="block h-6 w-6" aria-hidden="true" />
+              </button>
             </div>
           </div>
-        </nav>
-      )}
+        </div>
+      </nav>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
@@ -273,7 +349,7 @@ const Navbar = () => {
                     {item.dropdown ? (
                       <div>
                         <div
-                          className="px-4 py-3 text-gray-800 flex justify-center items-center hover:bg-gray-100 cursor-pointer transition duration-200 rounded-md"
+                          className="px-4 py-3 text-gray-800 flex justify-center items-center hover:bg-gray-100 cursor-pointer transition duration-200"
                           onClick={() => {
                             setActiveDropdown(activeDropdown === item.label ? null : item.label);
                             // Set first category as active by default when opening dropdown
@@ -291,7 +367,7 @@ const Navbar = () => {
                         </div>
 
                         {activeDropdown === item.label && (
-                          <div className="bg-gray-50 p-4 rounded-lg mt-2 overflow-x-hidden" 
+                          <div className="bg-gray-50 p-4 mt-2 overflow-x-hidden" 
                             style={{
                               animation: 'slideDown 0.4s ease-out forwards'
                             }}
@@ -300,7 +376,7 @@ const Navbar = () => {
                               {Object.keys(item.dropdown).map((category, catIndex) => (
                                 <button
                                   key={category}
-                                  className={`cursor-pointer py-2 px-3 rounded-md text-sm font-medium transition-all duration-300 overflow-x-hidden ${
+                                  className={`cursor-pointer py-2 px-3 text-sm font-medium transition-all duration-300 overflow-x-hidden ${
                                     activeCategoryTab === category
                                       ? 'bg-primary-500 text-white shadow-md'
                                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -335,7 +411,7 @@ const Navbar = () => {
                                           >
                                             <Link 
                                               href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                              className="block w-full text-center py-3 px-4 text-gray-700 bg-white rounded-md hover:bg-primary-500 hover:text-white hover:shadow-md transition-all duration-200"
+                                              className="block w-full text-center py-3 px-4 text-gray-700 bg-white hover:bg-primary-500 hover:text-white hover:shadow-md transition-all duration-200"
                                               onClick={() => setIsMenuOpen(false)}
                                             >
                                               {service}
@@ -353,7 +429,7 @@ const Navbar = () => {
                                           >
                                             <Link 
                                               href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                              className="block w-full text-center py-3 px-4 text-gray-700 bg-white rounded-md hover:bg-primary-500 hover:text-white hover:shadow-md transition-all duration-200"
+                                              className="block w-full text-center py-3 px-4 text-gray-700 bg-white hover:bg-primary-500 hover:text-white hover:shadow-md transition-all duration-200"
                                               onClick={() => setIsMenuOpen(false)}
                                             >
                                               {service}
@@ -373,7 +449,7 @@ const Navbar = () => {
                                         >
                                           <Link 
                                             href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-                                            className="block w-full text-center py-3 px-4 text-gray-700 bg-white rounded-md hover:bg-primary-500 hover:text-white hover:shadow-md transition-all duration-200"
+                                            className="block w-full text-center py-3 px-4 text-gray-700 bg-white hover:bg-primary-500 hover:text-white hover:shadow-md transition-all duration-200"
                                             onClick={() => setIsMenuOpen(false)}
                                           >
                                             {service}
@@ -391,7 +467,7 @@ const Navbar = () => {
                     ) : (
                       <Link
                         href={item.link}
-                        className="flex justify-center px-4 py-3 text-lg font-medium text-gray-800 hover:bg-gray-100 transition duration-200 rounded-md"
+                        className="flex justify-center px-4 py-3 text-lg font-medium text-gray-800 hover:bg-gray-100 transition duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.label}

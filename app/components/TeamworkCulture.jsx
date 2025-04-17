@@ -44,32 +44,25 @@ const ModernTeamworkSection = () => {
       const sectionTop = sectionRef.current.getBoundingClientRect().top;
       const sectionHeight = sectionRef.current.getBoundingClientRect().height;
       const windowHeight = window.innerHeight;
-      
-      // Calculate how far we've scrolled into the section
+
       const scrolledIntoSection = windowHeight - sectionTop;
       
-      // Calculate percentage scrolled (0 to 1)
       let percentScrolled = scrolledIntoSection / sectionHeight;
       
-      // Clamp values between 0 and 100
       percentScrolled = Math.max(0, Math.min(1, percentScrolled));
       
-      // Only update if the new value is larger than the previous maximum
       if (percentScrolled > maxLineHeightRef.current) {
         maxLineHeightRef.current = percentScrolled;
         setLineHeight(percentScrolled * 100);
       }
     };
 
-    // Initialize AOS
     AOS.init({
       duration: 800,
-      once: true, // This ensures AOS animations only happen once
+      once: true,
     });
 
-    // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
-    // Initial calculation
     handleScroll();
 
     return () => {

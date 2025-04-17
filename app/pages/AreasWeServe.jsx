@@ -108,7 +108,7 @@ const AreasWeServe = () => {
                         className="brightness-90"
                         priority={index === activeIndex}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-primary-500/15"></div>
                     </div>
 
                     {/* Map Pin and Text */}
@@ -202,6 +202,8 @@ const AreasWeServe = () => {
                       style={{ objectFit: 'cover' }}
                       className="group-hover:scale-105 transition-transform duration-700"
                     />
+                    
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-500/25 to-primary-300/0"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-300/40 to-transparent group-hover:from-primary-400/40 transition-all duration-300"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/50 transition-all duration-300"></div>
                     <div className="absolute bottom-0 left-0 w-full p-4 flex items-center">

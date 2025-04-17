@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import { Building2 } from 'lucide-react';
 import Image from 'next/image';
 import SectionHeader from '../utils/SectionHeader';
+import Link from 'next/link';
 
 import aboutImage1 from "@/public/about1.jpg"; 
 import aboutImage2 from "@/public/about2.jpg"; 
@@ -136,17 +137,18 @@ const AboutUs = () => {
               
               {/* CTA Button */}
               <div className="flex justify-center md:block">
-                <button 
-                  onClick={handleReadMore}
-                  className="cursor-pointer relative overflow-hidden group px-8 py-4 bg-primary-300 text-white font-medium shadow-lg transform transition-all duration-300 hover:scale-110"
-                >
-                  <span className="relative z-10 flex items-center">
-                    Learn More
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                  </span>
-                </button>
+                <Link href="/about-us" passHref>
+                  <button 
+                    className="cursor-pointer relative overflow-hidden group px-8 py-4 bg-primary-300 text-white font-medium shadow-lg transform transition-all duration-300 hover:scale-110"
+                  >
+                    <span className="relative z-10 flex items-center">
+                      Learn More
+                      <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                      </svg>
+                    </span>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
