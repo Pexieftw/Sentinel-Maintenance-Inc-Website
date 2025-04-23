@@ -251,6 +251,28 @@ import newCondominiumConstructionCleaning from "@/public/pages/services/cleaning
 import officeCleaning from "@/public/pages/services/cleaning services/office-cleaning.webp";
 import postConstructionCleaning from "@/public/pages/services/cleaning services/post-construction-cleaning.webp";
 
+import covid19Cleaning from "@/public/pages/services/specialized services/covid19-cleaning.webp";
+import deepCleaning from "@/public/pages/services/specialized services/deep-cleaning-and-disinfection.webp";
+import exteriorPowerWashing from "@/public/pages/services/specialized services/exterior-power-washing.webp";
+import fanCoilCleaning from "@/public/pages/services/specialized services/fan-coil-cleaning.webp";
+import foggingDisinfection from "@/public/pages/services/specialized services/fogging-disinfection.webp";
+import graffitiRemoval from "@/public/pages/services/specialized services/graffiti-removal.webp";
+import hvacCleaning from "@/public/pages/services/specialized services/hvac-cleaning.webp";
+import industrialKitchenVentCleaning from "@/public/pages/services/specialized services/industrial-kitchen-vent-cleaning.webp";
+import junkRemoval from "@/public/pages/services/specialized services/junk-removal.webp";
+import landscaping from "@/public/pages/services/specialized services/landscaping.webp";
+import laundryExhaustFanCleaning from "@/public/pages/services/specialized services/laundry-kitch-exhaust-fan-cleaning.webp";
+import mattingInstallation from "@/public/pages/services/specialized services/matting-installation.webp";
+import movingServices from "@/public/pages/services/specialized services/moving-services.webp";
+import naturalStoneRestoration from "@/public/pages/services/specialized services/natural-stone-restoration.webp";
+import parkingGaragePowerWashing from "@/public/pages/services/specialized services/parking-garage-power-washing.webp";
+import snowRemoval from "@/public/pages/services/specialized services/snow-removal.webp";
+import stoneStaining from "@/public/pages/services/specialized services/stone-staining.webp";
+import tileGroutCleaning from "@/public/pages/services/specialized services/tile-grout-cleaning.webp";
+import windowCleaning from "@/public/pages/services/specialized services/window-cleaning.webp";
+import animalControl from "@/public/pages/services/specialized services/animal-control.webp";
+import carpetCleaning from "@/public/pages/services/specialized services/carpet-cleaning.webp";
+
 import amrt from "@/public/pages/services/restoration/amrt.webp";
 import fireRestoration from "@/public/pages/services/restoration/fire-restoration.webp";
 import floodCleanup from "@/public/pages/services/restoration/flood-cleanup.webp";
@@ -489,7 +511,7 @@ export const serviceCategories = [
         name: 'Deep Cleaning and Disinfection',
         slug: 'deep-cleaning-and-disinfection',
         description: 'Comprehensive sanitization using advanced cleaning technologies.',
-        image: '/about1.jpg',
+        image: deepCleaning,
         fullDescription: 'Our deep cleaning and disinfection service provides a thorough sanitization process using hospital-grade disinfectants and cutting-edge cleaning technologies.',
         keyFeatures: [
           'Advanced antimicrobial treatments',
@@ -516,7 +538,7 @@ export const serviceCategories = [
         name: 'Fogging Disinfection',
         slug: 'fogging-disinfection',
         description: 'Advanced disinfection technique using fog-based sanitization.',
-        image: '/about1.jpg',
+        image: foggingDisinfection,
         fullDescription: 'Our fogging disinfection service uses specialized equipment to create a fine mist that penetrates hard-to-reach areas, providing comprehensive sanitization for entire spaces.',
         keyFeatures: [
           'Complete area coverage',
@@ -543,7 +565,7 @@ export const serviceCategories = [
         name: 'Low-Rise and High-rise Window Cleaning',
         slug: 'low-rise-and-high-rise-window-cleaning',
         description: 'Professional window cleaning for buildings of all heights.',
-        image: '/about1.jpg',
+        image: windowCleaning,
         fullDescription: 'Our window cleaning service provides streak-free, crystal-clear windows for both low-rise and high-rise buildings, using advanced safety techniques and professional-grade equipment.',
         keyFeatures: [
           'Safe working at height procedures',
@@ -570,7 +592,7 @@ export const serviceCategories = [
         name: 'Exterior Power Washing',
         slug: 'exterior-power-washing',
         description: 'High-pressure cleaning for exterior surfaces and facades.',
-        image: '/about1.jpg',
+        image: exteriorPowerWashing,
         fullDescription: 'Our exterior power washing service removes years of dirt, grime, and environmental buildup from various surfaces, restoring them to their original appearance.',
         keyFeatures: [
           'Adjustable pressure settings',
@@ -597,7 +619,7 @@ export const serviceCategories = [
         name: 'Parking Garage Power Washing',
         slug: 'parking-garage-power-washing',
         description: 'Specialized cleaning for parking structures and garages.',
-        image: '/about1.jpg',
+        image: parkingGaragePowerWashing,
         fullDescription: 'Our parking garage power washing service removes oil stains, dirt, and grime, maintaining a clean and safe environment for vehicles and users.',
         keyFeatures: [
           'Oil and stain removal',
@@ -624,7 +646,7 @@ export const serviceCategories = [
         name: 'Carpet Cleaning',
         slug: 'carpet-cleaning',
         description: 'Deep cleaning and restoration for carpeted surfaces.',
-        image: '/about1.jpg',
+        image: carpetCleaning,
         fullDescription: 'Our carpet cleaning service uses advanced extraction and sanitization techniques to remove deep-seated dirt, allergens, and stains, revitalizing your carpets.',
         keyFeatures: [
           'Hot water extraction method',
@@ -651,7 +673,7 @@ export const serviceCategories = [
         name: 'COVID-19 Cleaning',
         slug: 'covid-19-cleaning',
         description: 'Specialized sanitization to prevent COVID-19 transmission.',
-        image: '/about1.jpg',
+        image: covid19Cleaning,
         fullDescription: 'Our COVID-19 cleaning service provides comprehensive sanitization using EPA-approved disinfectants and specialized techniques to minimize viral transmission risks.',
         keyFeatures: [
           'CDC and WHO guideline compliance',
@@ -678,7 +700,7 @@ export const serviceCategories = [
         name: 'Graffiti Removal',
         slug: 'graffiti-removal',
         description: 'Professional graffiti elimination and surface restoration.',
-        image: '/about1.jpg',
+        image: graffitiRemoval,
         fullDescription: 'Our graffiti removal service provides comprehensive surface restoration, using advanced techniques to completely remove unwanted markings while preserving the original surface integrity.',
         keyFeatures: [
           'Multiple surface treatment options',
@@ -705,7 +727,7 @@ export const serviceCategories = [
         name: 'Hand Stone Staining for Colour Matching',
         slug: 'hand-stone-staining-for-colour-matching',
         description: 'Precise stone staining and color restoration services.',
-        image: '/about1.jpg',
+        image: stoneStaining,
         fullDescription: 'Our hand stone staining service provides expert color matching and restoration for natural stone surfaces, ensuring seamless and precise color integration.',
         keyFeatures: [
           'Customized color matching',
@@ -732,7 +754,7 @@ export const serviceCategories = [
         name: 'Natural Stone Restoration',
         slug: 'natural-stone-restoration',
         description: 'Comprehensive restoration for natural stone surfaces.',
-        image: '/about1.jpg',
+        image: naturalStoneRestoration,
         fullDescription: 'Our natural stone restoration service revitalizes and repairs damaged or worn stone surfaces, bringing them back to their original beauty and protecting them from future damage.',
         keyFeatures: [
           'Professional surface assessment',
@@ -759,7 +781,7 @@ export const serviceCategories = [
         name: 'Tile & Grout Cleaning & Colour Sealing',
         slug: 'tile-and-grout-cleaning-and-colour-sealing',
         description: 'Deep cleaning and color restoration for tile and grout surfaces.',
-        image: '/about1.jpg',
+        image: tileGroutCleaning,
         fullDescription: 'Our tile and grout cleaning service provides deep sanitization and color restoration, bringing new life to your tiled surfaces and protecting them from future staining.',
         keyFeatures: [
           'High-pressure deep cleaning',
@@ -786,7 +808,7 @@ export const serviceCategories = [
         name: 'Landscaping',
         slug: 'landscaping',
         description: 'Comprehensive landscape maintenance and design services.',
-        image: '/about1.jpg',
+        image: landscaping,
         fullDescription: 'Our landscaping service provides full-spectrum landscape maintenance, from routine care to comprehensive design and installation, ensuring beautiful and healthy outdoor spaces.',
         keyFeatures: [
           'Seasonal maintenance',
@@ -813,7 +835,7 @@ export const serviceCategories = [
         name: 'Snow Removal',
         slug: 'snow-removal',
         description: 'Professional snow and ice management services.',
-        image: '/about1.jpg',
+        image: snowRemoval,
         fullDescription: 'Our snow removal service provides comprehensive winter maintenance, ensuring safe and clear access to residential and commercial properties during winter months.',
         keyFeatures: [
           '24/7 emergency snow response',
@@ -840,7 +862,7 @@ export const serviceCategories = [
         name: 'Lobby and Entrance Walk-off Matting Installation',
         slug: 'lobby-and-entrance-walk-off-matting-installation',
         description: 'Professional entrance matting solutions for commercial spaces.',
-        image: '/about1.jpg',
+        image: mattingInstallation,
         fullDescription: 'Our walk-off matting installation service provides customized entrance solutions that reduce dirt, moisture, and wear in high-traffic areas, maintaining cleanliness and safety.',
         keyFeatures: [
           'Custom mat sizing',
@@ -867,7 +889,7 @@ export const serviceCategories = [
         name: 'Animal Control and Deterrents',
         slug: 'animal-control-and-deterrents',
         description: 'Humane wildlife and pest management services.',
-        image: '/about1.jpg',
+        image: animalControl,
         fullDescription: 'Our animal control and deterrent service provides comprehensive wildlife management, using humane and effective techniques to prevent and remove unwanted animal intrusions.',
         keyFeatures: [
           'Humane removal techniques',
@@ -894,7 +916,7 @@ export const serviceCategories = [
         name: 'HVAC Cleaning',
         slug: 'hvac-cleaning',
         description: 'Comprehensive cleaning and maintenance of HVAC systems.',
-        image: '/about1.jpg',
+        image: hvacCleaning,
         fullDescription: 'Our HVAC cleaning service ensures optimal air quality and system efficiency by thoroughly cleaning and maintaining heating, ventilation, and air conditioning systems.',
         keyFeatures: [
           'Improved air quality',
@@ -921,7 +943,7 @@ export const serviceCategories = [
         name: 'Fan Coil Cleaning',
         slug: 'fan-coil-cleaning',
         description: 'Thorough cleaning and maintenance of HVAC fan coil units.',
-        image: '/about1.jpg',
+        image: fanCoilCleaning,
         fullDescription: 'Our fan coil cleaning service ensures optimal performance and air quality by thoroughly cleaning and maintaining fan coil units in residential and commercial HVAC systems.',
         keyFeatures: [
           'Comprehensive unit disassembly',
@@ -948,7 +970,7 @@ export const serviceCategories = [
         name: 'Laundry and Kitchen Exhaust Fan Cleaning',
         slug: 'laundry-and-kitchen-exhaust-fan-cleaning',
         description: 'Professional cleaning of laundry and kitchen exhaust systems.',
-        image: '/about1.jpg',
+        image: laundryExhaustFanCleaning,
         fullDescription: 'Our exhaust fan cleaning service provides thorough cleaning and maintenance of laundry and kitchen exhaust systems, ensuring optimal performance and reducing fire risks.',
         keyFeatures: [
           'Comprehensive system cleaning',
@@ -975,7 +997,7 @@ export const serviceCategories = [
         name: 'Industrial Kitchen Vent Cleaning',
         slug: 'industrial-kitchen-vent-cleaning',
         description: 'Specialized cleaning for commercial and industrial kitchen ventilation systems.',
-        image: '/about1.jpg',
+        image: industrialKitchenVentCleaning,
         fullDescription: 'Our industrial kitchen vent cleaning service provides comprehensive cleaning and maintenance of complex kitchen ventilation systems, ensuring safety, compliance, and optimal performance.',
         keyFeatures: [
           'Comprehensive vent system cleaning',
@@ -1002,7 +1024,7 @@ export const serviceCategories = [
         name: 'Moving Services',
         slug: 'moving-services',
         description: 'Professional relocation solutions for homes and businesses.',
-        image: '/about1.jpg',
+        image: movingServices,
         fullDescription: 'Our comprehensive moving services handle every aspect of your relocation, from careful packing and secure transportation to efficient unpacking and placement at your new location.',
         keyFeatures: [
           'Custom packing solutions for delicate items',
@@ -1030,7 +1052,7 @@ export const serviceCategories = [
         name: 'Junk Removal',
         slug: 'junk-removal',
         description: 'Efficient disposal and recycling solutions for unwanted items.',
-        image: '/about1.jpg',
+        image: junkRemoval,
         fullDescription: 'Our junk removal service provides responsible disposal of unwanted items, furniture, and debris with an emphasis on recycling and donation whenever possible to minimize environmental impact.',
         keyFeatures: [
           'Same-day removal options',
