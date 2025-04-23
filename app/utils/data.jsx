@@ -56,7 +56,7 @@ export const topBarSections = [
   },
   { 
     icon: <MapPin className="stroke-current" size={16} />, 
-    text: "401 Richemond St" 
+    text: "401 Richmond St" 
   },
   { 
     icon: <Mail className="stroke-current" size={16} />, 

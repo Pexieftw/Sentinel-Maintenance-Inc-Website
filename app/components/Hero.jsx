@@ -2,13 +2,14 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import hero from "@/public/pages/home/hero.webp";
 
 const Hero = () => {
   return (
     <div className=" relative h-[70vh] lg:h-screen w-full overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero.jpeg" 
+          src={hero}
           alt="Modern Cleaning Interior"
           className="w-full h-full object-cover"
           width={1920} 

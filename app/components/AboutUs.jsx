@@ -8,11 +8,10 @@ import Image from 'next/image';
 import SectionHeader from '../utils/SectionHeader';
 import Link from 'next/link';
 
-import aboutUs1 from "@/public/pages/home/aboutUs1.webp"; 
-import aboutUs2 from "@/public/pages/home/aboutUs2.webp"; 
-import aboutUs3 from "@/public/pages/home/aboutUs3.webp"; 
-import aboutUs4 from "@/public/pages/home/aboutUs4.webp"; 
-
+import aboutUs1 from "@/public/pages/home/aboutUs1.png"; 
+import aboutUs2 from "@/public/pages/home/aboutUs2.png"; 
+import aboutUs3 from "@/public/pages/home/aboutUs3.png"; 
+import aboutUs4 from "@/public/pages/home/aboutUs4.png"; 
 
 
 const AboutUs = () => {
