@@ -50,9 +50,11 @@ const Services = () => {
                     src={service.image}
                     alt={service.title}
                     fill
+                    quality={100}
+                    priority
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-500/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-500/75 to-primary-300/25"></div>
                   <div className={`absolute top-4 left-4 bg-primary-300 px-4 py-1 text-white text-sm font-medium`}>
                     {service.info}
                   </div>

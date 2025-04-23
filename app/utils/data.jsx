@@ -80,12 +80,17 @@ export const navItems = [
 ];
 
 // Services Informations
+
+import cleaningServices from "@/public/pages/home/cleaning-services.webp"; 
+import specializedServiecs from "@/public/pages/home/specialized-services.webp"; 
+import restoration from "@/public/pages/home/restoration.webp"; 
+
 export const serviceData = [
   {
     id: 'cleaning',
     title: 'Cleaning Services',
     description: 'Professional cleaning solutions for residential and commercial properties, ensuring spotless results every time.',
-    image: '/about1.jpg',
+    image: cleaningServices,
     link: '/services',
     info: 'Featuring 8 Services'
   },
@@ -93,7 +98,7 @@ export const serviceData = [
     id: 'specialized',
     title: 'Specialized Services',
     description: 'Custom solutions for unique cleaning challenges, including biohazard cleanup, industrial cleaning, and more.',
-    image: '/about1.jpg',
+    image: specializedServiecs,
     link: '/services',
     info: 'Featuring 21 Services'
   },
@@ -101,7 +106,7 @@ export const serviceData = [
     id: 'restoration',
     title: 'Restoration',
     description: 'Complete restoration services for water, fire, and mold damage, helping you recover quickly from disasters.',
-    image: '/about1.jpg',
+    image: restoration,
     link: '/services',
     info: 'Featuring 4 Services'
   }
@@ -237,6 +242,21 @@ export const areas = [
     imageSrc: hamilton
   }
 ];
+import commercialJanitorialCleaning from "@/public/pages/services/cleaning services/commerical-janitorial-cleaning.webp";
+import condominiumCleaning from "@/public/pages/services/cleaning services/condominium-cleaning.webp";
+import dealershipCleaning from "@/public/pages/services/cleaning services/dealership-cleaning.webp";
+import institutionalCleaning from "@/public/pages/services/cleaning services/institutional-cleaning.webp";
+import medicalOfficeCleaning from "@/public/pages/services/cleaning services/medical-office-cleaning.webp";
+import newCondominiumConstructionCleaning from "@/public/pages/services/cleaning services/new-condominium-construction-cleaning.webp";
+import officeCleaning from "@/public/pages/services/cleaning services/office-cleaning.webp";
+import postConstructionCleaning from "@/public/pages/services/cleaning services/post-construction-cleaning.webp";
+
+import amrt from "@/public/pages/services/restoration/amrt.webp";
+import fireRestoration from "@/public/pages/services/restoration/fire-restoration.webp";
+import floodCleanup from "@/public/pages/services/restoration/flood-cleanup.webp";
+import odourControl from "@/public/pages/services/restoration/odour-control.webp";
+
+
 
 export const serviceCategories = [
   {
@@ -247,7 +267,7 @@ export const serviceCategories = [
         name: 'Commercial Janitorial Cleaning',
         slug: 'commercial-janitorial-cleaning',
         description: 'Comprehensive cleaning solutions for commercial spaces of all sizes.',
-        image: '/about1.jpg',
+        image: commercialJanitorialCleaning,
         fullDescription: 'Our commercial janitorial cleaning service provides thorough and systematic cleaning for businesses across various industries. We ensure a clean, hygienic, and professional environment that reflects your company\'s standards.',
         keyFeatures: [
           'Customized cleaning protocols',
@@ -274,7 +294,7 @@ export const serviceCategories = [
         name: 'Office Cleaning',
         slug: 'office-cleaning',
         description: 'Tailored cleaning solutions for modern office environments.',
-        image: '/about1.jpg',
+        image: officeCleaning,
         fullDescription: 'Our office cleaning service focuses on creating a pristine, healthy, and productive workspace. We pay attention to every detail, from workstations to common areas, ensuring a spotless professional environment.',
         keyFeatures: [
           'Flexible scheduling',
@@ -301,7 +321,7 @@ export const serviceCategories = [
         name: 'Condominium Cleaning',
         slug: 'condominium-cleaning',
         description: 'Comprehensive cleaning services for condominium complexes and shared spaces.',
-        image: '/about1.jpg',
+        image: condominiumCleaning,
         fullDescription: 'Our condominium cleaning service maintains the highest standards of cleanliness in common areas, lobbies, hallways, and shared facilities. We understand the unique needs of condominium management.',
         keyFeatures: [
           '24/7 emergency cleaning support',
@@ -328,7 +348,7 @@ export const serviceCategories = [
         name: 'Medical Office Cleaning',
         slug: 'medical-office-cleaning',
         description: 'Specialized cleaning for healthcare facilities with strict hygiene standards.',
-        image: '/about1.jpg',
+        image: medicalOfficeCleaning,
         fullDescription: 'Our medical office cleaning service provides meticulous, sanitized cleaning that meets the highest healthcare industry standards. We understand the critical importance of infection control and patient safety.',
         keyFeatures: [
           'Hospital-grade disinfection',
@@ -355,7 +375,7 @@ export const serviceCategories = [
         name: 'Dealership Cleaning',
         slug: 'dealership-cleaning',
         description: 'Comprehensive cleaning solutions for automotive showrooms and service centers.',
-        image: '/about1.jpg',
+        image: dealershipCleaning,
         fullDescription: 'Our dealership cleaning service ensures a pristine and professional appearance for your automotive business. We clean showrooms, service areas, and customer spaces with meticulous attention to detail.',
         keyFeatures: [
           'Specialized surface cleaning',
@@ -382,7 +402,7 @@ export const serviceCategories = [
         name: 'Institutional Cleaning',
         slug: 'institutional-cleaning',
         description: 'Comprehensive cleaning for educational, government, and public institutions.',
-        image: '/about1.jpg',
+        image: institutionalCleaning,
         fullDescription: 'Our institutional cleaning service provides thorough and consistent cleaning for schools, universities, government buildings, and public facilities. We prioritize hygiene, safety, and comprehensive maintenance.',
         keyFeatures: [
           'Large-scale cleaning capabilities',
@@ -409,7 +429,7 @@ export const serviceCategories = [
         name: 'Post Construction Cleaning',
         slug: 'post-construction-cleaning',
         description: 'Comprehensive cleanup services for newly constructed or renovated spaces.',
-        image: '/about1.jpg',
+        image: postConstructionCleaning,
         fullDescription: 'Our post-construction cleaning service transforms construction sites into clean, move-in ready spaces. We handle debris removal, dust elimination, and thorough surface cleaning.',
         keyFeatures: [
           'Complete debris and dust removal',
@@ -436,7 +456,7 @@ export const serviceCategories = [
         name: 'New Condominium Construction Cleaning',
         slug: 'new-condominium-construction-cleaning',
         description: 'Specialized cleaning for newly constructed condominium buildings.',
-        image: '/about1.jpg',
+        image: newCondominiumConstructionCleaning,
         fullDescription: 'Our new condominium construction cleaning service ensures that your newly built residential complex is immaculately prepared for residents, meeting the highest standards of cleanliness and presentation.',
         keyFeatures: [
           'Comprehensive construction cleanup',
@@ -1044,7 +1064,7 @@ export const serviceCategories = [
         name: "Flood Cleanup",
         slug: "flood-cleanup",
         description: "Emergency water damage restoration and cleanup services.",
-        image: "/about1.jpg",
+        image: floodCleanup,
         fullDescription: "Our flood cleanup service provides rapid response and comprehensive water damage restoration, minimizing property damage and preventing long-term issues.",
         keyFeatures: [
           "Rapid 24/7 emergency response within 1 hour",
@@ -1068,7 +1088,7 @@ export const serviceCategories = [
         name: "Fire Restoration",
         slug: "fire-restoration",
         description: "Comprehensive recovery and restoration after fire damage.",
-        image: "/about1.jpg",
+        image: fireRestoration,
         fullDescription: "Our fire restoration service provides complete recovery solutions, from smoke and soot removal to structural repairs and content restoration.",
         keyFeatures: [
           "Immediate emergency stabilization within 2 hours",
@@ -1092,7 +1112,7 @@ export const serviceCategories = [
         name: "Odour Control",
         slug: "odour-control",
         description: "Advanced treatment for persistent and challenging odors.",
-        image: "/about1.jpg",
+        image: odourControl,
         fullDescription: "Our odor control service uses advanced techniques to eliminate even the most stubborn odors, restoring fresh and clean environments.",
         keyFeatures: [
           "Molecular-level odor neutralization technology",
@@ -1116,7 +1136,7 @@ export const serviceCategories = [
         name: "Applied Microbial (Mould & Sewage) Remediation (AMRT)",
         slug: "applied-microbial-(mould-and-sewage)-remediation-(amrt)",
         description: "Comprehensive treatment for mould, sewage, and microbial contamination.",
-        image: "/about1.jpg",
+        image: amrt,
         fullDescription: "Our Applied Microbial Remediation (AMRT) service provides expert treatment for mould, sewage, and other microbial contaminations, ensuring safe and thorough restoration.",
         keyFeatures: [
           "IICRC-certified microbial remediation specialists",
@@ -1603,4 +1623,52 @@ export const cleaningBlogs = [
       }
     ],
   },
+];
+
+
+/* ABOUT US PAGE */
+
+import seniorManagement from "@/public/pages/about-us/senior-management.webp"; 
+import areaSupervisor from "@/public/pages/about-us/area-supervisor.webp"; 
+import jobForeperson from "@/public/pages/about-us/job-foreperson.webp"; 
+import cleaners from "@/public/pages/about-us/cleaners.webp"; 
+import { Users, Award, Briefcase, User } from 'lucide-react';
+
+export const teamStructureData = [
+  {
+    id: 1,
+    title: "Senior Management",
+    description: "The Senior Management team is responsible for all administrative and strategic decision making. The Senior Management also coordinates the firm's marketing as well as attending industry meetings and workshops to stay abreast of the changes and improvements occurring within the industry.",
+    icon: <Award size={40} className="text-white" />,
+    positionNumber: "i",
+    image: seniorManagement,
+    imageAlt: "Senior Management"
+  },
+  {
+    id: 2,
+    title: "Area Supervisor",
+    description: "The Area Supervisors are responsible for projects within a defined geographical area, and they maintain daily contact with the Job Foreperson to ensure all activities at the job site are being performed at the highest level.",
+    icon: <Users size={40} className="text-white" />,
+    positionNumber: "ii",
+    image: areaSupervisor,
+    imageAlt: "Area Supervisor"
+  },
+  {
+    id: 3,
+    title: "Job Foreperson",
+    description: "The Job Foreperson is responsible for the specific job site designated to them. They report directly to the area supervisor daily.",
+    icon: <Briefcase size={40} className="text-white" />,
+    positionNumber: "iii",
+    image: jobForeperson,
+    imageAlt: "Job Foreperson"
+  },
+  {
+    id: 4,
+    title: "Cleaners",
+    description: "The cleaners report to the Job Foreperson and perform the duties as detailed in the contract.",
+    icon: <User size={40} className="text-white" />,
+    positionNumber: "iv",
+    image: cleaners,
+    imageAlt: "Cleaners"
+  }
 ];

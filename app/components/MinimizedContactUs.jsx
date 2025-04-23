@@ -22,7 +22,7 @@ const MinimizedContactUs = () => {
               <div className="md:w-1/3 flex justify-center md:justify-end">
                 <Link 
                   href="/contact-us" 
-                  className="inline-flex items-center px-8 py-4 bg-white text-gray-800 font-bold rounded-lg text-lg transition-all hover:bg-gray-100 hover:shadow-lg duration-300 group"
+                  className="inline-flex items-center px-8 py-4 bg-white text-gray-800 font-bold text-lg transition-all hover:bg-gray-100 hover:shadow-lg duration-300 group"
                 >
                   Contact Us
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

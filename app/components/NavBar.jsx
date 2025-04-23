@@ -322,6 +322,8 @@ const Navbar = () => {
                     alt="SMI Logo"
                     width={100}
                     height={46}
+                    placeholder="blur" 
+                    
                   />
                 </Link>
               </div>

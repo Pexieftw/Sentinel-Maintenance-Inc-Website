@@ -1,8 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import { Users, Award, Briefcase, Timer, User } from 'lucide-react';
+import { Timer } from 'lucide-react';
 import BreadCrumbsSection from '../utils/BreadCrumbsSection';
-import aboutImage1 from "@/public/about1.jpg"; 
+import main from "@/public/pages/about-us/main.webp"; 
+import secondary from "@/public/pages/about-us/secondary.webp"; 
+import { teamStructureData } from "../utils/data";
 
 const AboutUs = () => {
   return (
@@ -36,9 +38,11 @@ const AboutUs = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-100/20 to-primary-300/20 transform -rotate-3"></div>
                 <div className="relative shadow-2xl w-full h-64 md:h-96 transform rotate-3 hover:rotate-0 transition-all duration-500 overflow-hidden">
                   <Image 
-                    src={aboutImage1} 
+                    src={main} 
                     alt="Office building" 
                     fill
+                    loading="lazy"
+                    placeholder="blur" 
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
@@ -150,9 +154,11 @@ const AboutUs = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-100/20 to-primary-300/20 transform -rotate-3"></div>
                 <div className="relative shadow-2xl w-full h-64 md:h-96 transform rotate-3 hover:rotate-0 transition-all duration-500 overflow-hidden">
                   <Image 
-                    src={aboutImage1} 
+                    src={secondary} 
                     alt="Team collaboration" 
                     fill
+                    loading="lazy"
+                    placeholder="blur" 
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
@@ -177,130 +183,42 @@ const AboutUs = () => {
                 Structure
               </span>
             </h2>
-            <div className="flex flex-col space-y-6 max-w-4xl mx-auto text-left">
-              {/* Senior Management */}
-              <div 
-                className="h-auto md:h-[250px] bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
-                data-aos="fade-up"
-              >
-                <div className="flex flex-col md:flex-row h-full">
-                  <div className="w-full md:w-1/4 h-48 md:h-auto bg-primary-300 relative overflow-hidden">
-                    <Image 
-                      src={aboutImage1} 
-                      alt="Senior Management" 
-                      fill 
-                      className="object-cover opacity-30" 
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Award size={40} className="text-white" />
+            <div className="flex flex-col space-y-6 max-w-7xl mx-auto text-left">
+              {/* Dynamic Team Structure */}
+              {teamStructureData.map((item) => (
+                <div 
+                  key={item.id}
+                  className="h-auto md:h-[250px] bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
+                  data-aos="fade-up"
+                >
+                  <div className="flex flex-col md:flex-row h-full">
+                    <div className="w-full md:w-1/4 h-48 md:h-full bg-primary-300 relative overflow-hidden aspect-square">
+                      <Image 
+                        src={item.image} 
+                        alt={item.imageAlt} 
+                        fill 
+                        loading="lazy"
+                        placeholder="blur" 
+                        className="object-cover opacity-30" 
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        {item.icon}
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-6 md:p-8 w-full md:w-3/4 flex flex-col items-start justify-center">
-                    <div className="flex items-center mb-4">
-                      <span className="uppercase bg-primary-100 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">i</span>
-                      <div className="w-5 h-1 mr-3 bg-primary-300"></div>
-                      <h4 className="text-xl font-bold text-primary-300">Senior Management</h4>
+                    <div className="p-6 md:p-8 w-full md:w-3/4 flex flex-col items-start justify-center">
+                      <div className="flex items-center mb-4">
+                        <span className="uppercase bg-primary-100 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">{item.positionNumber}</span>
+                        <div className="w-5 h-1 mr-3 bg-primary-300"></div>
+                        <h4 className="text-xl font-bold text-primary-300">{item.title}</h4>
+                      </div>
+                      <p className="text-slate-600 leading-relaxed text-sm">
+                        {item.description}
+                      </p>
                     </div>
-                    <p className="text-slate-600 leading-relaxed text-sm">
-                      The Senior Management team is responsible for all administrative and strategic decision making. The Senior Management also coordinates the firm's marketing as well as attending industry meetings and workshops to stay abreast of the changes and improvements occurring within the industry.
-                    </p>
                   </div>
                 </div>
-              </div>
-
-              {/* Area Supervisor */}
-              <div 
-                className="h-auto md:h-[250px] bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
-                data-aos="fade-up"
-              >
-                <div className="flex flex-col md:flex-row h-full">
-                  <div className="w-full md:w-1/4 h-48 md:h-auto bg-primary-300 relative overflow-hidden">
-                    <Image 
-                      src={aboutImage1} 
-                      alt="Area Supervisor" 
-                      fill 
-                      className="object-cover opacity-30" 
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Users size={40} className="text-white" />
-                    </div>
-                  </div>
-                  <div className="p-6 md:p-8 w-full md:w-3/4  flex flex-col items-start justify-center">
-                    <div className="flex items-center mb-4">
-                      <span className="uppercase bg-primary-100 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">ii</span>
-                      <div className="w-5 h-1 mr-3 bg-primary-300"></div>
-                      <h4 className="text-xl font-bold text-primary-300">Area Supervisor</h4>
-                    </div>
-                    <p className="text-slate-600 leading-relaxed  text-sm">
-                      The Area Supervisors are responsible for projects within a defined geographical area, and they maintain daily contact with the Job Foreperson to ensure all activities at the job site are being performed at the highest level.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Job Foreperson */}
-              <div 
-                className="h-auto md:h-[250px] bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
-                data-aos="fade-up"
-              >
-                <div className="flex flex-col md:flex-row h-full">
-                  <div className="w-full md:w-1/4 h-48 md:h-auto bg-primary-300 relative overflow-hidden">
-                    <Image 
-                      src={aboutImage1} 
-                      alt="Job Foreperson" 
-                      fill 
-                      className="object-cover opacity-30" 
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Briefcase size={40} className="text-white" />
-                    </div>
-                  </div>
-                  <div className="p-6 md:p-8 w-full md:w-3/4 flex flex-col items-start justify-center">
-                    <div className="flex items-center mb-4">
-                      <span className="uppercase bg-primary-100 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">iii</span>
-                      <div className="w-5 h-1 mr-3 bg-primary-300"></div>
-                      <h4 className="text-xl font-bold text-primary-300">Job Foreperson</h4>
-                    </div>
-                    <p className="text-slate-600 leading-relaxed text-sm">
-                      The Job Foreperson is responsible for the specific job site designated to them. They report directly to the area supervisor daily.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Cleaners */}
-              <div 
-                className="h-auto md:h-[250px] bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
-                data-aos="fade-up"
-              >
-                <div className="flex flex-col md:flex-row h-full">
-                  <div className="w-full md:w-1/4 h-48 md:h-auto bg-primary-300 relative overflow-hidden">
-                    <Image 
-                      src={aboutImage1} 
-                      alt="Cleaners" 
-                      fill 
-                      className="object-cover opacity-30" 
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <User size={40} className="text-white" />
-                    </div>
-                  </div>
-                  <div className="p-6 md:p-8 w-full md:w-3/4 flex flex-col items-start justify-center">
-                    <div className="flex items-center mb-4">
-                      <span className="uppercase bg-primary-100 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">iv</span>
-                      <div className="w-5 h-1 mr-3 bg-primary-300"></div>
-                      <h4 className="text-xl font-bold text-primary-300">Cleaners</h4>
-                    </div>
-                    <p className="text-slate-600 leading-relaxed text-sm">
-                      The cleaners report to the Job Foreperson and perform the duties as detailed in the contract.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

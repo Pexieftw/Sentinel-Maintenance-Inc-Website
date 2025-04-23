@@ -8,10 +8,11 @@ import Image from 'next/image';
 import SectionHeader from '../utils/SectionHeader';
 import Link from 'next/link';
 
-import aboutImage1 from "@/public/about1.jpg"; 
-import aboutImage2 from "@/public/about2.jpg"; 
-import aboutImage3 from "@/public/about3.jpg"; 
-import aboutImage4 from "@/public/about4.jpg"; 
+import aboutUs1 from "@/public/pages/home/aboutUs1.webp"; 
+import aboutUs2 from "@/public/pages/home/aboutUs2.webp"; 
+import aboutUs3 from "@/public/pages/home/aboutUs3.webp"; 
+import aboutUs4 from "@/public/pages/home/aboutUs4.webp"; 
+
 
 
 const AboutUs = () => {
@@ -39,7 +40,7 @@ const AboutUs = () => {
               <div className="grid grid-rows-3 gap-6 h-full">
                 <div className="row-span-2 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
                   <Image
-                    src={aboutImage1}
+                    src={aboutUs1}
                     alt="Modern Cleaning Interior"
                     placeholder="blur"
                     quality={100}
@@ -53,7 +54,7 @@ const AboutUs = () => {
                 {/* Third Image */}
                 <div className="row-span-1 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
                   <Image
-                    src={aboutImage3}
+                    src={aboutUs2}
                     alt="Additional Cleaning Service"
                     placeholder="blur"
                     quality={100}
@@ -70,7 +71,7 @@ const AboutUs = () => {
                 {/* Second Image */}
                 <div className="row-span-1 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
                   <Image
-                    src={aboutImage2}
+                    src={aboutUs3}
                     alt="SMI Property Service"
                     placeholder="blur"
                     quality={100}
@@ -84,7 +85,7 @@ const AboutUs = () => {
                 {/* Fourth Image */}
                 <div className="row-span-2 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
                   <Image
-                    src={aboutImage4}
+                    src={aboutUs4}
                     alt="Additional Cleaning Service"
                     placeholder="blur"
                     quality={100}
