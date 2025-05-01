@@ -66,13 +66,13 @@ const AboutUs = () => {
                 </h3>
                 <div className="bg-gradient-to-r from-slate-50 to-white p-4 md:p-6 shadow-sm border border-slate-100">
                   <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
-                    Sentinel Maintenance Inc., (SMI), originated in Regina, Saskatchewan in 1989. In early 1991, the Toronto office was open followed by the Calgary office in 1993. In the years following, other satellite offices opened in cities like Vancouver, Las Vegas, Phoenix with the latest full-service office opening in Stamford, CT serving the greater New York City area.
+                  Sentinel Maintenance Inc., (SMI), proudly founded in Regina, Saskatchewan in 1989, represents true Canadian entrepreneurship. Our expansion began in 1991 with our Toronto office, followed by Calgary in 1993, establishing our strong Canadian foundation. While we've since grown to serve Vancouver and other Canadian markets, as well as select US locations like Phoenix and Stamford, our Canadian roots remain at the heart of our business approach.
                   </p>
                   <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
-                    SMI is a full-service <span className="font-bold text-primary-100">Property Services Company</span>. Our primary objective is to provide each of our clients with high quality, conscientious and reliable service. Our success is based on being able to achieve these objectives through a dedicated team of Owners, Managers, and Office and support staff.
+                    As a Canadian-owned and operated <span className="font-bold text-primary-100">Property Services Company</span>. SMI brings the values of reliability, quality, and exceptional service that Canadians are known for worldwide. Our success stems from these quintessentially Canadian values, embodied by our dedicated team of Canadian Owners, Managers, and support staff across the country.
                   </p>
                   <p className="text-slate-700 leading-relaxed text-sm md:text-base">
-                    SMI specializes in several different areas to operate successfully as a full-service <span className="font-bold text-primary-100">Property Services Company</span>. These areas include contract janitorial, steam cleaning, window washing, construction clean-ups, plumbing, electrical, small construction and emergency services.
+                  With our headquarters in the Canadian prairies and a strong national presence, SMI delivers comprehensive property services with Canadian thoroughness and attention to detail. Our expertise includes contract janitorial, steam cleaning, window washing, construction clean-ups, plumbing, electrical, small construction and emergency services—all delivered with the commitment to excellence that has defined Canadian business standards for generations.
                   </p>
                 </div>
                 
@@ -122,13 +122,13 @@ const AboutUs = () => {
                 
                 <div className="bg-gradient-to-r from-slate-50 to-white p-4 md:p-6 shadow-sm border border-slate-100">
                   <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
-                    SMI is a well-organized, people-oriented company that has a strong commitment to quality service. This commitment starts at the senior management level and continues through to all staff positions. We provide key management personnel at all levels to ensure the highest quality service to our clients.
+                  SMI embodies the Canadian values of integrity, reliability, and teamwork in our well-organized, people-oriented approach. True to our Canadian roots, our commitment to quality service begins with senior management and extends through every position in our organization. We provide key management personnel across our Canadian offices to ensure consistent, high-quality service that our clients have come to expect from a leading Canadian enterprise.
                   </p>
                   <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
-                    SMI's high level of quality can be attributed to our <span className="font-bold text-primary-100">excellent staff of employees</span> and the pride they have in their work. This level of quality is maintained by providing continuous training and instruction. We conduct regular staff meetings where we coordinate, motivate and instruct our people on the latest techniques, methods, and equipment the industry has to offer.
+                  Our exceptional quality standards reflect the Canadian work ethic embraced by <span className="font-bold text-primary-100">our dedicated staff</span> From Saskatchewan to Ontario and beyond, our Canadian team takes tremendous pride in their work. We maintain these standards through continuous training and instruction, including regular staff meetings where we share innovations developed in our Canadian research facilities alongside the latest industry techniques, methods, and equipment.
                   </p>
                   <p className="text-slate-700 leading-relaxed text-sm md:text-base">
-                    Our management team ensures that all <span className="font-bold text-primary-100">quality standards</span> are met through regular inspections, client feedback sessions, and performance evaluations. This commitment to excellence is what sets SMI apart in the property services industry.
+                  With characteristic Canadian thoroughness, our management team ensures <span className="font-bold text-primary-100">all quality standards</span> are met through regular inspections, client feedback sessions, and performance evaluations. This distinctly Canadian commitment to excellence, combining meticulous attention to detail with genuine care for our clients' needs, is what distinguishes SMI as a proudly Canadian leader in the North American property services industry.
                   </p>
                 </div>
                 <div className="mt-6 md:mt-8 flex flex-wrap gap-2 md:gap-4 justify-start">

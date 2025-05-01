@@ -91,7 +91,7 @@ export const serviceData = [
     title: 'Cleaning Services',
     description: 'Professional cleaning solutions for residential and commercial properties, ensuring spotless results every time.',
     image: cleaningServices,
-    link: '/services',
+    link: '/services/#cleaning-services',
     info: 'Featuring 8 Services'
   },
   {
@@ -99,7 +99,7 @@ export const serviceData = [
     title: 'Specialized Services',
     description: 'Custom solutions for unique cleaning challenges, including biohazard cleanup, industrial cleaning, and more.',
     image: specializedServiecs,
-    link: '/services',
+    link: '/services/#specialized-services',
     info: 'Featuring 21 Services'
   },
   {
@@ -107,7 +107,7 @@ export const serviceData = [
     title: 'Restoration',
     description: 'Complete restoration services for water, fire, and mold damage, helping you recover quickly from disasters.',
     image: restoration,
-    link: '/services',
+    link: '/services#restoration',
     info: 'Featuring 4 Services'
   }
 ];

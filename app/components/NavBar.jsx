@@ -164,9 +164,9 @@ const Navbar = () => {
                       href={item.link}
                       ref={el => navLinksRef.current[index] = el}
                       onClick={(e) => handleLinkClick(e, item.link)}
-                      className={`${isActive ? 'font-bold text-primary-600' : 'font-normal'} 
+                      className={`${isActive ? 'font-extrabold text-primary-600' : 'font-semibold'} 
                         flex text-gray-800 hover:text-primary-500 px-4 h-full items-center text-sm 
-                        font-medium transition-colors duration-300 hover:bg-gray-50`}
+                        transition-colors duration-300 hover:bg-gray-50`}
                     >
                       {item.label}
                       {item.dropdown && <ChevronDown className="ml-1 w-4 h-4" />}

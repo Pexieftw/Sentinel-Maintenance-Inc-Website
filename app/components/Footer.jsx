@@ -130,7 +130,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="mt-4 text-center text-gray-500 text-xs">
-            <a href="https://www.smi.ca" className="hover:text-primary-100 transition-colors">www.smi.ca</a> | A Property Service Company Powered by Mira Visions
+            <a target="_blank" href="https://www.smi.ca" className="hover:text-primary-100 transition-colors">SMI</a> | A Property Service Company Powered by <a target="_blank" href="https://miravisions.com" className="hover:text-primary-100 transition-colors">Mira Visions</a>
           </div>
         </div>
       </div>

@@ -8,10 +8,12 @@ import { serviceCategories } from '../utils/data'
 import BreadCrumbsSection from '../utils/BreadCrumbsSection'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 export default function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState('All')
   const [searchTerm, setSearchTerm] = useState('')
+  const router = useRouter()
 
   const allCategories = [
     {
@@ -20,6 +22,33 @@ export default function ServicesPage() {
     },
     ...serviceCategories
   ]
+
+  // Handle URL hash for category selection
+  useEffect(() => {
+    // Check if we're running on the client side
+    if (typeof window !== 'undefined') {
+      // Get the hash from the URL (removing the # character)
+      const hash = window.location.hash.replace('#', '')
+      
+      if (hash) {
+        // Convert hash to proper category name format by converting kebab-case to normal text
+        // For example, 'cleaning-services' becomes 'Cleaning Services'
+        const formattedHash = hash
+          .split('-')
+          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ')
+        
+        // Find the matching category
+        const matchingCategory = allCategories.find(
+          cat => cat.category.toLowerCase() === formattedHash.toLowerCase()
+        )
+        
+        if (matchingCategory) {
+          setActiveCategory(matchingCategory.category)
+        }
+      }
+    }
+  }, []) // Empty dependency array ensures this only runs on mount
 
   useEffect(() => {
     AOS.init({
@@ -30,6 +59,20 @@ export default function ServicesPage() {
 
   useEffect(() => {
     AOS.refresh()
+  }, [activeCategory])
+
+  // Update URL hash when category changes
+  useEffect(() => {
+    if (typeof window !== 'undefined' && activeCategory !== 'All') {
+      // Convert category name to kebab-case for the URL
+      // For example, 'Cleaning Services' becomes 'cleaning-services'
+      const hash = activeCategory.toLowerCase().replace(/\s+/g, '-')
+      // Update URL without triggering page reload
+      window.history.replaceState(null, '', `/services#${hash}`)
+    } else if (typeof window !== 'undefined') {
+      // Remove hash when 'All' is selected
+      window.history.replaceState(null, '', '/services')
+    }
   }, [activeCategory])
 
   const filteredServices = allCategories
@@ -81,30 +124,24 @@ export default function ServicesPage() {
             />
           </div>
 
-          {/* Mobile-friendly Category Tabs - display full grid on mobile */}
-          <div className="grid grid-cols-2 sm:flex sm:flex-row gap-2 sm:gap-0 order-last lg:order-first">
+          {/* Mobile-friendly Category Tabs */}
+          <div className="grid grid-cols-2 sm:flex sm:flex-row gap-3 sm:gap-0 order-last lg:order-first">
             {allCategories.map((category, index) => (
               <button
                 key={category.category}
                 onClick={() => setActiveCategory(category.category)}
                 className={`
-                  px-4 sm:px-6 py-2 sm:py-3 sm:mr-3 text-sm font-medium uppercase tracking-wide
+                  px-4 sm:px-6 py-3 text-sm font-medium uppercase tracking-wide
                   transition-all duration-300 relative cursor-pointer
+                  border-2 
                   ${activeCategory === category.category 
-                    ? 'text-primary-500 font-semibold' 
-                    : 'text-gray-500 hover:text-gray-800'}
-                  border border-gray-100 sm:border-none
+                    ? 'bg-primary-300 text-white font-semibold border-primary-300' 
+                    : 'bg-white text-gray-700 border-gray-300 hover:border-primary-300 hover:bg-gray-50'}
                 `}
                 data-aos="zoom-in"
                 data-aos-delay={200 + (index * 50)}
               >
                 {category.category}
-                {activeCategory === category.category && (
-                  <motion.div 
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-500 hidden sm:block"
-                    layoutId="activeCategoryIndicator"
-                  />
-                )}
               </button>
             ))}
           </div>
