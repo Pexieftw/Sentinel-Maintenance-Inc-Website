@@ -288,6 +288,10 @@ export const serviceCategories = [
       {
         name: 'Commercial Janitorial Cleaning',
         slug: 'commercial-janitorial-cleaning',
+        header: {
+          title: "Commercial Janitorial Cleaning Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we specialize in commercial janitorial cleaning services that keep your business environment consistently spotless, professional, and welcoming. Whether you operate an office, retail outlet, or industrial space, we tailor our janitorial routines to meet your exact needs. Our cleaning specialists focus on eliminating dust, debris, and bacteria to promote a hygienic workplace that enhances employee morale and client impressions. With eco-friendly products, flexible scheduling, and industry-specific cleaning protocols, SMI helps reduce allergens, prevent the spread of germs, and maintain a polished image across all surfaces. Businesses across Toronto and the GTA trust us to maintain their lobbies, restrooms, break rooms, and workspaces with precision and reliability. We believe that a clean facility is not only about appearance—it’s about creating a safer and more productive atmosphere every single day."
+        },
         description: 'Comprehensive cleaning solutions for commercial spaces of all sizes.',
         image: commercialJanitorialCleaning,
         fullDescription: 'Our commercial janitorial cleaning service provides thorough and systematic cleaning for businesses across various industries. We ensure a clean, hygienic, and professional environment that reflects your company\'s standards.',
@@ -315,6 +319,10 @@ export const serviceCategories = [
       {
         name: 'Office Cleaning',
         slug: 'office-cleaning',
+        header: {
+          title: "Office Cleaning Services in Toronto & GTA",
+          description: "A clean office environment plays a vital role in productivity, employee health, and the image your business projects. At Sentinel Maintenance Inc (SMI), we provide expert office cleaning services for businesses throughout Toronto and the GTA. Our team delivers meticulous cleaning of desks, boardrooms, kitchens, restrooms, and shared areas—ensuring no detail is overlooked. We target high-touch surfaces to reduce germs, apply industry-grade disinfectants, and work around your business hours to minimize disruption. Whether your office requires daily attention or scheduled deep cleaning, our flexible services are designed to meet your exact standards. Clean offices help reduce absenteeism, elevate staff satisfaction, and present your brand with the professionalism it deserves. Choose SMI for trusted, routine cleaning backed by trained professionals and modern tools that bring your workspace to life."
+        },        
         description: 'Tailored cleaning solutions for modern office environments.',
         image: officeCleaning,
         fullDescription: 'Our office cleaning service focuses on creating a pristine, healthy, and productive workspace. We pay attention to every detail, from workstations to common areas, ensuring a spotless professional environment.',
@@ -342,6 +350,10 @@ export const serviceCategories = [
       {
         name: 'Condominium Cleaning',
         slug: 'condominium-cleaning',
+        header: {
+          title: "Condominium Cleaning Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we understand the importance of clean and welcoming shared spaces in condominium communities. Our condominium cleaning services are built to support property managers and condo boards with reliable, high-quality cleaning for lobbies, elevators, hallways, mailrooms, and recreational areas. We deliver scheduled and emergency cleanings to ensure that every square foot of your property remains spotless, safe, and resident-ready. Our respectful, uniformed staff follow detailed cleaning protocols with eco-friendly solutions and a strong emphasis on discretion and consistency. With Toronto and GTA condos becoming increasingly high-traffic and service-driven, SMI ensures your building maintains a professional appearance that residents appreciate and prospective buyers remember. Let us take care of the details so your condominium remains clean, secure, and inviting all year round."
+        },        
         description: 'Comprehensive cleaning services for condominium complexes and shared spaces.',
         image: condominiumCleaning,
         fullDescription: 'Our condominium cleaning service maintains the highest standards of cleanliness in common areas, lobbies, hallways, and shared facilities. We understand the unique needs of condominium management.',
@@ -369,6 +381,10 @@ export const serviceCategories = [
       {
         name: 'Medical Office Cleaning',
         slug: 'medical-office-cleaning',
+        header: {
+          title: "Medical Office Cleaning Services in Toronto & GTA",
+          description: "Medical and healthcare environments demand a higher level of cleanliness to protect patients, staff, and visitors from cross-contamination and infection risks. At Sentinel Maintenance Inc (SMI), our medical office cleaning services are designed to exceed strict healthcare regulations. We use hospital-grade disinfectants, color-coded tools to avoid cross-use, and rigorous sanitation techniques that comply with industry protocols. From examination rooms and waiting areas to surgical suites and restrooms, our cleaning professionals are trained to handle sensitive environments with precision. We maintain full confidentiality, uphold sterilization best practices, and follow infection prevention standards backed by years of experience. In a time when hygiene is paramount, clinics, dental offices, and medical labs throughout Toronto and the GTA rely on SMI for cleaning services that prioritize health, safety, and compliance above all else."
+        },        
         description: 'Specialized cleaning for healthcare facilities with strict hygiene standards.',
         image: medicalOfficeCleaning,
         fullDescription: 'Our medical office cleaning service provides meticulous, sanitized cleaning that meets the highest healthcare industry standards. We understand the critical importance of infection control and patient safety.',
@@ -396,6 +412,10 @@ export const serviceCategories = [
       {
         name: 'Dealership Cleaning',
         slug: 'dealership-cleaning',
+        header: {
+          title: "Dealership Cleaning Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we deliver top-tier dealership cleaning services designed to uphold the pristine image of your showroom and service center. We understand that presentation is key in the automotive industry, which is why we clean every surface—from gleaming floors and spotless windows to tidy service bays and customer lounges. Our team uses safe, effective cleaning methods to enhance your showroom’s appeal without damaging vehicles or finishes. We also maintain waiting areas, restrooms, and employee spaces to reflect the professionalism of your brand. Whether preparing for a car launch or keeping day-to-day operations polished, SMI ensures your dealership is always client-ready. Serving Toronto and the GTA, we help auto businesses create a clean, inviting environment that builds customer trust and drives sales.",
+        },
         description: 'Comprehensive cleaning solutions for automotive showrooms and service centers.',
         image: dealershipCleaning,
         fullDescription: 'Our dealership cleaning service ensures a pristine and professional appearance for your automotive business. We clean showrooms, service areas, and customer spaces with meticulous attention to detail.',
@@ -423,6 +443,10 @@ export const serviceCategories = [
       {
         name: 'Institutional Cleaning',
         slug: 'institutional-cleaning',
+        header: {
+          title: "Institutional Cleaning Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) provides professional institutional cleaning services tailored to meet the needs of schools, universities, government buildings, and public facilities throughout Toronto and the GTA. These environments demand a high level of cleanliness to protect students, staff, and visitors while maintaining a productive and safe atmosphere. Our experienced team delivers meticulous attention to classrooms, offices, labs, sports facilities, and high-traffic public areas. We adhere to strict safety protocols, provide flexible scheduling, and use eco-conscious cleaning products to align with your institution’s values and regulations. Whether it’s daily maintenance or deep cleaning during holidays and exam periods, SMI ensures consistent, high-quality results. Our services help reduce illness transmission, increase occupant satisfaction, and uphold the professional standards expected in institutional environments.",
+        },
         description: 'Comprehensive cleaning for educational, government, and public institutions.',
         image: institutionalCleaning,
         fullDescription: 'Our institutional cleaning service provides thorough and consistent cleaning for schools, universities, government buildings, and public facilities. We prioritize hygiene, safety, and comprehensive maintenance.',
@@ -450,6 +474,10 @@ export const serviceCategories = [
       {
         name: 'Post Construction Cleaning',
         slug: 'post-construction-cleaning',
+        header: {
+          title: "Post Construction Cleaning Services in Toronto & GTA",
+          description: "When your construction or renovation project wraps up, Sentinel Maintenance Inc (SMI) is ready to handle the final stage—comprehensive post-construction cleaning. We turn dusty, debris-filled spaces into clean, safe, and presentable environments for occupancy or inspection. Our trained crew removes leftover materials, vacuum and mops floors, cleans walls and windows, and sanitizes surfaces with professional-grade tools and precision. From residential developments to large-scale commercial projects, we ensure every inch is polished and move-in ready. Our team works efficiently within your project timelines and budget, providing reliable cleanup that meets building codes and presentation standards. Serving clients across Toronto and the GTA, SMI helps construction professionals transition smoothly from build to business-ready with expert post-construction cleaning services.",
+        },
         description: 'Comprehensive cleanup services for newly constructed or renovated spaces.',
         image: postConstructionCleaning,
         fullDescription: 'Our post-construction cleaning service transforms construction sites into clean, move-in ready spaces. We handle debris removal, dust elimination, and thorough surface cleaning.',
@@ -477,6 +505,10 @@ export const serviceCategories = [
       {
         name: 'New Condominium Construction Cleaning',
         slug: 'new-condominium-construction-cleaning',
+        header: {
+          title: "New Condominium Construction Cleaning Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we understand how important a flawless finish is when presenting newly built condominiums to prospective residents. Our new condominium construction cleaning services ensure that each unit and shared space is thoroughly cleaned, inspected, and prepared for immediate occupancy. We tackle post-construction dust, residue, and smudges with specialized tools and techniques that leave surfaces spotless and scratch-free. From lobby glass to individual suite appliances, every detail is addressed with care. Our services are perfect for developers and builders aiming to make a strong first impression while meeting delivery deadlines. Serving Toronto and the GTA, SMI is your trusted partner for comprehensive move-in ready cleaning that adds value, polish, and professionalism to your new condominium project.",
+        },
         description: 'Specialized cleaning for newly constructed condominium buildings.',
         image: newCondominiumConstructionCleaning,
         fullDescription: 'Our new condominium construction cleaning service ensures that your newly built residential complex is immaculately prepared for residents, meeting the highest standards of cleanliness and presentation.',
@@ -510,6 +542,10 @@ export const serviceCategories = [
       {
         name: 'Deep Cleaning and Disinfection',
         slug: 'deep-cleaning-and-disinfection',
+        header: {
+          title: "Deep Cleaning and Disinfection Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we provide deep cleaning and disinfection services that go beyond surface-level cleaning to protect your environment from harmful pathogens. Our advanced cleaning protocols combine hospital-grade disinfectants with eco-friendly solutions to eliminate up to 99.9% of bacteria and viruses from every surface. Whether it’s a high-traffic office, a retail space, or a residential unit, our trained team focuses on high-touch areas and hidden zones often missed in routine cleanings. SMI’s deep sanitization services are ideal during flu season, post-outbreak, or any time enhanced hygiene is essential. We adhere to strict industry standards to ensure your space is clean, safe, and fully sanitized. Proudly serving Toronto and the GTA, we help businesses and homeowners regain peace of mind with reliable and effective disinfection solutions.",
+        },
         description: 'Comprehensive sanitization using advanced cleaning technologies.',
         image: deepCleaning,
         fullDescription: 'Our deep cleaning and disinfection service provides a thorough sanitization process using hospital-grade disinfectants and cutting-edge cleaning technologies.',
@@ -537,6 +573,10 @@ export const serviceCategories = [
       {
         name: 'Fogging Disinfection',
         slug: 'fogging-disinfection',
+        header: {
+          title: "Fogging Disinfection Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers fogging disinfection services that deliver total space sanitization quickly and effectively. Using advanced fogging machines, we disperse a fine antimicrobial mist that settles on all surfaces—including those hard to reach by traditional methods. This method is ideal for disinfecting offices, warehouses, schools, and public facilities, especially during high-risk seasons like flu outbreaks or viral surges. Our trained technicians use EPA-registered disinfectants safe for both people and property, with minimal downtime and fast reentry times. The process targets bacteria, viruses, and allergens with uniform coverage and consistent results. Businesses across Toronto and the GTA rely on SMI’s fogging service to ensure their environments remain hygienic, safe, and compliant with evolving health regulations. It's the smart choice for large-scale, contactless disinfection.",
+        },
         description: 'Advanced disinfection technique using fog-based sanitization.',
         image: foggingDisinfection,
         fullDescription: 'Our fogging disinfection service uses specialized equipment to create a fine mist that penetrates hard-to-reach areas, providing comprehensive sanitization for entire spaces.',
@@ -564,6 +604,10 @@ export const serviceCategories = [
       {
         name: 'Low-Rise and High-rise Window Cleaning',
         slug: 'low-rise-and-high-rise-window-cleaning',
+        header: {
+          title: "Low-Rise and High-Rise Window Cleaning Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we provide expert window cleaning services for both low-rise and high-rise buildings, ensuring streak-free clarity and professional curb appeal. Our certified technicians are trained to handle windows at any height with the highest level of safety and efficiency. Using specialized equipment, eco-friendly cleaners, and rope or lift systems, we clean both exterior and interior glass surfaces with precision. From corporate towers to residential complexes, SMI enhances natural light and improves the overall appearance of your property. We serve commercial clients across Toronto and the GTA with reliable scheduling, excellent customer service, and results you can see through. Whether it's spring maintenance or pre-sale preparation, our window cleaning service brings clarity and brilliance to your building's exterior.",
+        },
         description: 'Professional window cleaning for buildings of all heights.',
         image: windowCleaning,
         fullDescription: 'Our window cleaning service provides streak-free, crystal-clear windows for both low-rise and high-rise buildings, using advanced safety techniques and professional-grade equipment.',
@@ -591,6 +635,10 @@ export const serviceCategories = [
       {
         name: 'Exterior Power Washing',
         slug: 'exterior-power-washing',
+        header: {
+          title: "Exterior Power Washing Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) provides professional exterior power washing services designed to refresh and restore your building’s exterior surfaces. Using commercial-grade pressure washers and eco-friendly cleaning agents, we remove stubborn grime, mold, mildew, and environmental stains from siding, concrete, brick, and decks. Our adjustable pressure techniques ensure deep cleaning without damaging surfaces, making this service ideal for property owners preparing for repainting, inspections, or seasonal revitalization. Whether you're maintaining a commercial storefront or refreshing a residential façade, SMI delivers results that dramatically improve appearance and curb appeal. Serving clients across Toronto and the GTA, our power washing services help preserve property value and promote a cleaner, more professional exterior environment—perfect for first impressions and long-term maintenance.",
+        },
         description: 'High-pressure cleaning for exterior surfaces and facades.',
         image: exteriorPowerWashing,
         fullDescription: 'Our exterior power washing service removes years of dirt, grime, and environmental buildup from various surfaces, restoring them to their original appearance.',
@@ -618,6 +666,10 @@ export const serviceCategories = [
       {
         name: 'Parking Garage Power Washing',
         slug: 'parking-garage-power-washing',
+        header: {
+          title: "Parking Garage Power Washing Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers professional parking garage power washing services to maintain clean, safe, and presentable vehicle environments. Over time, parking garages accumulate oil stains, grime, tire marks, and salt residue—posing both safety risks and aesthetic concerns. Our industrial-grade pressure washing systems effectively remove these contaminants without damaging the surface. We target concrete floors, pillars, and walls to eliminate buildup and restore non-slip traction. Ideal for commercial, residential, and underground structures, our services can be scheduled during off-peak hours, including nights and weekends, to avoid disrupting daily operations. SMI helps extend the life of your structure and reduce liability by enhancing visibility and cleanliness. Serving Toronto and the GTA, we deliver reliable power washing solutions tailored for high-traffic parking facilities.",
+        },
         description: 'Specialized cleaning for parking structures and garages.',
         image: parkingGaragePowerWashing,
         fullDescription: 'Our parking garage power washing service removes oil stains, dirt, and grime, maintaining a clean and safe environment for vehicles and users.',
@@ -645,6 +697,10 @@ export const serviceCategories = [
       {
         name: 'Carpet Cleaning',
         slug: 'carpet-cleaning',
+        header: {
+          title: "Carpet Cleaning Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), our professional carpet cleaning services are designed to breathe new life into your carpets while ensuring a healthier indoor environment. Using advanced hot water extraction and deep-sanitization techniques, we remove embedded dirt, stains, allergens, and odors from carpet fibers. This service is ideal for offices, hotels, residential units, and high-traffic commercial spaces. We offer specialized treatments for spots and spills, as well as fiber protection applications to extend carpet life. With rapid-drying systems and eco-friendly products, your space is left fresh, clean, and ready for use in no time. Whether it’s seasonal deep cleaning or stain removal after an accident, SMI provides consistent, thorough results across Toronto and the GTA. We restore your carpets to like-new condition with care and precision.",
+        },
         description: 'Deep cleaning and restoration for carpeted surfaces.',
         image: carpetCleaning,
         fullDescription: 'Our carpet cleaning service uses advanced extraction and sanitization techniques to remove deep-seated dirt, allergens, and stains, revitalizing your carpets.',
@@ -672,6 +728,10 @@ export const serviceCategories = [
       {
         name: 'COVID-19 Cleaning',
         slug: 'covid-19-cleaning',
+        header: {
+          title: "COVID-19 Cleaning Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) provides certified COVID-19 cleaning services to help protect your workplace or home from viral contamination. Our disinfection protocols strictly follow CDC, WHO, and Health Canada guidelines, using EPA-approved disinfectants proven effective against SARS-CoV-2. Our team targets high-touch surfaces, shared spaces, and HVAC-accessible areas with precision and care, ensuring comprehensive sanitization across all zones. Suitable for commercial offices, clinics, schools, retail stores, and residential buildings, our COVID-19 cleaning services include detailed surface reports and optional post-cleaning certification. With Toronto and GTA businesses focused on health and safety, SMI supports your operations with proactive cleaning measures that minimize transmission risks and build public trust. We respond quickly, work efficiently, and maintain the highest standards of infection control.",
+        },
         description: 'Specialized sanitization to prevent COVID-19 transmission.',
         image: covid19Cleaning,
         fullDescription: 'Our COVID-19 cleaning service provides comprehensive sanitization using EPA-approved disinfectants and specialized techniques to minimize viral transmission risks.',
@@ -699,6 +759,10 @@ export const serviceCategories = [
       {
         name: 'Graffiti Removal',
         slug: 'graffiti-removal',
+        header: {
+          title: "Graffiti Removal Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we specialize in professional graffiti removal services that restore your property’s appearance without compromising surface integrity. Graffiti can tarnish your brand image and attract further vandalism if left untreated. That’s why we offer fast, effective removal using eco-friendly solvents and customized techniques based on surface type—brick, concrete, metal, or glass. Our approach minimizes damage while completely removing spray paint, markers, and adhesives. To help prevent recurrence, we also offer anti-graffiti coatings and recommendations for deterrence strategies. Whether it's a commercial storefront, public space, or residential complex, SMI helps clients across Toronto and the GTA maintain clean, graffiti-free properties. Our response is prompt, discreet, and designed to help you protect your investment and uphold a professional image.",
+        },
         description: 'Professional graffiti elimination and surface restoration.',
         image: graffitiRemoval,
         fullDescription: 'Our graffiti removal service provides comprehensive surface restoration, using advanced techniques to completely remove unwanted markings while preserving the original surface integrity.',
@@ -726,6 +790,10 @@ export const serviceCategories = [
       {
         name: 'Hand Stone Staining for Colour Matching',
         slug: 'hand-stone-staining-for-colour-matching',
+        header: {
+          title: "Hand Stone Staining for Colour Matching in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers precise hand stone staining services tailored for seamless color correction and restoration on natural stone surfaces. Whether you're addressing inconsistencies in stone slabs, enhancing faded tones, or restoring uniformity after repairs, our experts use customized, hand-applied staining methods that preserve the texture and character of the original stone. We begin with an in-depth color consultation to ensure an exact match, then apply long-lasting pigments that bond with the stone while maintaining breathability and integrity. Ideal for both residential and commercial applications, our service is trusted by designers, contractors, and homeowners across Toronto and the GTA. Choose SMI to bring harmony and visual consistency to stone counters, walls, tiles, or floors—backed by expert care and professional results.",
+        },
         description: 'Precise stone staining and color restoration services.',
         image: stoneStaining,
         fullDescription: 'Our hand stone staining service provides expert color matching and restoration for natural stone surfaces, ensuring seamless and precise color integration.',
@@ -753,6 +821,10 @@ export const serviceCategories = [
       {
         name: 'Natural Stone Restoration',
         slug: 'natural-stone-restoration',
+        header: {
+          title: "Natural Stone Restoration Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we provide comprehensive natural stone restoration services that bring your stone surfaces back to their original beauty. Over time, marble, granite, limestone, and other natural stones can show signs of wear such as etching, scratches, stains, or cracks. Our restoration process includes expert surface assessment, precision repairs, resurfacing, polishing, and sealing—ensuring long-term protection and a flawless finish. Whether it's a high-traffic lobby floor or an elegant residential countertop, we tailor our methods to the specific material and environment. With years of expertise in both interior and exterior stone surfaces, we help preserve your investment while enhancing visual appeal. Serving clients throughout Toronto and the GTA, SMI is your trusted partner for breathing new life into aged or damaged stonework.",
+        },
         description: 'Comprehensive restoration for natural stone surfaces.',
         image: naturalStoneRestoration,
         fullDescription: 'Our natural stone restoration service revitalizes and repairs damaged or worn stone surfaces, bringing them back to their original beauty and protecting them from future damage.',
@@ -780,6 +852,10 @@ export const serviceCategories = [
       {
         name: 'Tile & Grout Cleaning & Colour Sealing',
         slug: 'tile-and-grout-cleaning-and-colour-sealing',
+        header: {
+          title: "Tile & Grout Cleaning and Colour Sealing in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers professional tile and grout cleaning and colour sealing services that restore vibrancy to tiled surfaces while extending their lifespan. Over time, tiles lose their shine and grout lines accumulate dirt, stains, and mildew—especially in high-moisture environments. Our service combines high-pressure steam cleaning and stain removal with durable colour sealing to rejuvenate and protect your floors, walls, and backsplashes. The result is a cleaner, more uniform look that resists future grime buildup. We serve residential and commercial clients across Toronto and the GTA, treating ceramic, porcelain, stone, and other tile types. Whether refreshing a bathroom, commercial kitchen, or office lobby, SMI ensures your tile surfaces are deep-cleaned, sealed, and protected with industry-leading techniques.",
+        },
         description: 'Deep cleaning and color restoration for tile and grout surfaces.',
         image: tileGroutCleaning,
         fullDescription: 'Our tile and grout cleaning service provides deep sanitization and color restoration, bringing new life to your tiled surfaces and protecting them from future staining.',
@@ -807,6 +883,10 @@ export const serviceCategories = [
       {
         name: 'Landscaping',
         slug: 'landscaping',
+        header: {
+          title: "Landscaping Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we provide full-service landscaping solutions that enhance the health, appearance, and sustainability of your outdoor spaces. From routine lawn care and pruning to custom garden design and seasonal planting, our team works closely with you to bring your vision to life. We serve residential properties, commercial buildings, condominiums, and public spaces with tailored maintenance schedules and expert plant management. Our approach emphasizes eco-friendly practices, soil health, and long-term curb appeal. Whether you're revitalizing a front yard, maintaining a green roof, or designing a new outdoor retreat, SMI ensures consistent results and elevated outdoor aesthetics. Trusted across Toronto and the GTA, our landscaping services deliver year-round beauty and value to every space we manage.",
+        },
         description: 'Comprehensive landscape maintenance and design services.',
         image: landscaping,
         fullDescription: 'Our landscaping service provides full-spectrum landscape maintenance, from routine care to comprehensive design and installation, ensuring beautiful and healthy outdoor spaces.',
@@ -834,6 +914,10 @@ export const serviceCategories = [
       {
         name: 'Snow Removal',
         slug: 'snow-removal',
+        header: {
+          title: "Snow Removal Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers professional snow removal services to ensure safe and accessible properties throughout the harsh Canadian winter. Our winter maintenance programs include plowing, shoveling, de-icing, and salting for residential, commercial, and industrial sites. With 24/7 availability and real-time weather monitoring, our team is ready to respond to snowstorms, freezing rain, and sudden ice buildup. We utilize advanced snow removal equipment to quickly clear driveways, parking lots, walkways, and entrances with minimal disruption. Our services are designed not only for safety and liability reduction but also to protect surfaces from long-term weather damage. Trusted across Toronto and the GTA, SMI helps you stay operational and safe all winter long with dependable, responsive snow and ice management.",
+        },
         description: 'Professional snow and ice management services.',
         image: snowRemoval,
         fullDescription: 'Our snow removal service provides comprehensive winter maintenance, ensuring safe and clear access to residential and commercial properties during winter months.',
@@ -861,6 +945,10 @@ export const serviceCategories = [
       {
         name: 'Lobby and Entrance Walk-off Matting Installation',
         slug: 'lobby-and-entrance-walk-off-matting-installation',
+        header: {
+          title: "Lobby and Entrance Walk-off Matting Installation in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) installs high-performance walk-off matting systems that protect your building’s interior from dirt, moisture, and seasonal wear. Tailored for high-traffic commercial entrances, our custom matting solutions help extend floor life, reduce cleaning costs, and improve safety with slip-resistant materials. We offer a wide selection of styles and sizes, including logo-branded options that reinforce your company image while maintaining cleanliness. Whether for office buildings, retail environments, or condo lobbies, our mats serve both functional and aesthetic purposes. Proper matting reduces maintenance demands and captures debris before it spreads through your facility. Serving Toronto and the GTA, SMI delivers precise installation and durable solutions that work hard behind the scenes, season after season.",
+        },
         description: 'Professional entrance matting solutions for commercial spaces.',
         image: mattingInstallation,
         fullDescription: 'Our walk-off matting installation service provides customized entrance solutions that reduce dirt, moisture, and wear in high-traffic areas, maintaining cleanliness and safety.',
@@ -888,6 +976,10 @@ export const serviceCategories = [
       {
         name: 'Animal Control and Deterrents',
         slug: 'animal-control-and-deterrents',
+        header: {
+          title: "Animal Control and Deterrent Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we provide humane and effective animal control services to safely manage wildlife intrusions on residential and commercial properties. Our trained specialists assess your site, identify vulnerabilities, and implement eco-friendly deterrents and physical barriers to prevent future re-entry. We manage a wide range of species including raccoons, squirrels, birds, skunks, and rodents using ethical practices that prioritize safety for both animals and occupants. Our approach includes long-term strategies like exclusion repairs, scent deterrents, and habitat modification. Whether it’s spring nesting or autumn migration, Toronto and GTA property owners rely on SMI to keep their buildings animal-free, compliant, and protected through every season.",
+        },
         description: 'Humane wildlife and pest management services.',
         image: animalControl,
         fullDescription: 'Our animal control and deterrent service provides comprehensive wildlife management, using humane and effective techniques to prevent and remove unwanted animal intrusions.',
@@ -915,6 +1007,10 @@ export const serviceCategories = [
       {
         name: 'HVAC Cleaning',
         slug: 'hvac-cleaning',
+        header: {
+          title: "HVAC Cleaning Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers comprehensive HVAC cleaning services that improve indoor air quality, energy efficiency, and system longevity. We clean ducts, vents, coils, and filters using specialized equipment to eliminate dust, mold, allergens, and contaminants that can compromise your environment. Regular HVAC maintenance helps reduce utility bills, enhance airflow, and extend the lifespan of your system. Whether for commercial offices, industrial facilities, or residential buildings, our certified technicians provide detailed inspections and thorough cleanings tailored to your setup. With spring and fall being optimal times for service, SMI ensures your heating and cooling systems remain in peak condition year-round. Serving Toronto and the GTA, we deliver clean air and clean systems—safely and professionally.",
+        },
         description: 'Comprehensive cleaning and maintenance of HVAC systems.',
         image: hvacCleaning,
         fullDescription: 'Our HVAC cleaning service ensures optimal air quality and system efficiency by thoroughly cleaning and maintaining heating, ventilation, and air conditioning systems.',
@@ -942,6 +1038,10 @@ export const serviceCategories = [
       {
         name: 'Fan Coil Cleaning',
         slug: 'fan-coil-cleaning',
+        header: {
+          title: "Fan Coil Cleaning Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers professional fan coil cleaning services that improve HVAC efficiency and indoor air quality for residential and commercial buildings. Over time, fan coil units collect dust, debris, and microbial buildup that reduce airflow and performance. Our service includes full disassembly, deep cleaning of the coil, blower, and filter components, and reassembly with operational testing. By removing blockages and contaminants, we help restore optimal air circulation and energy efficiency while reducing potential allergens. This service is especially valuable during seasonal transitions, when heating or cooling demand increases. Whether you're managing a condo unit, office space, or multi-unit property, SMI ensures that your fan coil systems are running clean, quiet, and efficiently. Serving Toronto and the GTA, we provide preventive maintenance that keeps your HVAC system in top condition year-round.",
+        },
         description: 'Thorough cleaning and maintenance of HVAC fan coil units.',
         image: fanCoilCleaning,
         fullDescription: 'Our fan coil cleaning service ensures optimal performance and air quality by thoroughly cleaning and maintaining fan coil units in residential and commercial HVAC systems.',
@@ -969,6 +1069,10 @@ export const serviceCategories = [
       {
         name: 'Laundry and Kitchen Exhaust Fan Cleaning',
         slug: 'laundry-and-kitchen-exhaust-fan-cleaning',
+        header: {
+          title: "Laundry and Kitchen Exhaust Fan Cleaning in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we provide professional cleaning services for laundry and kitchen exhaust systems to ensure optimal airflow, safety, and energy performance. Grease buildup in kitchen vents and lint accumulation in laundry exhausts are major contributors to fire risks and indoor air quality issues. Our service targets these hazards with thorough removal of debris, grease, and residue from exhaust fans, ducts, and filters. Whether for residential high-rises, commercial kitchens, or shared laundry facilities, SMI helps maintain compliance with building codes and fire prevention standards. Regular exhaust fan cleaning extends equipment life, enhances ventilation, and protects property and occupants alike. Serving Toronto and the GTA, our expert team delivers peace of mind with every cleaning cycle.",
+        },
         description: 'Professional cleaning of laundry and kitchen exhaust systems.',
         image: laundryExhaustFanCleaning,
         fullDescription: 'Our exhaust fan cleaning service provides thorough cleaning and maintenance of laundry and kitchen exhaust systems, ensuring optimal performance and reducing fire risks.',
@@ -996,6 +1100,10 @@ export const serviceCategories = [
       {
         name: 'Industrial Kitchen Vent Cleaning',
         slug: 'industrial-kitchen-vent-cleaning',
+        header: {
+          title: "Industrial Kitchen Vent Cleaning Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) specializes in industrial kitchen vent cleaning for restaurants, food processing facilities, and commercial kitchens that demand strict fire safety and hygiene standards. Grease and smoke residue build up quickly in high-capacity kitchens, posing a major fire hazard and reducing ventilation efficiency. Our team uses advanced degreasing tools and certified techniques to remove buildup from hoods, ducts, filters, and exhaust fans. We also perform detailed inspections to ensure compliance with NFPA fire safety regulations. Regular cleaning not only reduces liability but also enhances airflow, odor control, and kitchen productivity. Trusted by chefs and facility managers across Toronto and the GTA, SMI helps you maintain a clean, safe, and regulation-compliant kitchen environment that operates without disruption.",
+        },
         description: 'Specialized cleaning for commercial and industrial kitchen ventilation systems.',
         image: industrialKitchenVentCleaning,
         fullDescription: 'Our industrial kitchen vent cleaning service provides comprehensive cleaning and maintenance of complex kitchen ventilation systems, ensuring safety, compliance, and optimal performance.',
@@ -1023,6 +1131,10 @@ export const serviceCategories = [
       {
         name: 'Moving Services',
         slug: 'moving-services',
+        header: {
+          title: "Moving Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers full-service moving solutions for both residential and commercial clients across Toronto and the GTA. Whether relocating a home, office, or retail space, we manage every detail of the move—from careful packing and furniture disassembly to transportation, unloading, and placement. Our team uses secure handling techniques and climate-controlled trucks to protect your belongings, including fragile, oversized, and high-value items. We also offer partial packing, storage coordination, and specialized handling upon request. With an emphasis on efficiency, safety, and professionalism, SMI ensures a stress-free relocation experience tailored to your schedule and needs. From short-distance moves to full-scale commercial transitions, we are your trusted partner in getting you from point A to point B—safely, swiftly, and smoothly.",
+        },
         description: 'Professional relocation solutions for homes and businesses.',
         image: movingServices,
         fullDescription: 'Our comprehensive moving services handle every aspect of your relocation, from careful packing and secure transportation to efficient unpacking and placement at your new location.',
@@ -1051,6 +1163,10 @@ export const serviceCategories = [
       {
         name: 'Junk Removal',
         slug: 'junk-removal',
+        header: {
+          title: "Junk Removal Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers fast, responsible junk removal services for residential, commercial, and construction sites across Toronto and the GTA. Whether you're cleaning out a home, downsizing an office, or managing post-renovation debris, our team handles all unwanted items with care and efficiency. We prioritize recycling, donation, and environmentally sound disposal practices to reduce landfill waste and support sustainable cleanouts. From furniture and appliances to electronic waste and construction materials, SMI ensures every load is managed properly and respectfully. With same-day options available, our junk removal services help clients reclaim their space safely, quickly, and stress-free. Let us do the heavy lifting while you focus on your next project or fresh start.",
+        },        
         description: 'Efficient disposal and recycling solutions for unwanted items.',
         image: junkRemoval,
         fullDescription: 'Our junk removal service provides responsible disposal of unwanted items, furniture, and debris with an emphasis on recycling and donation whenever possible to minimize environmental impact.',
@@ -1085,6 +1201,10 @@ export const serviceCategories = [
       {
         name: "Flood Cleanup",
         slug: "flood-cleanup",
+        header: {
+          title: "Flood Cleanup and Water Damage Restoration in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) provides 24/7 emergency flood cleanup and water damage restoration services to help protect your property from long-term structural and health-related risks. Our rapid-response team arrives within the hour, equipped with industrial water extraction pumps, moisture mapping tools, and high-efficiency dehumidifiers. We address everything from minor leaks to major flooding, using thermal imaging to locate hidden moisture and applying eco-friendly mold prevention treatments. Our comprehensive approach ensures full drying, sanitization, and restoration of affected areas. Whether you're dealing with basement floods, burst pipes, or storm damage, SMI helps homeowners and businesses across Toronto and the GTA recover quickly and safely with minimal disruption.",
+        },
         description: "Emergency water damage restoration and cleanup services.",
         image: floodCleanup,
         fullDescription: "Our flood cleanup service provides rapid response and comprehensive water damage restoration, minimizing property damage and preventing long-term issues.",
@@ -1109,6 +1229,10 @@ export const serviceCategories = [
       {
         name: "Fire Restoration",
         slug: "fire-restoration",
+        header: {
+          title: "Fire Damage Restoration Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we deliver comprehensive fire restoration services that support full recovery from fire and smoke damage. Our certified technicians respond quickly to stabilize your property, assess structural integrity, and initiate smoke, soot, and odor removal using advanced tools and techniques. We also specialize in salvaging valuable contents, documenting losses, and working directly with insurance providers to streamline claims. From cleanup and demolition to full reconstruction and air purification, our end-to-end fire restoration process helps restore both safety and peace of mind. Serving homes and businesses across Toronto and the GTA, SMI is your trusted partner in navigating the aftermath of fire-related emergencies.",
+        },        
         description: "Comprehensive recovery and restoration after fire damage.",
         image: fireRestoration,
         fullDescription: "Our fire restoration service provides complete recovery solutions, from smoke and soot removal to structural repairs and content restoration.",
@@ -1133,6 +1257,10 @@ export const serviceCategories = [
       {
         name: "Odour Control",
         slug: "odour-control",
+        header: {
+          title: "Odour Control Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers advanced odor control services that eliminate persistent smells at their source—without relying on masking agents. Our multi-stage treatment process neutralizes odors at the molecular level using non-toxic, eco-friendly solutions safe for families, pets, and sensitive environments. Whether caused by smoke, pets, mold, sewage, or organic waste, our technicians identify the root cause and apply targeted treatments including ozone, hydroxyl, and enzyme-based solutions. We serve residential, commercial, and industrial spaces throughout Toronto and the GTA, ensuring your environment is restored to a fresh, breathable condition. With guaranteed long-term results and complete source removal, SMI helps you reclaim your space with confidence.",
+        },
         description: "Advanced treatment for persistent and challenging odors.",
         image: odourControl,
         fullDescription: "Our odor control service uses advanced techniques to eliminate even the most stubborn odors, restoring fresh and clean environments.",
@@ -1157,6 +1285,10 @@ export const serviceCategories = [
       {
         name: "Applied Microbial (Mould & Sewage) Remediation (AMRT)",
         slug: "applied-microbial-(mould-and-sewage)-remediation-(amrt)",
+        header: {
+          title: "Mould and Sewage Remediation (AMRT) Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) provides IICRC-certified Applied Microbial Remediation (AMRT) services for the safe removal of mold, sewage, and bio-contaminants. We specialize in isolating affected areas, eliminating active microbial growth, and restoring contaminated spaces to healthy, habitable conditions. Using HEPA filtration, negative air pressure, and eco-conscious antimicrobials, we ensure compliance with industry standards and protect the health of occupants. Our detailed contamination assessment includes moisture tracing and full post-treatment documentation for insurance and regulatory needs. From flooded basements to sewer backups and attic mold, clients across Toronto and the GTA rely on SMI’s thorough, science-backed remediation techniques for safe and lasting results.",
+        },
         description: "Comprehensive treatment for mould, sewage, and microbial contamination.",
         image: amrt,
         fullDescription: "Our Applied Microbial Remediation (AMRT) service provides expert treatment for mould, sewage, and other microbial contaminations, ensuring safe and thorough restoration.",
@@ -1201,8 +1333,26 @@ export function getAllServicePaths() {
 }
 
 // Blogs
-import blogImage1 from "@/public/about1.jpg";
-
+import BcommercialJanitorialCleaning from "@/public/blogs/commerical-janitorial-cleaning.webp";
+import BcommercialJanitorialCleaning2 from "@/public/blogs/commerical-janitorial-cleaning2.webp";
+import BcondominiumCleaning from "@/public/blogs/condominium-cleaning.webp";
+import BcondominiumCleaning2 from "@/public/blogs/condominium-cleaning2.webp";
+import BecoFriendlyCleaning from "@/public/blogs/eco-friendly-cleaning.webp";
+import BecoFriendlyCleaning2 from "@/public/blogs/eco-friendly-cleaning2.webp";
+import BemergencyCleaning from "@/public/blogs/emergency-cleaning.webp";
+import BemergencyCleaning2 from "@/public/blogs/emergency-cleaning2.webp";
+import BhvacVentilationCleaning from "@/public/blogs/hvac-ventilation-cleaning.webp";
+import BhvacVentilationCleaning2 from "@/public/blogs/hvac-ventilation-cleaning2.webp";
+import BmedicalOfficeCleaning from "@/public/blogs/medical-office-cleaning.webp";
+import BmedicalOfficeCleaning2 from "@/public/blogs/medical-office-cleaning2.webp";
+import BpostConstruction from "@/public/blogs/post-construction.webp";
+import BpostConstruction2 from "@/public/blogs/post-construction2.webp";
+import BpostCovid from "@/public/blogs/post-covid.webp";
+import BpostCovid2 from "@/public/blogs/post-covid2.webp";
+import BstoneRestoration from "@/public/blogs/stone-restoration.webp";
+import BstoneRestoration2 from "@/public/blogs/stone-restoration2.webp";
+import BwindowCleaning from "@/public/blogs/window-cleaning.webp";
+import BwindowCleaning2 from "@/public/blogs/window-cleaning2.webp";
 
 export const cleaningBlogs = [
   {
@@ -1213,7 +1363,7 @@ export const cleaningBlogs = [
     readTime: 6,
     category: "Commercial",
     tags: ["Office Cleaning", "Janitorial", "Commercial"],
-    image: blogImage1,
+    image: BcommercialJanitorialCleaning,
     featured: true,
     popular: true,
     author: {
@@ -1226,7 +1376,7 @@ export const cleaningBlogs = [
       {
         heading: "Understanding Commercial Cleaning Standards",
         content: "Commercial spaces require specialized cleaning approaches that differ significantly from residential cleaning...",
-        imageUrl: blogImage1, 
+        imageUrl: BcommercialJanitorialCleaning2
       },
       {
         heading: "The Business Impact of Clean Environments",
@@ -1257,7 +1407,7 @@ export const cleaningBlogs = [
     readTime: 8,
     category: "Specialized Services",
     tags: ["Disinfection", "COVID-19", "Deep Cleaning"],
-    image: blogImage1,
+    image: BpostCovid,
     featured: false,
     popular: false,
     author: {
@@ -1270,7 +1420,7 @@ export const cleaningBlogs = [
       {
         heading: "Evolution of Disinfection Protocols",
         content: "The pandemic fundamentally changed our understanding of surface disinfection and airborne pathogen control...",
-        imageUrl: blogImage1, 
+        imageUrl: BpostCovid2
       },
       {
         heading: "Advanced Disinfection Technologies",
@@ -1301,7 +1451,7 @@ export const cleaningBlogs = [
     readTime: 5,
     category: "Residential",
     tags: ["Condominium", "Residential Cleaning"],
-    image: blogImage1,
+    image: BcondominiumCleaning,
     popular: true,
     featured: false,
     author: {
@@ -1314,7 +1464,7 @@ export const cleaningBlogs = [
       {
         heading: "Common Areas and Shared Spaces",
         content: "Lobbies, hallways, and amenity spaces require specialized attention to maintain the property's overall impression...",
-        imageUrl: blogImage1,
+        imageUrl: BcondominiumCleaning2
       },
       {
         heading: "Service Scheduling for Minimal Disruption",
@@ -1345,7 +1495,7 @@ export const cleaningBlogs = [
     readTime: 7,
     category: "Specialized Services",
     tags: ["Window Cleaning", "High-Rise", "Safety"],
-    image: blogImage1,
+    image: BwindowCleaning,
     featured: false,
     popular: false,
     author: {
@@ -1358,7 +1508,7 @@ export const cleaningBlogs = [
       {
         heading: "Safety First: Equipment and Protocols",
         content: "Professional high-rise window cleaning relies on specialized equipment and rigorous safety protocols to protect workers and pedestrians alike...",
-        imageUrl: blogImage1,
+        imageUrl: BwindowCleaning2
       },
       {
         heading: "Pure Water Technology and Reach Systems",
@@ -1389,7 +1539,7 @@ export const cleaningBlogs = [
     readTime: 9,
     category: "Specialized Services",
     tags: ["Stone Restoration", "Maintenance", "Surfaces"],
-    image: blogImage1,
+    image: BstoneRestoration,
     popular: true,
     featured: true,
     author: {
@@ -1402,7 +1552,7 @@ export const cleaningBlogs = [
       {
         heading: "Understanding Different Stone Types",
         content: "Each natural stone—from marble and granite to travertine and limestone—requires unique treatment approaches based on composition and porosity...",
-        imageUrl: blogImage1,
+        imageUrl: BstoneRestoration2
       },
       {
         heading: "Diamond Polishing and Honing Techniques",
@@ -1433,7 +1583,7 @@ export const cleaningBlogs = [
     readTime: 6,
     category: "Construction",
     tags: ["Post-Construction", "Debris Removal", "New Buildings"],
-    image: blogImage1,
+    image: BpostConstruction,
     featured: false,
     popular: false,
     author: {
@@ -1446,7 +1596,7 @@ export const cleaningBlogs = [
       {
         heading: "The Three Phases of Post-Construction Cleaning",
         content: "Professional post-construction cleaning follows a methodical approach: rough clean, deep clean, and final detail clean to ensure no residue remains...",
-        imageUrl: blogImage1,
+        imageUrl: BpostConstruction2
       },
       {
         heading: "Handling Special Surfaces and Materials",
@@ -1477,7 +1627,7 @@ export const cleaningBlogs = [
     readTime: 8,
     category: "Medical",
     tags: ["Healthcare", "Disinfection", "Compliance"],
-    image: blogImage1,
+    image: BmedicalOfficeCleaning,
     featured: false,
     popular: false,
     author: {
@@ -1490,7 +1640,7 @@ export const cleaningBlogs = [
       {
         heading: "Healthcare Cleaning Standards and Compliance",
         content: "Medical facilities must adhere to strict guidelines from organizations like CDC, OSHA, and Joint Commission to ensure patient safety and infection control...",
-        imageUrl: blogImage1,
+        imageUrl: BmedicalOfficeCleaning2
       },
       {
         heading: "Cross-Contamination Prevention Protocols",
@@ -1521,7 +1671,7 @@ export const cleaningBlogs = [
     readTime: 7,
     category: "Sustainable",
     tags: ["Eco-Friendly", "Green Cleaning", "Sustainability"],
-    image: blogImage1,
+    image: BecoFriendlyCleaning,
     popular: true,
     featured: false,
     author: {
@@ -1534,7 +1684,7 @@ export const cleaningBlogs = [
       {
         heading: "Beyond Green Products: The Sustainable Cleaning Ecosystem",
         content: "True green cleaning extends beyond eco-friendly chemicals to encompass equipment, processes, and comprehensive waste reduction strategies...",
-        imageUrl: blogImage1,
+        imageUrl: BecoFriendlyCleaning2
       },
       {
         heading: "Certifications and Standards in Green Cleaning",
@@ -1565,7 +1715,7 @@ export const cleaningBlogs = [
     readTime: 5,
     category: "Restoration",
     tags: ["Emergency", "Restoration", "Damage Control"],
-    image: blogImage1,
+    image: BemergencyCleaning,
     featured: false,
     popular: false,
     author: {
@@ -1578,7 +1728,7 @@ export const cleaningBlogs = [
       {
         heading: "The Critical First 24 Hours After Damage",
         content: "The initial response window is crucial for preventing secondary damage and begins with comprehensive assessment and immediate containment measures...",
-        imageUrl: blogImage1,
+        imageUrl: BemergencyCleaning2
       },
       {
         heading: "Advanced Drying and Decontamination Technology",
@@ -1609,7 +1759,7 @@ export const cleaningBlogs = [
     readTime: 6,
     category: "Specialized Services",
     tags: ["HVAC", "Air Quality", "Ventilation"],
-    image: blogImage1,
+    image: BhvacVentilationCleaning,
     featured: false,
     popular: false,
     author: {
@@ -1622,7 +1772,7 @@ export const cleaningBlogs = [
       {
         heading: "The Hidden Impact of Contaminated HVAC Systems",
         content: "Dirty ventilation systems not only distribute pollutants throughout facilities but also significantly reduce system efficiency and component lifespan...",
-        imageUrl: blogImage1,
+        imageUrl: BhvacVentilationCleaning2
       },
       {
         heading: "Comprehensive Cleaning Methodologies",

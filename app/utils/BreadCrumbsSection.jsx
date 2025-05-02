@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import breadCrumbs from "@/public/breadcrumbs-bg.jpg"; 
+import office from "@/public/office.webp"; 
 
 const BreadCrumbsSection = ({ breadcrumbs = [], imageSrc, imageAlt }) => {
   if (!Array.isArray(breadcrumbs) || breadcrumbs.length === 0) return null;
@@ -15,11 +15,11 @@ const BreadCrumbsSection = ({ breadcrumbs = [], imageSrc, imageAlt }) => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 bg-primary-500 ">
         <Image
-          src={breadCrumbs}
+          src={office}
           alt="Custom Cleaning Background"
           className="w-full h-full object-cover opacity-30"
-          width={1920}
-          height={1080}
+          width={1030}
+          height={565}
           priority
         />
       </div>

@@ -4,6 +4,7 @@ import { Timer } from 'lucide-react';
 import BreadCrumbsSection from '../utils/BreadCrumbsSection';
 import main from "@/public/pages/about-us/main.webp"; 
 import secondary from "@/public/pages/about-us/secondary.webp"; 
+import canadaFlag from "@/public/pages/about-us/canada-flag.webp"; 
 import { teamStructureData } from "../utils/data";
 
 const AboutUs = () => {
@@ -30,65 +31,75 @@ const AboutUs = () => {
           </span>
         </h2>
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
-            {/* Left side image - stacks on mobile */}
-            <div className="w-full md:w-2/5 mb-8 md:mb-0" data-aos="fade-right">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-100/20 to-primary-300/20 transform -rotate-3"></div>
-                <div className="relative shadow-2xl w-full h-64 md:h-96 transform rotate-3 hover:rotate-0 transition-all duration-500 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+          {/* Left side image - stacks on mobile */}
+          <div className="relative w-full md:w-2/5 mb-8 md:mb-0" data-aos="fade-right">
+            <div className="">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-100/20 to-primary-300/20 transform -rotate-3"></div>
+              <div className="shadow-2xl w-full h-64 md:h-96 transform rotate-3 hover:rotate-0 transition-all duration-500 overflow-hidden">
+                <Image 
+                  src={main} 
+                  alt="Office building" 
+                  fill
+                  loading="lazy"
+                  placeholder="blur" 
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                {/* Canada Flag positioned in the top right */}
+                <div className="absolute top-4 right-4 z-10 w-12 md:w-16 h-auto shadow-lg rounded-sm overflow-hidden">
                   <Image 
-                    src={main} 
-                    alt="Office building" 
-                    fill
-                    loading="lazy"
-                    placeholder="blur" 
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    src={canadaFlag}
+                    alt="Canadian Flag"
+                    width={64}
+                    height={32}
+                    className="w-full h-auto"
                   />
                 </div>
-                <div className="absolute -bottom-8 left-[10] bg-white p-3 md:p-4 shadow-xl">
-                  <div className="flex items-center gap-2">
-                    <Timer className="text-primary-100" size={24} />
-                    <span className="font-semibold text-gray-900 text-sm md:text-base">Since 1989</span>
-                  </div>
+              </div>
+              <div className="absolute -bottom-8 left-[10] bg-white p-3 md:p-4 shadow-xl">
+                <div className="flex items-center gap-2">
+                  <Timer className="text-primary-100" size={24} />
+                  <span className="font-semibold text-gray-900 text-sm md:text-base">Since 1989</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Right side content */}
-            <div className="w-full md:w-3/5" data-aos="fade-left">
-              <div className="my-2 md:my-4">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-primary-200 flex items-center">
-                  <span className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center bg-primary-200 text-white rounded-full mr-3 text-sm md:text-base">I</span>
-                  <div className="w-4 h-1 mr-3 bg-primary-200"></div>
-                  Introduction
-                </h3>
-                <div className="bg-gradient-to-r from-slate-50 to-white p-4 md:p-6 shadow-sm border border-slate-100">
-                  <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
+          {/* Right side content */}
+          <div className="w-full md:w-3/5" data-aos="fade-left">
+            <div className="my-2 md:my-4">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-primary-200 flex items-center">
+                <span className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center bg-primary-200 text-white rounded-full mr-3 text-sm md:text-base">I</span>
+                <div className="w-4 h-1 mr-3 bg-primary-200"></div>
+                Introduction
+              </h3>
+              <div className="bg-gradient-to-r from-slate-50 to-white p-4 md:p-6 shadow-sm border border-slate-100">
+                <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
                   Sentinel Maintenance Inc., (SMI), proudly founded in Regina, Saskatchewan in 1989, represents true Canadian entrepreneurship. Our expansion began in 1991 with our Toronto office, followed by Calgary in 1993, establishing our strong Canadian foundation. While we've since grown to serve Vancouver and other Canadian markets, as well as select US locations like Phoenix and Stamford, our Canadian roots remain at the heart of our business approach.
-                  </p>
-                  <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
-                    As a Canadian-owned and operated <span className="font-bold text-primary-100">Property Services Company</span>. SMI brings the values of reliability, quality, and exceptional service that Canadians are known for worldwide. Our success stems from these quintessentially Canadian values, embodied by our dedicated team of Canadian Owners, Managers, and support staff across the country.
-                  </p>
-                  <p className="text-slate-700 leading-relaxed text-sm md:text-base">
+                </p>
+                <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
+                  As a Canadian-owned and operated <span className="font-bold text-primary-100">Property Services Company</span>. SMI brings the values of reliability, quality, and exceptional service that Canadians are known for worldwide. Our success stems from these quintessentially Canadian values, embodied by our dedicated team of Canadian Owners, Managers, and support staff across the country.
+                </p>
+                <p className="text-slate-700 leading-relaxed text-sm md:text-base">
                   With our headquarters in the Canadian prairies and a strong national presence, SMI delivers comprehensive property services with Canadian thoroughness and attention to detail. Our expertise includes contract janitorial, steam cleaning, window washing, construction clean-ups, plumbing, electrical, small construction and emergency services—all delivered with the commitment to excellence that has defined Canadian business standards for generations.
-                  </p>
+                </p>
+              </div>
+              
+              <div className="mt-6 md:mt-8 flex flex-wrap gap-2 md:gap-4 justify-start">
+                <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
+                  Janitorial
                 </div>
-                
-                <div className="mt-6 md:mt-8 flex flex-wrap gap-2 md:gap-4 justify-start">
-                  <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
-                    Janitorial
-                  </div>
-                  <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
-                    Steam Cleaning
-                  </div>
-                  <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
-                    Window Washing
-                  </div>
-                  <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
-                    etc...
-                  </div>
+                <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
+                  Steam Cleaning
+                </div>
+                <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
+                  Window Washing
+                </div>
+                <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
+                  etc...
+                </div>
                 </div>
               </div>
             </div>
@@ -109,7 +120,7 @@ const AboutUs = () => {
             The Sentinel Maintenance Team
           </span>
         </h2>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             {/* Left side content */}
             <div className="w-full md:w-3/5" data-aos="fade-right">

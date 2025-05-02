@@ -4,7 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Search, Tag, Calendar, Clock, ChevronRight, ChevronLeft, Filter, TrendingUp, Award } from 'lucide-react';
 
-import blogImage1 from "@/public/about1.jpg";
+import BcommercialJanitorialCleaning from "@/public/blogs/commerical-janitorial-cleaning.webp";
+import office from "@/public/office.webp";
 import { cleaningBlogs } from "../utils/data";
 
 
@@ -94,7 +95,7 @@ export default function BlogPage() {
         <div className="z-0 bg-gradient-to-r from-primary-100 to-primary-300 text-white p-8 mb-12 shadow-lg relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <Image 
-              src={blogImage1} 
+              src={office} 
               alt="Cleaning service background" 
               fill 
               style={{ objectFit: 'cover' }}
@@ -188,7 +189,7 @@ export default function BlogPage() {
               <div className="bg-white  shadow-md overflow-hidden mb-10 transition-transform hover:shadow-lg hover:-translate-y-1">
                 <div className="relative h-72">
                   <Image 
-                    src={blogImage1} 
+                    src={BcommercialJanitorialCleaning} 
                     alt="Featured blog post" 
                     fill
                     style={{ objectFit: 'cover' }}
