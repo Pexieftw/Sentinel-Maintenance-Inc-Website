@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { Lightbulb, FileText, Presentation, Info, Book } from 'lucide-react';
 import BreadCrumbsSection from '../utils/BreadCrumbsSection';
+
+import healthSafety from "@/public/pages/health-safety/healthSafety.webp"; 
 
 const HealthSafety = () => {
   return (
@@ -15,7 +17,7 @@ const HealthSafety = () => {
         imageAlt="Custom Cleaning Background"
       />
       <section className="bg-white py-20 px-4 md:px-8 lg:px-0 shadow-lg">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div 
             className="flex flex-col items-center mb-16 text-center"
             data-aos="fade-up"
@@ -42,7 +44,7 @@ const HealthSafety = () => {
               data-aos-duration="500"
             >
               <Image 
-                src="/about1.jpg" 
+                src={healthSafety}
                 alt="Safety equipment and WHMIS training" 
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

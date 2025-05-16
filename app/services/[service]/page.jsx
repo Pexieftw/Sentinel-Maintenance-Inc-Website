@@ -40,11 +40,11 @@ export default async function ServiceDetailPage({ params }) {
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-                {service.header?.title || service.name}
+                {service.header?.title}
               </h1>
               
               <p className="text-sm md:text:md lg:text-xl text-gray-700 leading-relaxed">
-                {service.header?.description || service.shortDescription}
+                {service.header?.description}
               </p>
               
               <div className="flex flex-wrap justify-center items-center lg:justify-start lg:items-start gap-6 pt-6">
@@ -52,23 +52,22 @@ export default async function ServiceDetailPage({ params }) {
                   Request Service
                   <ArrowRight className="w-5 h-5" />
                 </a>
-                <a href="services" className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 font-medium border border-gray-300 hover:border-primary-300 transition-all shadow-sm hover:shadow-md">
+                <a href="/services" className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 font-medium border border-gray-300 hover:border-primary-300 transition-all shadow-sm hover:shadow-md">
                   Explore Other Services
                 </a>
               </div>
             </div>
             
             {/* Image Area */}
-            <div className="relative w-full h-full min-h-[100vh]"> 
-              <div className="relative w-full h-full overflow-hidden">
-                <div className="absolute inset-0 bg-primary-300 opacity-10"></div>
+            <div className="w-full">
+              <div className="relative w-full" style={{ aspectRatio: '14/16' }}>
                 <Image 
                   src={placeHolder} 
-                  alt={service.name} 
+                  alt={service.name}
                   fill
-                  className="object-cover"
+                  className="object-cover" 
                   priority
-                  style={{ objectPosition: 'center' }} 
+                  sizes="100vw"
                 />
               </div>
             </div>
@@ -99,12 +98,13 @@ export default async function ServiceDetailPage({ params }) {
                   <Image 
                     src={service.image} 
                     alt={service.name} 
-                    fill 
-                    className="object-cover hover:scale-110 transition-transform duration-700"
+                    width={800}  // Actual image width
+                    height={600} // Actual image height
+                    className="w-full h-auto"
                     priority
                   />
-                  <div className="absolute bottom-0 right-0 p-4 bg-primary-500">
-                    <p className="text-white font-medium text-sm">{service.name}</p>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-primary-500/50">
+                    <p className="text-white font-medium text-sm text-center">{service.name}</p>
                   </div>
                 </div>
               </div>

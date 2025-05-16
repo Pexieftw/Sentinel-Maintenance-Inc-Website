@@ -106,7 +106,7 @@ const PrivacyPolicy = () => {
           >
             <button 
               onClick={() => toggleSection(index)}
-              className="w-full px-6 py-5 text-left bg-primary-300 hover:bg-primary-400 duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 flex justify-between items-center"
+              className="cursor-pointer w-full px-6 py-5 text-left bg-primary-300 hover:bg-primary-400 duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 flex justify-between items-center"
             >
               <span className="text-lg font-semibold text-white">{index + 1}. {section.title}</span>
               <svg 

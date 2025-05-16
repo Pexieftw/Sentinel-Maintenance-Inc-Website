@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { services } from '../utils/data'; 
 
+import SmiLogoMini from '@/public/icons/SMI-LOGO-MINI.svg';
+import MapleLeaf from '@/public/svg-ui/MapleLeaf.svg'; 
 const Footer = () => {
   const locations = [
     "Toronto", "North York", "Scarborough", "Etobicoke", "Vaughan", 
@@ -40,17 +42,17 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="md:pr-4 text-4xl font-bold flex items-center justify-center mb-6 md:justify-between gap-3">
               <Image
-                src="/icons/SMI-LOGO-MINI.svg"
+                src={SmiLogoMini}
                 alt="Logo"
-                width={96} 
-                height={37}
+                width={96}
+                height={40}
                 className="brightness-0 invert"
               />
               <Image
-                src="/svg-ui/MapleLeaf.svg"
+                src={MapleLeaf}
                 alt="Canadian Maple Leaf"
-                width={32}
-                height={32}
+                width={40}
+                height={40}
                 className="hidden md:block brightness-0 invert"
               />
             </div>

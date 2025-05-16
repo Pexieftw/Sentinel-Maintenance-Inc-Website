@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { services, navItems } from "../utils/data";
 
-import smiLogo from '@/public/icons/SMI-NEW-FONT.svg';
+import smiLogo from '@/public/icons/SMI-FINAL.svg';
 const Navbar = () => {
   const pathname = usePathname();
   const router = useRouter();
@@ -60,25 +60,89 @@ const Navbar = () => {
     }
   };
 
-  // Handle scroll behavior
+  // Handle scroll behavior - IMPROVED WITH RESPONSIVE THRESHOLDS
   useEffect(() => {
+    // Threshold for how far user needs to scroll before navbar hides (in pixels)
+    const SCROLL_THRESHOLD = 10;
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    
+    // Function to get current viewport width
+    const getViewportWidth = () => {
+      return window.innerWidth;
+    };
+    
+    // Function to get scroll threshold based on viewport width
+    const getScrollThreshold = () => {
+      const viewportWidth = getViewportWidth();
+      if (viewportWidth >= 1024) {
+        return 172; // lg screens
+      } else if (viewportWidth >= 768) {
+        return 140; // md screens
+      } else {
+        return 132; // sm screens
+      }
+    };
+    
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      const navbarPosition = currentScrollPos < 52 ? 52 : 0;
+      const scrollDown = currentScrollPos > lastScrollY;
+      const dynamicThreshold = getScrollThreshold();
       
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 52);
+      // Check if at the top zone (always show navbar at the 52px mark)
+      const inTopZone = currentScrollPos < 52;
+      // Check if in the "fixed" zone between 52px and the responsive threshold
+      const inFixedZone = currentScrollPos >= 52 && currentScrollPos < dynamicThreshold;
+      
+      // Set navbar position - fixed at 52px until the threshold is reached
+      const navbarPosition = inTopZone ? 52 : 0;
       document.documentElement.style.setProperty('--navbar-top', `${navbarPosition}px`);
       
-      setPrevScrollPos(currentScrollPos);
+      // Visibility logic
+      if (inTopZone || inFixedZone) {
+        // Always visible in top or fixed zones
+        setVisible(true);
+      } else if (scrollDown && Math.abs(currentScrollPos - lastScrollY) > SCROLL_THRESHOLD) {
+        // Hide when scrolling down past the dynamic threshold
+        setVisible(false);
+      } else if (!scrollDown) {
+        // Show immediately on any upward scroll when below the threshold
+        setVisible(true);
+      }
+      
+      lastScrollY = currentScrollPos;
+      ticking = false;
     };
-  
+    
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    
+    // Set initial position and visibility
     const initialScrollPos = window.scrollY;
+    const dynamicThreshold = getScrollThreshold();
     const initialPosition = initialScrollPos < 52 ? 52 : 0;
+    const initiallyVisible = initialScrollPos < dynamicThreshold;
+    
     document.documentElement.style.setProperty('--navbar-top', `${initialPosition}px`);
-  
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos]);
+    setVisible(initiallyVisible);
+    lastScrollY = initialScrollPos;
+    
+    // Add event listeners
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, []);
   
   // Handle body scroll when menu is open
   useEffect(() => {
@@ -116,21 +180,20 @@ const Navbar = () => {
   return (
     <>
       <nav 
-        className={`w-full bg-white shadow-md z-40 fixed left-0 right-0 transition-all duration-300 ease-in-out ${
+        className={`w-full bg-white shadow-md z-40 fixed left-0 right-0 transition-transform duration-300 ease-in-out ${
           visible ? 'translate-y-0' : '-translate-y-full'
         }`}
         style={{ top: 'var(--navbar-top)' }}
       >
         <div className="relative max-w-7xl mx-auto">
-          <div className="flex items-center h-22 px-4 lg:px-0">
+          <div className="flex items-center h-20 md:h-26 lg:h-30 px-4 lg:px-0">
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/">
                 <Image
                   src={smiLogo}
-                  alt="Logo"
-                  width={160}
-                  height={83} 
+                  alt="SMI Logo"
+                  className="w-28 h-14 sm:w-40 sm:h-20 md:w-40 md:h-20 lg:w-52 lg:h-26"
                   priority
                 />
               </Link>
@@ -320,10 +383,9 @@ const Navbar = () => {
                   <Image
                     src={smiLogo}
                     alt="SMI Logo"
-                    width={100}
-                    height={46}
-                    placeholder="blur" 
-                    
+                    width={150}
+                    height={74}
+                    priority                    
                   />
                 </Link>
               </div>

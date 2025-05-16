@@ -23,22 +23,16 @@ export default function ServicesPage() {
     ...serviceCategories
   ]
 
-  // Handle URL hash for category selection
   useEffect(() => {
-    // Check if we're running on the client side
     if (typeof window !== 'undefined') {
-      // Get the hash from the URL (removing the # character)
       const hash = window.location.hash.replace('#', '')
       
       if (hash) {
-        // Convert hash to proper category name format by converting kebab-case to normal text
-        // For example, 'cleaning-services' becomes 'Cleaning Services'
         const formattedHash = hash
           .split('-')
           .map(word => word.charAt(0).toUpperCase() + word.slice(1))
           .join(' ')
         
-        // Find the matching category
         const matchingCategory = allCategories.find(
           cat => cat.category.toLowerCase() === formattedHash.toLowerCase()
         )
@@ -48,11 +42,11 @@ export default function ServicesPage() {
         }
       }
     }
-  }, []) // Empty dependency array ensures this only runs on mount
+  }, []) 
 
   useEffect(() => {
     AOS.init({
-      duration: 500,
+      duration: 400,
       once: true,
     })
   }, [])
@@ -61,16 +55,11 @@ export default function ServicesPage() {
     AOS.refresh()
   }, [activeCategory])
 
-  // Update URL hash when category changes
   useEffect(() => {
     if (typeof window !== 'undefined' && activeCategory !== 'All') {
-      // Convert category name to kebab-case for the URL
-      // For example, 'Cleaning Services' becomes 'cleaning-services'
       const hash = activeCategory.toLowerCase().replace(/\s+/g, '-')
-      // Update URL without triggering page reload
       window.history.replaceState(null, '', `/services#${hash}`)
     } else if (typeof window !== 'undefined') {
-      // Remove hash when 'All' is selected
       window.history.replaceState(null, '', '/services')
     }
   }, [activeCategory])
@@ -106,7 +95,6 @@ export default function ServicesPage() {
         <div 
           className="flex flex-col md:flex-col lg:flex-row lg:justify-between lg:items-center mb-8 sm:mb-12 border-b border-gray-200 pb-4"
           data-aos="fade-up"
-          data-aos-delay="200"
         >
           {/* Search Filter */}
           <div className="relative w-full lg:w-96 mb-6 lg:mb-0 order-first lg:order-last" data-aos="fade-up">
@@ -126,7 +114,7 @@ export default function ServicesPage() {
 
           {/* Mobile-friendly Category Tabs */}
           <div className="grid grid-cols-2 sm:flex sm:flex-row gap-3 sm:gap-0 order-last lg:order-first">
-            {allCategories.map((category, index) => (
+            {allCategories.map((category) => (
               <button
                 key={category.category}
                 onClick={() => setActiveCategory(category.category)}
@@ -139,7 +127,6 @@ export default function ServicesPage() {
                     : 'bg-white text-gray-700 border-gray-300 hover:border-primary-300 hover:bg-gray-50'}
                 `}
                 data-aos="zoom-in"
-                data-aos-delay={200 + (index * 50)}
               >
                 {category.category}
               </button>
@@ -169,13 +156,12 @@ export default function ServicesPage() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             {filteredServices.length > 0 ? (
-              filteredServices.map((service, index) => (
+              filteredServices.map((service) => (
                 <Link 
                   href={`/services/${service.slug}`} 
                   key={service.name}
                   className="group"
                   data-aos="fade-up"
-                  data-aos-delay={index * 100}
                 >
                   <div className="border border-gray-200 h-full flex flex-col 
                     transition-all duration-300 

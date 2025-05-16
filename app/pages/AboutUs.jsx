@@ -4,7 +4,7 @@ import { Timer } from 'lucide-react';
 import BreadCrumbsSection from '../utils/BreadCrumbsSection';
 import main from "@/public/pages/about-us/main.webp"; 
 import secondary from "@/public/pages/about-us/secondary.webp"; 
-import canadaFlag from "@/public/pages/about-us/canada-flag.webp"; 
+import MapleLeaf from '@/public/svg-ui/MapleLeaf.svg'; 
 import { teamStructureData } from "../utils/data";
 
 const AboutUs = () => {
@@ -47,14 +47,11 @@ const AboutUs = () => {
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                {/* Canada Flag positioned in the top right */}
-                <div className="absolute top-4 right-4 z-10 w-12 md:w-16 h-auto shadow-lg rounded-sm overflow-hidden">
+                <div className="absolute top-4 right-4 z-10 w-12 h-auto shadow-lg rounded-sm overflow-hidden">
                   <Image 
-                    src={canadaFlag}
+                    src={MapleLeaf}
                     alt="Canadian Flag"
-                    width={64}
-                    height={32}
-                    className="w-full h-auto"
+                    className="w-full h-full"
                   />
                 </div>
               </div>
@@ -160,10 +157,10 @@ const AboutUs = () => {
             </div>
 
             {/* Right side image - stacks on mobile */}
-            <div className="w-full md:w-2/5 mb-8 md:mb-0 order-first md:order-last" data-aos="fade-left">
-              <div className="relative">
+            <div className="relative w-full md:w-2/5 mb-8 md:mb-0 order-first md:order-last" data-aos="fade-left">
+              <div className="">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-100/20 to-primary-300/20 transform -rotate-3"></div>
-                <div className="relative shadow-2xl w-full h-64 md:h-96 transform rotate-3 hover:rotate-0 transition-all duration-500 overflow-hidden">
+                <div className="shadow-2xl w-full h-64 md:h-96 transform rotate-3 hover:rotate-0 transition-all duration-500 overflow-hidden">
                   <Image 
                     src={secondary} 
                     alt="Team collaboration" 
@@ -173,6 +170,13 @@ const AboutUs = () => {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
+                  <div className="absolute top-4 left-4 z-10 w-12 h-auto shadow-lg rounded-sm overflow-hidden">
+                    <Image 
+                      src={MapleLeaf}
+                      alt="Canadian Flag"
+                      className="w-full h-full"
+                    />
+                  </div>
                 </div>
                 <div className="absolute -bottom-8 right-[10] bg-white p-3 md:p-4 shadow-xl">
                   <div className="flex items-center gap-2">

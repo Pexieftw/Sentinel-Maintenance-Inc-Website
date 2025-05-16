@@ -136,7 +136,7 @@ export default function RootLayout({
         <div className="overflow-x-hidden">
           <TopBar />
           <NavBar />
-          <div className='w-full h-20 px-4 lg:px-0'></div>
+          <div className='w-full h-20 md:h-26 lg:h-30 px-4 lg:px-0'></div>
           {children}
           <Footer />
         </div>

@@ -108,7 +108,7 @@ const AreasWeServe = () => {
                         className="brightness-90"
                         priority={index === activeIndex}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-primary-500/15"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-black/50 to-black/10"></div>
                     </div>
 
                     {/* Map Pin and Text */}
@@ -159,7 +159,7 @@ const AreasWeServe = () => {
               ))}
             </div>
           </div>
-
+          
           {/* Cities Overview with Images */}
           <div 
             className="mt-16"
@@ -184,40 +184,58 @@ const AreasWeServe = () => {
                 </span>
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {areas.map((area) => (
-                <div 
-                  key={area.name} 
-                  className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden group"
-                  data-aos="fade-up"
-                  data-aos-once="true"
-                  data-aos-offset="200"
-                >
-                  <div className="h-48 relative overflow-hidden">
-                    <Image
-                      src={area.imageSrc}
-                      alt={`${area.name} service area`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      style={{ objectFit: 'cover' }}
-                      className="group-hover:scale-105 transition-transform duration-700"
-                    />
-                    
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-500/25 to-primary-300/0"></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-300/40 to-transparent group-hover:from-primary-400/40 transition-all duration-300"></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/50 transition-all duration-300"></div>
-                    <div className="absolute bottom-0 left-0 w-full p-4 flex items-center">
-                      <div className="w-8 h-8 flex items-center justify-center rounded-full bg-primary-200 text-white mr-3 group-hover:scale-110 transition-transform duration-300">
-                        <MapPin size={16} />
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {areas.map((area, index) => {
+                const totalItems = areas.length;
+                const isLastRowWithTwo = totalItems % 3 === 2;
+                const isSecondLast = index === totalItems - 2;
+                const isLast = index === totalItems - 1;
+                
+                let alignmentClass = "";
+                if (isLastRowWithTwo) {
+                  if (isSecondLast) alignmentClass = "lg:col-start-1";
+                  if (isLast) alignmentClass = "lg:col-start-3 lg:col-end-4";
+                }
+                
+                return (
+                  <div 
+                    key={area.name}
+                    className={`
+                      bg-white shadow-lg hover:shadow-xl 
+                      transition-all duration-300
+                      transform hover:-translate-y-1 
+                      overflow-hidden group
+                      ${alignmentClass}
+                    `}
+                    data-aos="fade-up"
+                    data-aos-once="true"
+                    data-aos-offset="200"
+                  >
+                    <div className="h-48 relative overflow-hidden">
+                      <Image
+                        src={area.imageSrc}
+                        alt={`${area.name} service area`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{ objectFit: 'cover' }}
+                        className="group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-black/0"></div>
+                      <div className="absolute bottom-0 left-0 w-full p-4 flex items-center">
+                        <div className="w-8 h-8 flex items-center justify-center rounded-full bg-primary-200 text-white mr-3 group-hover:scale-110 transition-transform duration-300">
+                          <MapPin size={16} />
+                        </div>
+                        <h4 className="text-xl font-bold text-white group-hover:translate-x-1 transition-transform duration-300">
+                          {area.name}
+                        </h4>
                       </div>
-                      <h4 className="text-xl font-bold text-white group-hover:translate-x-1 transition-transform duration-300">{area.name}</h4>
+                    </div>
+                    <div className="p-5">
+                      <p className="text-gray-600">{area.description}</p>
                     </div>
                   </div>
-                  <div className="p-5">
-                    <p className="text-gray-600">{area.description}</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

@@ -38,7 +38,7 @@ const AreasWeServe = () => {
           color="primary-300"
         />
 
-        {/* Scrolling cities ticker */}
+        {/* Scrolling cities */}
         <div className="my-8 overflow-hidden bg-primary-300 shadow-lg" data-aos="fade-up" data-aos-delay="600">
           <div className="relative flex py-4">
             <div className="animate-marquee whitespace-nowrap flex items-center">

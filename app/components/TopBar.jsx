@@ -81,9 +81,10 @@ const TopBar = () => {
           </div>
           
           {/* Call us now button */}
+
           <a 
             href="tel:+14169184122" 
-            className="bg-white text-gray-800 px-4 py-2 hover:bg-gray-100 transition-colors duration-200 font-medium"
+            className="border-2 border-white text-white hover:bg-white hover:text-gray-800 font-medium transition-all duration-300 py-1.5 px-4 "
           >
             Call us now
           </a>

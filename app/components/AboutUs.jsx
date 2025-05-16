@@ -13,6 +13,7 @@ import aboutUs2 from "@/public/pages/home/aboutUs2.webp";
 import aboutUs3 from "@/public/pages/home/aboutUs3.webp"; 
 import aboutUs4 from "@/public/pages/home/aboutUs4.webp"; 
 
+import MapleLeaf from '@/public/svg-ui/MapleLeaf.svg'; 
 
 const AboutUs = () => {
   useEffect(() => {
@@ -28,41 +29,58 @@ const AboutUs = () => {
   };
 
   return (
-    <section className="pt-10 md:pt-20 bg-gradient-to-b from-white to-gray-100">
+    <section className="pt-4 md:pt-4 bg-gradient-to-b from-white to-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-0">
+        <div className="relative mb-4 flex items-center gap-4 justify-center md:justify-start">
+          <div className="relative">
+            <Image 
+              src={MapleLeaf}
+              alt="Canadian Maple Leaf"
+              width={96}
+              height={96}
+              className="w-8 h-8 md:w-14 md:h-14 lg:w-20 lg:h-20"
+              priority
+            />
+          </div>
+          <div className=" text-primary-300 font-bold text-[16px] md:text-[24px] lg:text-[32px] text-center">
+            A Proudly Canadian Company
+          </div>
+        </div>
         <div className="flex flex-col md:flex-row items-stretch gap-12" data-aos="fade-up">
           {/* Images Section */}
-          <div className="md:w-1/2 h-auto flex">
+          <div className="md:w-1/2 h-auto flex flex-col">
+
             {/* Custom Grid */}
             <div className="grid grid-cols-2 gap-6 h-[50vh] md:h-full w-full">
               {/* Left column */}
               <div className="grid grid-rows-3 gap-6 h-full">
-                <div className="row-span-2 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
-                  <Image
-                    src={aboutUs1}
-                    alt="Modern Cleaning Interior"
-                    placeholder="blur"
-                    quality={100}
-                    className="object-cover"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority
-                  />
-                </div>
+                  <div className="row-span-2 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
+                    <Image
+                      src={aboutUs1}
+                      alt="Modern Cleaning Interior"
+                      placeholder="blur"
+                      quality={100}
+                      className="object-cover"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority
+                    />
+                  </div>
 
-                {/* Third Image */}
-                <div className="row-span-1 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
-                  <Image
-                    src={aboutUs2}
-                    alt="Additional Cleaning Service"
-                    placeholder="blur"
-                    quality={100}
-                    className="object-cover"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority
-                  />
-                </div>
+                  {/* Third Image */}
+                  <div className="row-span-1 relative overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
+                    <Image
+                      src={aboutUs2}
+                      alt="Additional Cleaning Service"
+                      placeholder="blur"
+                      quality={100}
+                      className="object-cover"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority
+                    />
+                  </div>
+
               </div>
 
               {/* Right column */}

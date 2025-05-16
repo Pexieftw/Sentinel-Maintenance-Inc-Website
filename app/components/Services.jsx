@@ -43,8 +43,6 @@ const Services = () => {
               data-aos-delay={300 + index * 200}
             >
               <div className="transition-transform duration-300 hover:-translate-y-3">
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary-300 opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-                
                 <div className="relative h-64 w-full overflow-hidden">
                   <Image
                     src={service.image}
@@ -54,7 +52,7 @@ const Services = () => {
                     priority
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-500/75 to-primary-300/25"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-100/0 to-primary-100/15"></div>
                   <div className={`absolute top-4 left-4 bg-primary-300 px-4 py-1 text-white text-sm font-medium`}>
                     {service.info}
                   </div>
