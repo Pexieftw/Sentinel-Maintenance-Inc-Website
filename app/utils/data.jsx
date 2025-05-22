@@ -1844,3 +1844,49 @@ export const teamStructureData = [
     imageAlt: "Cleaners"
   }
 ];
+
+// FAQ
+
+
+export const faqs = [
+  {
+    question: "What geographic areas do you serve?",
+    answer: "We proudly service the entire Greater Toronto Area (GTA)—from Toronto proper through North York, Scarborough, Etobicoke, Vaughan, Markham, Mississauga and surrounding municipalities."
+  },
+  {
+    question: "What kinds of cleaning services do you offer?",
+    answer: "Our core offerings include commercial janitorial and office cleaning, condominium and institutional cleaning, medical and dealership cleaning, plus post-construction and new-build cleaning services."
+  },
+  {
+    question: "Do you provide specialized or \"add-on\" services?",
+    answer: "Yes—everything from deep-clean disinfection, fogging, window cleaning (low-rise & high-rise), pressure-washing (exteriors & parking garages), carpet care, graffiti removal, to natural stone restoration and more."
+  },
+  {
+    question: "Can you handle emergency cleanup and restoration?",
+    answer: "Absolutely—we offer flood cleanup, fire damage restoration, odour control, and applied microbial (mould & sewage) remediation through our dedicated Restoration division."
+  },
+  {
+    question: "How do I request a quote or book a service?",
+    answer: "Simply fill out our online request form or call our office. We'll assess your needs, provide a detailed proposal, and schedule at your convenience."
+  },
+  {
+    question: "What are your pricing and payment options?",
+    answer: "Pricing is customized based on scope, frequency, and any specialized requirements. We accept major credit cards, e-transfers, and corporate invoicing. Recurring-service discounts are available."
+  },
+  {
+    question: "Are you fully licensed and insured?",
+    answer: "Yes—our company holds all required provincial licences and carries comprehensive liability and workers' compensation insurance for your peace of mind."
+  },
+  {
+    question: "What is your typical scheduling availability?",
+    answer: "We operate 24/7 for emergency and scheduled projects, with most routine commercial cleanings available outside standard business hours to minimize disruption."
+  },
+  {
+    question: "How do you ensure consistent service quality?",
+    answer: "Through a tiered oversight structure—senior management sets protocols, area supervisors coordinate regional operations, on-site forepersons manage daily execution, and all cleaners follow standardized training and checklists."
+  },
+  {
+    question: "What safety and compliance training do staff receive?",
+    answer: "Every team member completes WHMIS certification (≥80% pass) and ongoing chemical-handling, equipment-use, and workplace-safety training to meet or exceed industry standards."
+  }
+];

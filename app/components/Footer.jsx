@@ -123,6 +123,9 @@ const Footer = () => {
               <Link href="/blogs" className="text-gray-400 hover:text-white text-sm">
                 Blogs
               </Link>
+              <Link href="/faq" className="text-gray-400 hover:text-white text-sm">
+                FAQ
+              </Link>
               <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm">
                 Privacy Policy
               </Link>

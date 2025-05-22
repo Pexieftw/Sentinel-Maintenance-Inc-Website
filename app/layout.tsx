@@ -16,9 +16,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Environment variables with fallbacks
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://smi.ca';
+const COMPANY_NAME = process.env.NEXT_PUBLIC_COMPANY_NAME || 'Sentinel Maintenance Inc';
+const COMPANY_SHORT_NAME = process.env.NEXT_PUBLIC_COMPANY_SHORT_NAME || 'SMI';
+const OG_IMAGE_PATH = process.env.NEXT_PUBLIC_OG_IMAGE_PATH || '/about1.jpg';
+
 export const metadata: Metadata = {
-  title: "Sentinel Maintenance Inc | Home | SMI.ca`",
-  description: "SMI offers professional property services, including commercial cleaning, window washing, power washing, COVID-19 disinfection, and restoration. Trusted in Toronto, Mississauga, Vaughan, and across the GTA. Contact us for a free quote!",
+  title: `${COMPANY_NAME} | Home | ${COMPANY_SHORT_NAME}.ca`,
+  description: `${COMPANY_SHORT_NAME} offers professional property services, including commercial cleaning, window washing, power washing, COVID-19 disinfection, and restoration. Trusted in Toronto, Mississauga, Vaughan, and across the GTA. Contact us for a free quote!`,
   keywords: [
     "commercial cleaning services",
     "property maintenance GTA",
@@ -40,16 +46,16 @@ export const metadata: Metadata = {
     "best cleaning company in Toronto",
   ],
   openGraph: {
-    title: "Sentinel Maintenance Inc. (SMI) | Top Property Services & Cleaning Solutions in GTA",
-    description: "SMI provides professional property services, including commercial cleaning, window washing, power washing, COVID-19 disinfection, and restoration. Servicing Toronto, Mississauga, Vaughan, and the entire GTA. Get a free quote today!",
-    url: "https://smi.ca",
-    siteName: "Sentinel Maintenance Inc. (SMI)",
+    title: `${COMPANY_NAME} (${COMPANY_SHORT_NAME}) | Top Property Services & Cleaning Solutions in GTA`,
+    description: `${COMPANY_SHORT_NAME} provides professional property services, including commercial cleaning, window washing, power washing, COVID-19 disinfection, and restoration. Servicing Toronto, Mississauga, Vaughan, and the entire GTA. Get a free quote today!`,
+    url: SITE_URL,
+    siteName: `${COMPANY_NAME} (${COMPANY_SHORT_NAME})`,
     images: [
       {
-        url: "https://smi.ca/about1.jpg",
+        url: `${SITE_URL}${OG_IMAGE_PATH}`,
         width: 1200,
         height: 630,
-        alt: "SMI Property Services - Commercial Cleaning, Window Washing, and More",
+        alt: `${COMPANY_SHORT_NAME} Property Services - Commercial Cleaning, Window Washing, and More`,
       },
     ],
     locale: "en_CA",
@@ -57,12 +63,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sentinel Maintenance Inc. (SMI) | Top Property Services & Cleaning Solutions in GTA",
-    description: "SMI offers professional property services, including commercial cleaning, window washing, power washing, COVID-19 disinfection, and restoration. Servicing Toronto, Mississauga, Vaughan, and the entire GTA. Get a free quote today!",
-    images: ["https://smi.ca/about1.jpg"], 
+    title: `${COMPANY_NAME} (${COMPANY_SHORT_NAME}) | Top Property Services & Cleaning Solutions in GTA`,
+    description: `${COMPANY_SHORT_NAME} offers professional property services, including commercial cleaning, window washing, power washing, COVID-19 disinfection, and restoration. Servicing Toronto, Mississauga, Vaughan, and the entire GTA. Get a free quote today!`,
+    images: [`${SITE_URL}${OG_IMAGE_PATH}`], 
   },
   alternates: {
-    canonical: "https://smi.ca",
+    canonical: SITE_URL,
   },
   robots: {
     index: true,
@@ -116,20 +122,89 @@ export const metadata: Metadata = {
     ],
   },
   appleWebApp: {
-    title: "SMI",
+    title: COMPANY_SHORT_NAME,
   },
 };
 
+// FAQ Structured Data
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What geographic areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We proudly service the entire Greater Toronto Area (GTA)—from Toronto proper through North York, Scarborough, Etobicoke, Vaughan, Markham, Mississauga and surrounding municipalities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kinds of cleaning services do you offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our core offerings include commercial janitorial and office cleaning, condominium and institutional cleaning, medical and dealership cleaning, plus post-construction and new-build cleaning services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide specialized or \"add-on\" services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—everything from deep-clean disinfection, fogging, window cleaning (low-rise & high-rise), pressure-washing (exteriors & parking garages), carpet care, graffiti removal, to natural stone restoration and more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your pricing and payment options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing is customized based on scope, frequency, and any specialized requirements. We accept major credit cards, e-transfers, and corporate invoicing. Recurring-service discounts are available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you fully licensed and insured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—our company holds all required provincial licences and carries comprehensive liability and workers' compensation insurance for your peace of mind."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your typical scheduling availability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We operate 24/7 for emergency and scheduled projects, with most routine commercial cleanings available outside standard business hours to minimize disruption."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What safety and compliance training do staff receive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every team member completes WHMIS certification (≥80% pass) and ongoing chemical-handling, equipment-use, and workplace-safety training to meet or exceed industry standards."
+      }
+    }
+  ]
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqStructuredData),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
