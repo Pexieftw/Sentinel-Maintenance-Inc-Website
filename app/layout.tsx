@@ -136,7 +136,7 @@ const faqStructuredData = {
       "name": "What geographic areas do you serve?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We proudly service the entire Greater Toronto Area (GTA)—from Toronto proper through North York, Scarborough, Etobicoke, Vaughan, Markham, Mississauga and surrounding municipalities."
+        "text": "We proudly service the entire Greater Toronto Area (GTA) from Toronto proper through North York, Scarborough, Etobicoke, Vaughan, Markham, Mississauga and surrounding municipalities."
       }
     },
     {
@@ -149,10 +149,10 @@ const faqStructuredData = {
     },
     {
       "@type": "Question",
-      "name": "Do you provide specialized or \"add-on\" services?",
+      "name": "Do you provide specialized or add-on services?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes—everything from deep-clean disinfection, fogging, window cleaning (low-rise & high-rise), pressure-washing (exteriors & parking garages), carpet care, graffiti removal, to natural stone restoration and more."
+        "text": "Yes, everything from deep-clean disinfection, fogging, window cleaning (low-rise and high-rise), pressure-washing (exteriors and parking garages), carpet care, graffiti removal, to natural stone restoration and more."
       }
     },
     {
@@ -168,7 +168,7 @@ const faqStructuredData = {
       "name": "Are you fully licensed and insured?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes—our company holds all required provincial licences and carries comprehensive liability and workers' compensation insurance for your peace of mind."
+        "text": "Yes, our company holds all required provincial licences and carries comprehensive liability and workers' compensation insurance for your peace of mind."
       }
     },
     {
@@ -184,7 +184,7 @@ const faqStructuredData = {
       "name": "What safety and compliance training do staff receive?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every team member completes WHMIS certification (≥80% pass) and ongoing chemical-handling, equipment-use, and workplace-safety training to meet or exceed industry standards."
+        "text": "Every team member completes WHMIS certification (80% or higher pass rate) and ongoing chemical-handling, equipment-use, and workplace-safety training to meet or exceed industry standards."
       }
     }
   ]
@@ -193,7 +193,7 @@ const faqStructuredData = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.NextNode;
 }>) {
   return (
     <html lang="en">

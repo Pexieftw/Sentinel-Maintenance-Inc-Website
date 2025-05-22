@@ -108,7 +108,7 @@ const AreasWeServe = () => {
                         className="brightness-90"
                         priority={index === activeIndex}
                       />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-black/50 to-black/10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-black/35 to-black/10"></div>
                     </div>
 
                     {/* Map Pin and Text */}
