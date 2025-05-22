@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://smi.ca';
 const COMPANY_NAME = process.env.NEXT_PUBLIC_COMPANY_NAME || 'Sentinel Maintenance Inc';
 const COMPANY_SHORT_NAME = process.env.NEXT_PUBLIC_COMPANY_SHORT_NAME || 'SMI';
-const OG_IMAGE_PATH = process.env.NEXT_PUBLIC_OG_IMAGE_PATH || '/about1.jpg';
+const OG_IMAGE_PATH = process.env.NEXT_PUBLIC_OG_IMAGE_PATH || '/skyScraper.webp';
 
 export const metadata: Metadata = {
   title: `${COMPANY_NAME} | Home | ${COMPANY_SHORT_NAME}.ca`,

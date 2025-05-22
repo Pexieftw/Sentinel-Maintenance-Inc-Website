@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link'; 
 import { Mail, Phone } from 'lucide-react';
 
-import { faqs } from "../utils/faqs";
+import { faqs } from "../utils/data";
 
 const FAQ = () => {
   const [expandedSection, setExpandedSection] = useState(null);
