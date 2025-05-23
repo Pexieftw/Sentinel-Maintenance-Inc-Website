@@ -17,7 +17,7 @@ const BreadCrumbsSection = ({ breadcrumbs = [], imageSrc, imageAlt }) => {
         <Image
           src={office}
           alt="Custom Cleaning Background"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-50"
           width={1030}
           height={565}
           priority

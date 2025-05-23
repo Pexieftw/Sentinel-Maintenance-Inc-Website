@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
 import { areas } from "../utils/data";
 import BreadCrumbsSection from '../utils/BreadCrumbsSection';
-
-
+import smiLogo from '@/public/icons/SMI-FINAL.svg';
 
 const AreasWeServe = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -191,49 +191,71 @@ const AreasWeServe = () => {
                 const isSecondLast = index === totalItems - 2;
                 const isLast = index === totalItems - 1;
                 
-                let alignmentClass = "";
-                if (isLastRowWithTwo) {
-                  if (isSecondLast) alignmentClass = "lg:col-start-1";
-                  if (isLast) alignmentClass = "lg:col-start-3 lg:col-end-4";
-                }
-                
                 return (
-                  <div 
-                    key={area.name}
-                    className={`
-                      bg-white shadow-lg hover:shadow-xl 
-                      transition-all duration-300
-                      transform hover:-translate-y-1 
-                      overflow-hidden group
-                      ${alignmentClass}
-                    `}
-                    data-aos="fade-up"
-                    data-aos-once="true"
-                    data-aos-offset="200"
-                  >
-                    <div className="h-48 relative overflow-hidden">
-                      <Image
-                        src={area.imageSrc}
-                        alt={`${area.name} service area`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        style={{ objectFit: 'cover' }}
-                        className="group-hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-black/0"></div>
-                      <div className="absolute bottom-0 left-0 w-full p-4 flex items-center">
-                        <div className="w-8 h-8 flex items-center justify-center rounded-full bg-primary-200 text-white mr-3 group-hover:scale-110 transition-transform duration-300">
-                          <MapPin size={16} />
+                  <React.Fragment key={area.name}>
+                    <div 
+                      className={`
+                        bg-white shadow-lg hover:shadow-xl 
+                        transition-all duration-300
+                        transform hover:-translate-y-1 
+                        overflow-hidden group
+                      `}
+                      data-aos="fade-up"
+                      data-aos-once="true"
+                      data-aos-offset="200"
+                    >
+                      <div className="h-48 relative overflow-hidden">
+                        <Image
+                          src={area.imageSrc}
+                          alt={`${area.name} service area`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          style={{ objectFit: 'cover' }}
+                          className="group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-black/0"></div>
+                        <div className="absolute bottom-0 left-0 w-full p-4 flex items-center">
+                          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-primary-200 text-white mr-3 group-hover:scale-110 transition-transform duration-300">
+                            <MapPin size={16} />
+                          </div>
+                          <h4 className="text-xl font-bold text-white group-hover:translate-x-1 transition-transform duration-300">
+                            {area.name}
+                          </h4>
                         </div>
-                        <h4 className="text-xl font-bold text-white group-hover:translate-x-1 transition-transform duration-300">
-                          {area.name}
-                        </h4>
+                      </div>
+                      <div className="p-5">
+                        <p className="text-gray-600">{area.description}</p>
                       </div>
                     </div>
-                    <div className="p-5">
-                      <p className="text-gray-600">{area.description}</p>
-                    </div>
-                  </div>
+
+                    {/* Insert logo and contact button in the middle space for last row with 2 items */}
+                    {isLastRowWithTwo && isSecondLast && (
+                      <div 
+                        className="hidden lg:flex flex-col items-center justify-center "
+                        data-aos="fade-up"
+                        data-aos-once="true"
+                        data-aos-offset="200"
+                        data-aos-delay="100"
+                      >
+                        <div className="text-center">
+                          <Link href="/">
+                            <Image
+                              src={smiLogo}
+                              alt="SMI Logo"
+                              className="w-28 h-14 sm:w-40 sm:h-20 md:w-40 md:h-20 lg:w-52 lg:h-26 mb-6 hover:scale-105 transition-transform duration-300"
+                              priority
+                            />
+                          </Link>
+                          <Link 
+                            href="/contact-us"
+                            className="inline-block bg-primary-300 text-white font-semibold px-6 py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:from-primary-300 hover:to-primary-400"
+                          >
+                            Get A Free Estimate
+                          </Link>
+                        </div>
+                      </div>
+                    )}
+                  </React.Fragment>
                 );
               })}
             </div>
