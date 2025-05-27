@@ -29,7 +29,7 @@ const Hero = () => {
             Your Trusted Commerical Cleaning Partner Serving Toronto and the GTA
           </h1>
           <p className="text-lg md:text-xl mb-10 text-blue-100">
-            Sentinel Maintenance Inc. - providing reliable janitorial, facility, and emergency response solutions, delivered with care since 1989
+            Providing dependable, professional janitorial solutions, facility services, and emergency response—delivered with care since 1989.
           </p>
           
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-8">

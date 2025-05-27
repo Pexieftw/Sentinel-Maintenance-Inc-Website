@@ -99,7 +99,8 @@ export default function BlogPage() {
               alt="Cleaning service background" 
               fill 
               style={{ objectFit: 'cover' }}
-              priority
+              loading="lazy" 
+              placeholder="blur"
             />
           </div>
           <div className="text-center md:text-left relative z-10">
@@ -460,6 +461,8 @@ export default function BlogPage() {
                           fill
                           style={{ objectFit: 'cover' }}
                           sizes="80px"
+                          loading="lazy" 
+                          placeholder="blur"
                         />
                       </div>
                       <div>

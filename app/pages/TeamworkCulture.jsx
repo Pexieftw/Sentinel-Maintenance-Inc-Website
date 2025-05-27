@@ -18,7 +18,7 @@ import BreadCrumbsSection from '../utils/BreadCrumbsSection';
 
 const TeamworkCulture = () => {
   // Animation for stats with proper target values
-  const stats = { clients: 98, support: 24, staff: 25 };
+  const stats = { clients: 30 , support: 24, staff: 15 };
 
   const Section = ({ icon: Icon, title, children, animationDirection }) => (
     <div 
@@ -79,23 +79,22 @@ const TeamworkCulture = () => {
           <Section icon={MessageCircle} title="Communication" animationDirection="left">
             <div className="space-y-6">
               <p className="text-gray-700 text-lg">
-                The single most important factor in our ability to offer high quality, conscientious and reliable
-                service to our clients is communication. We classify this communication into three categories:
+                At SMI, we believe effective teamwork starts with clear, open communication. Our teams operate with transparency—both internally and with clients—ensuring expectations are aligned, updates are timely, and any concerns are addressed proactively. This approach builds trust and keeps everyone on the same page
               </p>
 
               <div className="space-y-8 mt-8">
                 {[
                   {
                     label: "Client Contact",
-                    content: "By maintaining ongoing communication with our clients, we are able to listen to and learn of their concerns. This communication is maintained by regular telephone conversations and, if convenient for the Client, through on-site meetings with the contract representative."
+                    content: "We prioritize transparent communication with our clients to align expectations, share timely updates, and proactively address any concerns. This ongoing dialogue helps build lasting trust and ensures clients remain fully informed every step of the way."
                   },
                   {
                     label: "Employee Communication",
-                    content: "On a daily basis, we communicate the needs of our clients to our employees. Each job site is visited on a regular basis to ensure that our employees are undertaking the details of our commitment to the client."
+                    content: "Open, clear communication across our teams promotes aligned goals and a shared understanding of expectations. By fostering transparency internally, we empower employees to proactively resolve issues and maintain consistent service excellence."
                   },
                   {
                     label: "Accessibility",
-                    content: "At all times both SMI management and supervisory staff will be accessible to the client. We utilize a system of Pagers and Cellular phones to remain accessible 24 hours a day, 7 days a week. In most cases, any cleaning issues will be corrected during the next shift, however if there is ever the need to have a cleaning issue rectified immediately, we will usually be able to provide the necessary staff within 2 to 3 hours."
+                    content: "We maintain open lines of communication around the clock, ensuring that both clients and employees can reach us when needed. This accessibility strengthens accountability, encourages swift issue resolution, and keeps everyone on the same page."
                   }
                 ].map((item, index) => (
                   <div 
@@ -123,18 +122,16 @@ const TeamworkCulture = () => {
             </div>
           </Section>
 
-          {/* Management Back Up Section */}
-          <Section icon={Users} title="Management Back Up" animationDirection="right">
+          {/* Accountability & Reliability */}
+          <Section icon={Users} title="Accountability & Reliability" animationDirection="right">
             <div className="space-y-6">
               <p className="text-gray-700 text-lg">
-                A well-experienced management group who can offer immediate and thorough backup to the
-                local supervisory team controls SMI's large work force. At no time will our clients be without
-                adequate labour and supervisory control.
+                Every member of our team is held to high standards of personal accountability and professional responsibility. At SMI, we don't just get the job done—we take ownership of our work. Clients can count on us to deliver consistent service, resolve issues efficiently, and stand behind our commitments.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
                 {[
-                  { value: stats.clients, label: "Expert Response", suffix: "%", icon: (
+                  { value: stats.clients, label: "Proven Industry Experience", suffix: " Years", icon: (
                     <div className="h-8 w-8 relative">
                       <Image 
                         src={Expert} 
@@ -144,7 +141,7 @@ const TeamworkCulture = () => {
                       />
                     </div>
                   ) },
-                  { value: stats.support, label: "Day Support", suffix: "/7", icon: (
+                  { value: stats.support, label: "Team Support", suffix: "/7", icon: (
                     <div className="h-8 w-8 relative">
                       <Image 
                         src={Support} 
@@ -154,7 +151,7 @@ const TeamworkCulture = () => {
                       />
                     </div>
                   ) },
-                  { value: stats.staff, label: "Trained Staff", suffix: "+", icon: <CircleUserRound className="h-8 w-8" /> }
+                  { value: stats.staff, label: "Experienced Management", suffix: "+", icon: <CircleUserRound className="h-8 w-8" /> }
                 ].map((stat, index) => (
                   <div 
                     key={index} 
@@ -175,13 +172,11 @@ const TeamworkCulture = () => {
             </div>
           </Section>
 
-          {/* Cooperation Section */}
-          <Section icon={Handshake} title="Cooperation" animationDirection="left">
+          {/* Respect & Inclusion Section */}
+          <Section icon={Handshake} title="Respect & Inclusion" animationDirection="left">
             <div className="space-y-6">
               <p className="text-gray-700 text-lg">
-                SMI always feels that cooperation with the site management is essential to the quality of service
-                provided. It is our firm belief that if we immediately act upon any concerns brought to our
-                attention, our job of maintaining the building will be easier and our efforts more appreciated.
+                Our work culture is rooted in mutual respect, where every individual—regardless of role—is valued. We foster an inclusive environment where diverse perspectives are welcomed and collaboration thrives. This respectful culture reflects in how we work together and in how we serve our clients.
               </p>
               
               <div 
@@ -190,9 +185,7 @@ const TeamworkCulture = () => {
                 data-aos-delay="200"
               >
                 <p className="text-white italic text-lg font-medium">
-                  "Our success in establishing long-term working relationships with our clients is based on this
-                  interaction with the management. Our goal is to establish the same long-term relationship with
-                  all of our clients."
+                  "Inclusion is not just a value—it's how we operate. When every voice is heard and every perspective is respected, collaboration becomes second nature and success becomes a shared achievement."
                 </p>
               </div>
               
@@ -215,14 +208,11 @@ const TeamworkCulture = () => {
             </div>
           </Section>
 
-          {/* Commitment Section */}
-          <Section icon={Target} title="Commitment" animationDirection="right">
+          {/* Continuous Improvement & Training Section */}
+          <Section icon={Target} title="Continuous Improvement & Training" animationDirection="right">
             <div className="space-y-6">
               <p className="text-gray-700 text-lg">
-                SMI firmly believes that we are all in this together and participate at equal levels to provide
-                ideas and input for continuous improvements in the quality of service we provide. Our
-                involvement with our clients allows us the ability to attain the highest possible standards in the
-                work we provide.
+                We're committed to ongoing learning and development. Through regular training sessions, safety refreshers, and team meetings, our staff stay up to date with the latest best practices and innovations in the industry. This culture of continuous improvement ensures the highest level of service for our clients.
               </p>
               
               <div 
@@ -230,13 +220,13 @@ const TeamworkCulture = () => {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h4 className="text-xl font-semibold text-white mb-5">Our Commitment to Excellence</h4>
+                <h4 className="text-xl font-semibold text-white mb-5">Our Approach to Excellence</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
-                    'Regular quality assurance checks',
-                    'Ongoing staff training programs',
-                    'Environmental sustainability practices',
-                    'Client-focused approach'
+                    'Routine Training and Developement',
+                    'Innovation and Industry Insights',
+                    'Safety and Compliance Refreshers',
+                    'Client-centered Service Mindset'
                   ].map((item, i) => (
                     <div 
                       key={i} 

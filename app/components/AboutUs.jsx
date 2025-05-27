@@ -138,18 +138,10 @@ const AboutUs = () => {
               {/* Smaller text with details */}
               <div className="text-gray-700 space-y-4 text-md md:text-lg text-center md:text-left">
                 <p>
-                  Sentinel Maintenance Inc. (SMI) originated in Regina, Saskatchewan in 1989, with the Toronto office opening in 1991 and the Calgary office in 1993. Our network has expanded to include Vancouver, Las Vegas, Phoenix, and Stamford, CT serving the greater New York City area.
+                  Sentinel Maintenance Inc. (SMI) is a Canadian-owned property services company headquartered in Toronto, originally founded in Regina in 1989. Now operating across North America, SMI delivers reliable, high-quality services including daily janitorial solutions, specialized cleaning, post-construction clean-ups, and 24/7 emergency response. With a focus on integrity, professionalism, and attention to detail, their experienced team ensures safe, clean, and well-maintained spaces, consistently upholding the values of reliability, quality, and integrity.
                 </p>
                 <p>
-                  Our primary objective is to provide each client with high quality, conscientious and reliable service through our dedicated team of Owners, Managers, and support staff. We specialize in{' '}
-                  <span className="font-bold">contract janitorial</span>,{' '}
-                  <span className="font-bold">steam cleaning</span>,{' '}
-                  <span className="font-bold">window washing</span>,{' '}
-                  <span className="font-bold">construction clean-ups</span>,{' '}
-                  <span className="font-bold">plumbing</span>,{' '}
-                  <span className="font-bold">electrical</span>,{' '}
-                  <span className="font-bold">small construction</span>, and{' '}
-                  <span className="font-bold">emergency services</span>.
+                  SMI takes pride in building long-term client relationships through consistent performance and personalized service. No matter the size or scope of the project, SMI brings the same commitment to excellence across every location they serve.
                 </p>
               </div>
               

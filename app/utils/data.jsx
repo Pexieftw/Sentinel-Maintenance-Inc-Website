@@ -45,24 +45,6 @@ export const services = {
   ]
 };
 
-// TopBar Infomatrions
-
-import { Phone, MapPin, Mail } from 'lucide-react';
-  
-export const topBarSections = [
-  { 
-    icon: <Phone className="stroke-current" size={16} />, 
-    text: "+1 416-918-4177" 
-  },
-  { 
-    icon: <MapPin className="stroke-current" size={16} />, 
-    text: "401 Richmond St" 
-  },
-  { 
-    icon: <Mail className="stroke-current" size={16} />, 
-    text: "info@smi.ca" 
-  }
-];
 
 // Navbar Informations
 export const navItems = [
@@ -89,7 +71,7 @@ export const serviceData = [
   {
     id: 'cleaning',
     title: 'Cleaning Services',
-    description: 'Professional cleaning solutions for residential and commercial properties, ensuring spotless results every time.',
+    description: 'Reliable, professional cleaning solutions tailored for commercial properties, with exceptional results you can count on',
     image: cleaningServices,
     link: '/services/#cleaning-services',
     info: 'Featuring 8 Services'
@@ -97,7 +79,7 @@ export const serviceData = [
   {
     id: 'specialized',
     title: 'Specialized Services',
-    description: 'Custom solutions for unique cleaning challenges, including biohazard cleanup, industrial cleaning, and more.',
+    description: 'Custom solutions for unique cleaning challenges, including biohazard cleanup, industrial cleaning, and more',
     image: specializedServiecs,
     link: '/services/#specialized-services',
     info: 'Featuring 21 Services'
@@ -105,7 +87,7 @@ export const serviceData = [
   {
     id: 'restoration',
     title: 'Restoration',
-    description: 'Complete restoration services for water, fire, and mold damage, helping you recover quickly from disasters.',
+    description: 'Complete restoration services for water, fire, and mold damage, helping you recover quickly from disasters',
     image: restoration,
     link: '/services#restoration',
     info: 'Featuring 4 Services'
@@ -476,7 +458,7 @@ export const serviceCategories = [
         slug: 'post-construction-cleaning',
         header: {
           title: "Post Construction Cleaning Services in Toronto & GTA",
-          description: "When your construction or renovation project wraps up, Sentinel Maintenance Inc (SMI) is ready to handle the final stage—comprehensive post-construction cleaning. We turn dusty, debris-filled spaces into clean, safe, and presentable environments for occupancy or inspection. Our trained crew removes leftover materials, vacuum and mops floors, cleans walls and windows, and sanitizes surfaces with professional-grade tools and precision. From residential developments to large-scale commercial projects, we ensure every inch is polished and move-in ready. Our team works efficiently within your project timelines and budget, providing reliable cleanup that meets building codes and presentation standards. Serving clients across Toronto and the GTA, SMI helps construction professionals transition smoothly from build to business-ready with expert post-construction cleaning services.",
+          description: "When your construction or renovation project wraps up, Sentinel Maintenance Inc (SMI) is ready to handle the final stage—comprehensive post-construction cleaning. We turn dusty, debris-filled spaces into clean, safe, and presentable environments for occupancy or inspection. Our trained crew removes leftover materials, vacuums and mops floors, cleans walls and windows, and sanitizes surfaces using professional-grade tools and precision. From residential developments to large-scale commercial projects, we ensure every inch is polished and move-in ready. Our team works efficiently within your project timelines and budget, providing reliable cleanup that meets building codes and presentation standards. Serving clients across Toronto and the GTA, SMI helps construction professionals transition smoothly from build to business-ready with expert post-construction cleaning services.",
         },
         description: 'Comprehensive cleanup services for newly constructed or renovated spaces.',
         image: postConstructionCleaning,

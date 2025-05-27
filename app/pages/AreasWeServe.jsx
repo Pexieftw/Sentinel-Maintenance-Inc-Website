@@ -74,14 +74,14 @@ const AreasWeServe = () => {
           >
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-gray-900">
               <span className="block mb-2">
-                Wherever you are
+                Delivering Trusted Services
               </span>
               
               <span className="mb-2">
-                we're here to {" "}
+                throughout {" "}
               </span>
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-primary-100 to-primary-300">
-                Help Out!
+                Toronto and the GTA
               </span>
             </h2>
           </div>
@@ -106,7 +106,8 @@ const AreasWeServe = () => {
                         sizes="100vw"
                         style={{ objectFit: 'cover' }}
                         className="brightness-90"
-                        priority={index === activeIndex}
+                        loading="lazy"
+                        placeholder="blur"
                       />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-black/35 to-black/10"></div>
                     </div>
@@ -173,14 +174,14 @@ const AreasWeServe = () => {
             >
               <h2 className="text-center text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-gray-900">
                 <span className="block mb-2">
-                  Serving your area with a smile
+                  Committed to Excellence in
                 </span>
                 
                 <span className="mb-2">
-                  because {" "}
+                  Every {" "}
                 </span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-b from-primary-100 to-primary-300">
-                  You Matter!
+                  Area We Serve.
                 </span>
               </h2>
             </div>

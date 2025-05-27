@@ -147,7 +147,7 @@ const ContactUs = () => {
                   </div>
                   <div className="mt-auto">
                     <a href="tel:18447402144" className="text-primary-300 font-medium hover:text-primary-400 inline-flex items-center group-hover:translate-x-1 transition-transform duration-300">
-                      +1 416-918-4177
+                      +1 416-340-8765
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>

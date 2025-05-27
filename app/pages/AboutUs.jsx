@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Timer } from 'lucide-react';
+import Link from 'next/link';
 import BreadCrumbsSection from '../utils/BreadCrumbsSection';
 import main from "@/public/pages/about-us/main.webp"; 
 import secondary from "@/public/pages/about-us/secondary.webp"; 
@@ -74,13 +75,23 @@ const AboutUs = () => {
               </h3>
               <div className="bg-gradient-to-r from-slate-50 to-white p-4 md:p-6 shadow-sm border border-slate-100">
                 <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
-                  Sentinel Maintenance Inc., (SMI), proudly founded in Regina, Saskatchewan in 1989, represents true Canadian entrepreneurship. Our expansion began in 1991 with our Toronto office, followed by Calgary in 1993, establishing our strong Canadian foundation. While we've since grown to serve Vancouver and other Canadian markets, as well as select US locations like Phoenix and Stamford, our Canadian roots remain at the heart of our business approach.
+                  Sentinel Maintenance Inc. (SMI) is a proudly Canadian-owned and operated property services company, headquartered in Toronto, Ontario. Founded in Regina, Saskatchewan in 1989, SMI has grown from its Prairie roots into an international presence, with established operations across North America.
                 </p>
                 <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
-                  As a Canadian-owned and operated <span className="font-bold text-primary-100">Property Services Company</span>. SMI brings the values of reliability, quality, and exceptional service that Canadians are known for worldwide. Our success stems from these quintessentially Canadian values, embodied by our dedicated team of Canadian Owners, Managers, and support staff across the country.
+                  We take pride in delivering dependable, high-quality services built on integrity, professionalism, and attention to detail. Our experienced team—from local managers to on-site staff—is committed to maintaining safe, clean, and well-functioning spaces for the clients and communities we serve. 
+                </p>
+                <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
+                  SMI offers a comprehensive range of property {" "}
+                  <Link href="/services" className="font-bold text-primary-100 hover:underline">
+                    services
+                  </Link>
+                  . These range from daily janitorial solutions to a variety of specialized services including carpet and upholstery cleaning, window washing, post-construction clean-ups as well as various property requirements including 24 hour emergency responses.
+                </p>
+                <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
+                  Whether it's day-to-day upkeep or urgent support, we bring the same level of care and reliability to every project—backed by decades of proven performance.
                 </p>
                 <p className="text-slate-700 leading-relaxed text-sm md:text-base">
-                  With our headquarters in the Canadian prairies and a strong national presence, SMI delivers comprehensive property services with Canadian thoroughness and attention to detail. Our expertise includes contract janitorial, steam cleaning, window washing, construction clean-ups, plumbing, electrical, small construction and emergency services—all delivered with the commitment to excellence that has defined Canadian business standards for generations.
+                  From the beginning, SMI has embodied the values Canadians are known for: reliability, quality, and integrity. These principles guide our experienced team of owners, managers, and support staff from coast to coast—ensuring consistent, high-quality service on every site, every time. 
                 </p>
               </div>
               
@@ -95,7 +106,10 @@ const AboutUs = () => {
                   Window Washing
                 </div>
                 <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
-                  etc...
+                  Junk Removal
+                </div>
+                <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
+                  And More
                 </div>
                 </div>
               </div>
@@ -130,13 +144,13 @@ const AboutUs = () => {
                 
                 <div className="bg-gradient-to-r from-slate-50 to-white p-4 md:p-6 shadow-sm border border-slate-100">
                   <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
-                  SMI embodies the Canadian values of integrity, reliability, and teamwork in our well-organized, people-oriented approach. True to our Canadian roots, our commitment to quality service begins with senior management and extends through every position in our organization. We provide key management personnel across our Canadian offices to ensure consistent, high-quality service that our clients have come to expect from a leading Canadian enterprise.
+                  SMI embodies the Canadian values of integrity, reliability, and teamwork in our well-organized, people-oriented approach. True to our roots, our commitment to quality service begins with senior management and extends through every position in our organization. We provide key management personnel across our offices nationwide to ensure consistent, high-quality service that our clients have come to expect from a leading enterprise.
                   </p>
                   <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
-                  Our exceptional quality standards reflect the Canadian work ethic embraced by <span className="font-bold text-primary-100">our dedicated staff</span> From Saskatchewan to Ontario and beyond, our Canadian team takes tremendous pride in their work. We maintain these standards through continuous training and instruction, including regular staff meetings where we share innovations developed in our Canadian research facilities alongside the latest industry techniques, methods, and equipment.
+                  Our exceptional quality standards reflect the strong work ethic embraced by our dedicated staff. Throughout North America, our team takes tremendous pride in their work. We maintain these standards through continuous training and instruction, including regular staff meetings where we share innovations developed in our research facilities alongside the latest industry techniques, methods, and equipment.
                   </p>
                   <p className="text-slate-700 leading-relaxed text-sm md:text-base">
-                  With characteristic Canadian thoroughness, our management team ensures <span className="font-bold text-primary-100">all quality standards</span> are met through regular inspections, client feedback sessions, and performance evaluations. This distinctly Canadian commitment to excellence, combining meticulous attention to detail with genuine care for our clients' needs, is what distinguishes SMI as a proudly Canadian leader in the North American property services industry.
+                  With our well-known focus on quality, our management team ensures that all standards are met through regular inspections, client feedback sessions, and performance evaluations. This unwavering commitment to excellence—combining meticulous attention to detail with genuine care for our clients' needs—is what distinguishes SMI as a proudly Canadian leader in the North American property services industry.
                   </p>
                 </div>
                 <div className="mt-6 md:mt-8 flex flex-wrap gap-2 md:gap-4 justify-start">
@@ -150,7 +164,7 @@ const AboutUs = () => {
                     Regular Meetings
                   </div>
                   <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
-                    etc...
+                    Client Communication
                   </div>
                 </div>
               </div>

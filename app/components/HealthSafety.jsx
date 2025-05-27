@@ -32,9 +32,9 @@ const HealthSafety = () => {
         <div className="flex flex-col md:flex-row gap-8 mt-10">
           {/* Left column - Understanding */}
           <div className="w-full md:w-1/2" data-aos="fade-right" data-aos-delay="300">
-            <div className="rounded-t-xl  bg-text overflow-hidden shadow-xl h-full">
+            <div className="rounded-t-xl bg-text overflow-hidden shadow-xl h-full">
               <div className="p-1 bg-gradient-to-r from-primary-400 to-primary-100"></div>
-              <div className="p-8">
+              <div className="p-8 flex flex-col h-full">
                 <div className="flex items-center">
                   <Lightbulb className="w-12 h-12 text-primary-300" />
                   <div className="ml-4">
@@ -43,29 +43,38 @@ const HealthSafety = () => {
                   </div>
                 </div>
                 
-                <div className="mt-8 space-y-6">
-                  <div className="flex items-start">
+                <div className="mt-8 space-y-6 flex-1 flex flex-col justify-between">
+                  <div className="flex items-start h-24">
                     <CheckCircle className="w-6 h-6 text-primary-300 mt-1 flex-shrink-0" />
-                    <p className="ml-4 text-gray-700 ">
-                      WHMIS is integral to the day-to-day operations of every jobsite, both legally and personally.
-                    </p>
+                    <div className="ml-4">
+                      <span className="font-bold block text-lg text-primary-300">Thorough Training Programs</span>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        All on-site staff and subcontractors are trained in essential safety protocols, including WHMIS, Worker and Supervisor Health & Safety Awareness, and Working at Heights certification.
+                      </p>
+                    </div>
                   </div>
                   
-                  <div className="flex items-start">
+                  <div className="flex items-start h-24">
                     <CheckCircle className="w-6 h-6 text-primary-300 mt-1 flex-shrink-0" />
-                    <p className="ml-4 text-gray-700 ">
-                      The safety of all SMI employees and the protection of client's property and staff is our primary concern.
-                    </p>
+                    <div className="ml-4">
+                      <span className="font-bold block text-lg text-primary-300">Built-in Safety Culture</span>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        Safety isn't just a checklist—it's a core part of our daily operations, embedded in our work culture to protect employees, clients, and every property we service.
+                      </p>
+                    </div>
                   </div>
                   
-                  <div className="flex items-start">
+                  <div className="flex items-start h-24">
                     <CheckCircle className="w-6 h-6 text-primary-300 mt-1 flex-shrink-0" />
-                    <p className="ml-4 text-gray-700 ">
-                      We provide all necessary labels, MSDS sheets, and protective equipment to adhere to WHMIS guidelines.
-                    </p>
+                    <div className="ml-4">
+                      <span className="font-bold block text-lg text-primary-300">Specialized Safety Certifications</span>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        Key team members receive additional training in lift operation, scaffold use, and other site-specific safety requirements.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                
+                                
                 <div className="mt-8 flex justify-end">
                   <Link
                     href="/health-and-safety"
@@ -81,9 +90,9 @@ const HealthSafety = () => {
           
           {/* Right column - Training */}
           <div className="w-full md:w-1/2" data-aos="fade-left" data-aos-delay="300">
-            <div className="rounded-t-xl  bg-white overflow-hidden shadow-xl h-full">
+            <div className="rounded-t-xl bg-white overflow-hidden shadow-xl h-full">
               <div className="p-1 bg-gradient-to-r from-primary-100 to-primary-400"></div>
-              <div className="p-8">
+              <div className="p-8 flex flex-col h-full">
                 <div className="flex items-center">
                   <Presentation className="w-12 h-12 text-primary-300" />
                   <div className="ml-4">
@@ -92,26 +101,35 @@ const HealthSafety = () => {
                   </div>
                 </div>
                 
-                <div className="mt-8 space-y-6">
-                  <div className="flex items-start">
+                <div className="mt-8 space-y-6 flex-1 flex flex-col justify-between">
+                  <div className="flex items-start h-24">
                     <CheckCircle className="w-6 h-6 text-primary-300 mt-1 flex-shrink-0" />
-                    <p className="ml-4 text-gray-700">
-                      All employees must complete WHMIS training with a minimum 80% score.
-                    </p>
+                    <div className="ml-4">
+                      <span className="font-bold block text-lg text-primary-300">Mandatory Onboarding for All Staff</span>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        Every team member and subcontractor begins with comprehensive safety training, including WHMIS, Worker and Supervisor Health & Safety Awareness, and Working at Heights (where applicable).
+                      </p>
+                    </div>
                   </div>
                   
-                  <div className="flex items-start">
+                  <div className="flex items-start h-24">
                     <CheckCircle className="w-6 h-6 text-primary-300 mt-1 flex-shrink-0" />
-                    <p className="ml-4 text-gray-700">
-                      Each employee must understand MSDS sheets, product labels, chemical handling, and proper protective attire.
-                    </p>
+                    <div className="ml-4">
+                      <span className="font-bold block text-lg text-primary-300">Proactive Certification Management</span>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        We monitor and renew all safety certifications on a strict schedule to ensure every worker remains up to date with evolving safety standards and legal requirements.
+                      </p>
+                    </div>
                   </div>
                   
-                  <div className="flex items-start">
+                  <div className="flex items-start h-24">
                     <CheckCircle className="w-6 h-6 text-primary-300 mt-1 flex-shrink-0" />
-                    <p className="ml-4 text-gray-700">
-                      Employees receive a "Certificate of Completion" with copies available to Management and Occupational Health & Safety.
-                    </p>
+                    <div className="ml-4">
+                      <span className="font-bold block text-lg text-primary-300">Centralized Tracking & Oversight</span>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        Our leadership team uses a dedicated system to manage training records, track certification expiries.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 
@@ -128,7 +146,6 @@ const HealthSafety = () => {
             </div>
           </div>
         </div>
-        
         {/* Stats Row */}
         <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="400">
           <div className="bg-primary-300 bg-opacity-20 backdrop-filter backdrop-blur-lg p-6">

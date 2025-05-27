@@ -18,12 +18,12 @@ const FAQ = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto py-24 px-4 sm:px-6 lg:px-0">
+    <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-0">
       <div className="mb-12 text-center">
         <h2 className="text-4xl font-extrabold text-primary-300 mb-4">Frequently Asked Questions</h2>
         <p className="text-primary-200 font-medium">Get answers to common questions about our services</p>
         
-        <div className="mt-8 max-w-6xl mx-auto p-6">
+        <div className="mt-8 max-w-7xl mx-auto p-6">
           <p className="text-gray-700 leading-relaxed">
             Find quick answers to the most common questions about Sentinel Maintenance Inc.'s 
             cleaning and property maintenance services throughout the Greater Toronto Area. 
@@ -97,7 +97,7 @@ const FAQ = () => {
             <Phone className="w-8 h-8 text-primary-300 mr-3" />
             <div>
               <p className="text-gray-800 font-medium">Need immediate assistance?</p>
-              <a href="tel:+14169184122" className="text-primary-300 hover:text-primary-400 font-bold">
+              <a href="tel:+14163408765" className="text-primary-300 hover:text-primary-400 font-bold">
                 Call Us Today
               </a>
             </div>

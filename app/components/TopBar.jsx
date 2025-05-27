@@ -1,7 +1,24 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { topBarSections } from '../utils/data';
+import { Phone, MapPin, Mail } from 'lucide-react';
+  
+export const topBarSections = [
+  { 
+    icon: <Phone className="stroke-current" size={16} />, 
+    text: "+1 416-340-8765",
+    href: "tel:+14163408765"
+  },
+  { 
+    icon: <MapPin className="stroke-current" size={16} />, 
+    text: "401 Richmond St W" 
+  },
+  { 
+    icon: <Mail className="stroke-current" size={16} />, 
+    text: "info@smi.ca",
+    href: "mailto:info@smi.ca"
+  }
+];
 
 const TopBar = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -53,9 +70,18 @@ const TopBar = () => {
                       ml-2 whitespace-nowrap overflow-hidden transition-all duration-500
                       ${isActive ? 'max-w-full opacity-100' : 'max-w-0 opacity-0'}
                     `}>
-                      <span className={`text-xs font-medium ${isActive ? 'text-gray-800' : 'text-white'}`}>
-                        {section.text}
-                      </span>
+                      {section.href ? (
+                        <a 
+                          href={section.href}
+                          className={`text-xs font-medium ${isActive ? 'text-gray-800 hover:underline' : 'text-white'} transition-colors duration-300`}
+                        >
+                          {section.text}
+                        </a>
+                      ) : (
+                        <span className={`text-xs font-medium ${isActive ? 'text-gray-800' : 'text-white'}`}>
+                          {section.text}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -71,7 +97,16 @@ const TopBar = () => {
               <React.Fragment key={index}>
                 <div className="flex items-center py-4">
                   {section.icon}
-                  <span className="ml-2">{section.text}</span>
+                  {section.href ? (
+                    <a 
+                      href={section.href}
+                      className="ml-2 hover:underline transition-colors duration-300"
+                    >
+                      {section.text}
+                    </a>
+                  ) : (
+                    <span className="ml-2">{section.text}</span>
+                  )}
                 </div>
                 {index < topBarSections.length - 1 && (
                   <div className="h-4 w-px bg-white bg-opacity-50 mx-4"></div>
@@ -81,9 +116,8 @@ const TopBar = () => {
           </div>
           
           {/* Call us now button */}
-
           <a 
-            href="tel:+14169184122" 
+            href="tel:+14163408765" 
             className="border-2 border-white text-white hover:bg-white hover:text-gray-800 font-medium transition-all duration-300 py-1.5 px-4 "
           >
             Call us now

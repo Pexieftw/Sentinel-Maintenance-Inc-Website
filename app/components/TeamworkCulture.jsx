@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState, useRef } from 'react';
-import { MessageSquare, Users, Handshake, Target, BriefcaseBusiness } from 'lucide-react';
+import { MessageSquare, Users, Handshake, TrendingUp, BriefcaseBusiness } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
@@ -12,22 +12,22 @@ const ModernTeamworkSection = () => {
     {
       icon: <MessageSquare className="w-8 h-8 text-primary-500" />,
       title: "Communication",
-      content: "The single most important factor in our service. We maintain ongoing client contact, ensure daily employee communication, and remain accessible 24/7."
+      content: "At SMI, we believe effective teamwork starts with clear, open communication. Our teams operate with transparency—both internally and with clients—ensuring expectations are aligned, updates are timely, and any concerns are addressed proactively. This approach builds trust and keeps everyone on the same page."
     },
     {
       icon: <Users className="w-8 h-8 text-primary-500" />,
-      title: "Management Back Up",
-      content: "Experienced management provides immediate backup to our supervisory team, ensuring clients always have adequate labour and support."
+      title: "Accountability & Reliability",
+      content: "Every member of our team is held to high standards of personal accountability and professional responsibility. At SMI, we don’t just get the job done—we take ownership of our work. Clients can count on us to deliver consistent service, resolve issues efficiently, and stand behind our commitments."
     },
     {
       icon: <Handshake className="w-8 h-8 text-primary-500" />,
-      title: "Cooperation",
-      content: "We believe cooperation with site management is essential. We act immediately on concerns to maintain our long-term client relationships."
+      title: "Respect & Inclusion",
+      content: "Our work culture is rooted in mutual respect, where every individual—regardless of role—is valued. We foster an inclusive environment where diverse perspectives are welcomed and collaboration thrives. This respectful culture reflects in how we work together and in how we serve our clients."
     },
     {
-      icon: <Target className="w-8 h-8 text-primary-500" />,
-      title: "Commitment",
-      content: "We're all in this together, participating equally to provide continuous improvements and attain the highest possible standards."
+      icon: <TrendingUp className="w-8 h-8 text-primary-500" />,
+      title: "Continuous Improvement & Training",
+      content: "We’re committed to ongoing learning and development. Through regular training sessions, safety refreshers, and team meetings, our staff stay up to date with the latest best practices and innovations in the industry. This culture of continuous improvement ensures the highest level of service for our clients."
     }
   ];
 
@@ -80,7 +80,7 @@ const ModernTeamworkSection = () => {
           <SectionHeader
             icon={<BriefcaseBusiness  className="sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />} 
             title="Teamwork & Work Culture"
-            description="Explore our range of services below"
+            description="Teamwork in Action: Built on Values, Delivered with Purpose"
             position="center"
             color="white"
           />
@@ -89,7 +89,7 @@ const ModernTeamworkSection = () => {
         </div>
         
         {/* Teamwork Points Section */}
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           {/* Connecting line */}
           <div 
             className="absolute hidden md:block left-1/2 top-0 w-1 bg-white transform -translate-x-1/2 z-0 origin-top" 

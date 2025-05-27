@@ -67,13 +67,13 @@ const PrivacyPolicy = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto py-24 px-4 sm:px-6 lg:px-0">
+    <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-0">
       <div className="mb-12 text-center">
 
         <h2 className="text-4xl font-extrabold text-primary-300 mb-4">Privacy Policy</h2>
         <p className="text-primary-200 font-medium">Last updated: March 24, 2025</p>
         
-        <div className="mt-8 max-w-6xl mx-autop-6">
+        <div className="mt-8 max-w-7xl mx-autop-6">
           <p className="text-gray-700 leading-relaxed">
             The respect of your private life is of the utmost importance for Sentinel Maintenance Inc. (SMI). 
             This Privacy Policy explains how we handle the personal information you provide through our 
@@ -148,7 +148,7 @@ const PrivacyPolicy = () => {
             <Phone className="w-8 h-8 text-primary-300 mr-3" />
             <div>
               <p className="text-gray-800 font-medium">Need immediate assistance?</p>
-              <a href="tel:+14169184122" className="text-primary-300 hover:text-primary-400 font-bold">
+              <a href="tel:+14163408765" className="text-primary-300 hover:text-primary-400 font-bold">
                 Call our Privacy Office
               </a>
             </div>

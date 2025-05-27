@@ -61,7 +61,7 @@ export default async function ServiceDetailPage({ params }) {
             
             {/* New Vertical Stack Section */}
             <div className="h-full relative w-full space-y-8">
-              <div className="h-full flex flex-col gap-8 justify-center items-center pb-16"> 
+              <div className="h-full flex flex-col gap-8 justify-center items-center md:items-end"> 
                 {/* Image */}
                 <div className="relative h-auto">
                   <div className="relative h-full overflow-hidden shadow-xl">
@@ -90,19 +90,19 @@ export default async function ServiceDetailPage({ params }) {
                     <div className="mt-8 w-24 h-1 bg-primary-100 ml-auto"></div>
                   </div>
                 </div>
+
+                {/* Leaf */}
+                <div className="flex justify-end">
+                  <Image 
+                    src={leaf} 
+                    alt={"A proud canadian company"} 
+                    priority 
+                    sizes="100vw" 
+                  />
+                </div>
+
               </div>
 
-
-
-              {/* Leaf */}
-              <div className="absolute right-0 bottom-0 flex justify-end">
-                <Image 
-                  src={leaf} 
-                  alt={"A proud canadian company"} 
-                  priority 
-                  sizes="100vw" 
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -121,30 +121,35 @@ export default async function ServiceDetailPage({ params }) {
                 <h2 className="text-4xl font-bold text-gray-900">Key Features</h2>
               </div>
               
-              <div className=" grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 {/* Features List - Left Side */}
-                <div className="grid grid-cols-1 gap-8">
+                <div className="order-2 lg:order-1 grid grid-cols-1 gap-6 lg:gap-8">
                   {service.keyFeatures.map((feature, index) => (
                     <div 
                       key={index} 
-                      className="bg-white p-8 flex items-center space-x-4 shadow-lg border-l-4 border-primary-300 hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px] group"
+                      className="bg-white p-6 lg:p-8 flex items-center space-x-4 shadow-lg border-l-4 border-primary-300 hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px] group"
                     >
                       <div className="p-2 bg-gray-50 rounded-full group-hover:bg-primary-300 text-primary-300 group-hover:text-white transition-colors">
-                        <CheckCircle2 className="w-6 h-6 flex-shrink-0" />
+                        <CheckCircle2 className="w-5 h-5 lg:w-6 lg:h-6 flex-shrink-0" />
                       </div>
-                      <span className="text-gray-800 font-medium">{feature}</span>
+                      <span className="text-gray-800 font-medium text-sm lg:text-base">{feature}</span>
                     </div>
                   ))}
                 </div>
                 
                 {/* Image - Right Side */}
-                <div className="relative h-full flex justify-end">
-                  <Image 
-                    src={differentServices} 
-                    alt={service.name} 
-                    priority 
-                    sizes="100vw" 
-                  />
+                <div className="order-1 lg:order-2 relative w-full">
+                  <div className="relative aspect-square sm:aspect-[4/3] lg:aspect-[3/4] xl:aspect-square lg:min-h-[500px]">
+                    <Image 
+                      src={differentServices} 
+                      alt={service.name} 
+                      priority 
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 50vw"
+                      className="object-cover object-center"
+                      quality={85}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
