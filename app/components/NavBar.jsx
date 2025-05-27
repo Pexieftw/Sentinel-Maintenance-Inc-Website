@@ -237,7 +237,7 @@ const Navbar = () => {
                     
                     {/* Dropdown menu */}
                     {item.dropdown && activeDropdown === item.label && (
-                      <div className="absolute left-0 top-22 w-7xl bg-white shadow-lg border border-gray-200"
+                      <div className="absolute left-0 top-30 w-7xl bg-white shadow-lg border border-gray-200"
                         style={{
                           animation: 'fadeIn 0.5s ease-out forwards'
                         }}
