@@ -83,9 +83,9 @@ const FAQ = () => {
 
       <div className="mt-8 pt-8 border-t border-primary-400">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center">
-            <Mail className="w-8 h-8 text-primary-300 mr-3" />
-            <div>
+          <div className="flex items-center w-full md:w-auto">
+            <Mail className="w-8 h-8 text-primary-300 mr-3 flex-shrink-0" />
+            <div className="flex-1">
               <p className="text-gray-800 font-medium">Still have questions?</p>
               <Link href="/contact-us" className="text-primary-300 hover:text-primary-400 font-bold">
                 Contact Us
@@ -93,9 +93,9 @@ const FAQ = () => {
             </div>
           </div>
 
-          <div className="flex items-center">
-            <Phone className="w-8 h-8 text-primary-300 mr-3" />
-            <div>
+          <div className="flex items-center w-full md:w-auto">
+            <Phone className="w-8 h-8 text-primary-300 mr-3 flex-shrink-0" />
+            <div className="flex-1">
               <p className="text-gray-800 font-medium">Need immediate assistance?</p>
               <a href="tel:+14163408765" className="text-primary-300 hover:text-primary-400 font-bold">
                 Call Us Today
