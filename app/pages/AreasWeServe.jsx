@@ -66,7 +66,7 @@ const AreasWeServe = () => {
         imageAlt="Custom Cleaning Background"
       />
       <section className="py-16 bg-gradient-to-br">
-        <div className="max-w-6xl mx-auto px-4 lg:px-0">
+        <div className="max-w-7xl mx-auto px-4 lg:px-0">
           <div 
             className="text-center mb-16"
             data-aos="fade-up"

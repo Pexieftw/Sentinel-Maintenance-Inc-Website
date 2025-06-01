@@ -54,7 +54,7 @@ const TeamworkCulture = () => {
         imageSrc="/breadcrumbs-bg.jpg"
         imageAlt="Custom Cleaning Background"
       />
-      <div className="max-w-6xl mx-auto min-h-screen md:min-h-auto overflow-hidden py-16">
+      <div className="max-w-7xl mx-auto min-h-screen md:min-h-auto overflow-hidden py-16">
         <div className="px-4 md:px-8 lg:px-0 relative">
         <div 
             className="text-center mb-16"

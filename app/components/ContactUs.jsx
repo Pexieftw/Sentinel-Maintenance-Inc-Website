@@ -87,7 +87,7 @@ const ContactUs = () => {
       />
 
       <section className="px-4 md:px-8 bg-gradient-to-b from-gray-50 to-white py-16 mb-16">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-7xl">
           <SectionHeader
             icon={<Mail size={40} className="text-primary-500" />} 
             title="Contact Us"
@@ -97,7 +97,7 @@ const ContactUs = () => {
           />
           <div className="lg:px-0 grid lg:grid-cols-2 gap-4 lg:gap-8 mt-16">
             {/* Contact Information Column */}
-            <div className="container mx-auto max-w-6xl flex flex-col justify-between">
+            <div className="container mx-auto max-w-7xl flex flex-col justify-between">
               {/* Introduction Text */}
               <div className="text-center md:text-left" data-aos="fade-right">
                 <h2 className="text-3xl md:text-4xl font-bold bg-primary-300 bg-clip-text text-transparent">Let's Connect</h2>
@@ -110,7 +110,7 @@ const ContactUs = () => {
               {/* Contact Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8" data-aos="fade-right" data-aos-delay="100">
                 {/* Chat with Us */}
-                <div className="bg-gradient-to-r from-slate-50 to-white border border-slate-100 group shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-6 h-48 md:h-64">
+                <div className="bg-gradient-to-r from-slate-50 to-white border border-slate-100 group shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-6 h-54 md:h-64">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="p-3 bg-primary-300 text-white">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -133,7 +133,7 @@ const ContactUs = () => {
                 </div>
 
                 {/* Call Us */}
-                <div className="bg-gradient-to-r from-slate-50 to-white border border-slate-100 group shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-6 h-48 md:h-64">
+                <div className="bg-gradient-to-r from-slate-50 to-white border border-slate-100 group shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-6 h-54 md:h-64">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="p-3 bg-primary-300 text-white">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -156,7 +156,7 @@ const ContactUs = () => {
                 </div>
 
                 {/* Visit Us */}
-                <div className="bg-gradient-to-r from-slate-50 to-white border border-slate-100 group shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-6 h-48 md:h-64">
+                <div className="bg-gradient-to-r from-slate-50 to-white border border-slate-100 group shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-6 h-54 md:h-64">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="p-3 bg-primary-300 text-white">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -177,7 +177,7 @@ const ContactUs = () => {
                 </div>
 
                 {/* Hours */}
-                <div className="bg-gradient-to-r from-slate-50 to-white border border-slate-100 group shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-6 h-48 md:h-64">
+                <div className="bg-gradient-to-r from-slate-50 to-white border border-slate-100 group shadow-sm hover:shadow-md transition-all duration-300 flex flex-col p-6 h-54 md:h-64">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="p-3 bg-primary-300 text-white">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

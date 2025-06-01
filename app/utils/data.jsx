@@ -7,7 +7,7 @@ export const services = {
     'Medical Office Cleaning',
     'Dealership Cleaning',
     'Institutional Cleaning',
-    'Post Construction Cleaning',
+    'Construction Cleaning',
     'New Condominium Construction Cleaning'
   ],
   'Specialized Services': {
@@ -454,8 +454,8 @@ export const serviceCategories = [
         seasonalNote: 'Back-to-school and exam periods require intensive cleaning and sanitization'
       },
       {
-        name: 'Post Construction Cleaning',
-        slug: 'post-construction-cleaning',
+        name: 'Construction Cleaning',
+        slug: 'construction-cleaning',
         header: {
           title: "Post Construction Cleaning Services in Toronto & GTA",
           description: "When your construction or renovation project wraps up, Sentinel Maintenance Inc (SMI) is ready to handle the final stage—comprehensive post-construction cleaning. We turn dusty, debris-filled spaces into clean, safe, and presentable environments for occupancy or inspection. Our trained crew removes leftover materials, vacuums and mops floors, cleans walls and windows, and sanitizes surfaces using professional-grade tools and precision. From residential developments to large-scale commercial projects, we ensure every inch is polished and move-in ready. Our team works efficiently within your project timelines and budget, providing reliable cleanup that meets building codes and presentation standards. Serving clients across Toronto and the GTA, SMI helps construction professionals transition smoothly from build to business-ready with expert post-construction cleaning services.",

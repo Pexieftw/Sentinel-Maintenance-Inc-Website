@@ -24,10 +24,6 @@ const AboutUs = () => {
     });
   }, []);
 
-  const handleReadMore = () => {
-    window.location.href = '/about';
-  };
-
   return (
     <section className="pt-4 md:pt-4 bg-gradient-to-b from-white to-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-0">
@@ -129,16 +125,14 @@ const AboutUs = () => {
                   color="primary-300"
                 />
 
-                {/* Big text briefing */}
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center md:text-left">
                   A Full-Service <span className="text-primary-300">Property Services Company</span> 
                 </h2>
               </div>
 
-              {/* Smaller text with details */}
               <div className="text-gray-700 space-y-4 text-md md:text-lg text-center md:text-left">
                 <p>
-                  Sentinel Maintenance Inc. (SMI) is a Canadian-owned property services company headquartered in Toronto, originally founded in Regina in 1989. Now operating across North America, SMI delivers reliable, high-quality services including daily janitorial solutions, specialized cleaning, post-construction clean-ups, and 24/7 emergency response. With a focus on integrity, professionalism, and attention to detail, their experienced team ensures safe, clean, and well-maintained spaces, consistently upholding the values of reliability, quality, and integrity.
+                  <span className="font-bold">Sentinel Maintenance Inc. (SMI)</span> a Canadian-owned property services company headquartered in Toronto, originally founded in Regina in 1989. Now operating across North America,  <span className="font-bold"> SMI delivers reliable, high-quality services including daily janitorial solutions, specialized cleaning, post-construction clean-ups, and 24/7 emergency response.</span> With a focus on integrity, professionalism, and attention to detail, their experienced team ensures safe, clean, and well-maintained spaces, consistently upholding the values of reliability, quality, and integrity.
                 </p>
                 <p>
                   SMI takes pride in building long-term client relationships through consistent performance and personalized service. No matter the size or scope of the project, SMI brings the same commitment to excellence across every location they serve.
