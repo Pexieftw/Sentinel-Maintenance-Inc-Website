@@ -176,6 +176,22 @@ const Navbar = () => {
       });
     }
   };
+
+  // Handle mobile services click - navigate and toggle dropdown
+  const handleMobileServicesClick = (e, item) => {
+    e.preventDefault();
+    
+    // Navigate to services page
+    router.push(item.link);
+    
+    // Toggle dropdown
+    setActiveDropdown(activeDropdown === item.label ? null : item.label);
+    
+    // Set first category as active by default when opening dropdown
+    if (activeDropdown !== item.label && item.dropdown) {
+      setActiveCategoryTab(Object.keys(item.dropdown)[0]);
+    }
+  };
   
   return (
     <>
@@ -327,7 +343,7 @@ const Navbar = () => {
                                   >
                                     {service}
                                   </Link>
-                                </li>
+                                  </li>
                               ))}
                             </ul>
                           </div>
@@ -414,13 +430,7 @@ const Navbar = () => {
                       <div>
                         <div
                           className="px-4 py-3 text-gray-800 flex justify-center items-center hover:bg-gray-100 cursor-pointer transition duration-200"
-                          onClick={() => {
-                            setActiveDropdown(activeDropdown === item.label ? null : item.label);
-                            // Set first category as active by default when opening dropdown
-                            if (activeDropdown !== item.label && item.dropdown) {
-                              setActiveCategoryTab(Object.keys(item.dropdown)[0]);
-                            }
-                          }}
+                          onClick={(e) => handleMobileServicesClick(e, item)}
                         >
                           <span className="font-medium text-lg">{item.label}</span>
                           <ChevronDown

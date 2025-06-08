@@ -84,11 +84,15 @@ export default function ServicesPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
         <div className="text-center mb-8 sm:mb-16" data-aos="fade-down">
           <h1 className="text-4xl sm:text-5xl font-bold uppercase tracking-tight text-gray-900 mb-4 sm:mb-6">
-            Cleaning Redefined
+            Reliable Cleaning Solutions
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Precision engineering meets cleanliness. We don't just clean, we transform.
-          </p>
+            <p className="block md:hidden text-lg text-gray-600 max-w-2xl mx-auto">
+              Comprehensive cleaning and maintenance tailored to meet your specific needs.
+            </p>
+
+            <p className="hidden md:block text-lg text-gray-600 max-w-2xl mx-auto">
+              Comprehensive cleaning and maintenance <br /> tailored to meet your specific needs.
+            </p>
         </div>
 
         {/* Category Navigation and Search */}
