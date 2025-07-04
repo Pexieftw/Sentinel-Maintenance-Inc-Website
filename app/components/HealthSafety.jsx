@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect } from 'react';
-import { HeartPulse, AlertTriangle, BookOpen, CheckCircle, ChevronRight, Lightbulb, Presentation, ShieldCheck, UsersRound, Star } from 'lucide-react';
+import { HeartPulse, TicketCheck, ShieldAlert, CheckCircle, ChevronRight, Lightbulb, Presentation, BriefcaseBusiness, UsersRound } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import SectionHeader from '../utils/SectionHeader';
@@ -38,7 +38,6 @@ const HealthSafety = () => {
                 <div className="flex items-center">
                   <Lightbulb className="w-8 h-8 md:w-12 md:h-12 text-primary-300 flex-shrink-0" />
                   <div className="ml-3 md:ml-4">
-                    <span className="uppercase text-xs font-bold tracking-wider text-primary-400">Section 3.A</span>
                     <h3 className="text-xl md:text-3xl font-bold text-primary-300">Understanding</h3>
                   </div>
                 </div>
@@ -96,7 +95,6 @@ const HealthSafety = () => {
                 <div className="flex items-center">
                   <Presentation className="w-8 h-8 md:w-12 md:h-12 text-primary-300 flex-shrink-0" />
                   <div className="ml-3 md:ml-4">
-                    <span className="uppercase text-xs font-bold tracking-wider text-primary-400">Section 3.B</span>
                     <h3 className="text-xl md:text-3xl font-bold text-primary-300">Training</h3>
                   </div>
                 </div>
@@ -127,7 +125,7 @@ const HealthSafety = () => {
                     <div className="ml-3 md:ml-4">
                       <span className="font-bold block text-base md:text-lg text-primary-300">Centralized Tracking & Oversight</span>
                       <p className="text-gray-700 text-sm leading-relaxed mt-1">
-                        Our leadership team uses a dedicated system to manage training records, track certification expiries.
+                        Our leadership team uses a dedicated system to manage training records and track certification expiries.
                       </p>
                     </div>
                   </div>
@@ -151,42 +149,42 @@ const HealthSafety = () => {
         <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="400">
           <div className="bg-primary-300 bg-opacity-20 backdrop-filter backdrop-blur-lg p-6">
             <div className="flex justify-between items-start">
-              <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-white" />
+              <BriefcaseBusiness className="w-8 h-8 md:w-10 md:h-10 text-white" />
               <span className="text-3xl md:text-4xl font-bold text-white">
-                100%
+                35+
               </span>
             </div>
-            <p className="text-white mt-4 font-medium">Fully Compliant</p>
+            <p className="text-white mt-4 font-medium">Years of service</p>
           </div>
           
           <div className="bg-primary-300 bg-opacity-20 backdrop-filter backdrop-blur-lg p-6">
             <div className="flex justify-between items-start">
               <UsersRound className="w-8 h-8 md:w-10 md:h-10 text-white" />
               <span className="text-3xl md:text-4xl font-bold text-white">
-                50+
+                500+
               </span>
             </div>
-            <p className="text-white mt-4 font-medium">Certified & Qualified Staff</p>
+            <p className="text-white mt-4 font-medium">Clients over 35 years</p>
           </div>
           
           <div className="bg-primary-300 bg-opacity-20 backdrop-filter backdrop-blur-lg p-6">
             <div className="flex justify-between items-start">
-              <AlertTriangle className="w-8 h-8 md:w-10 md:h-10 text-white" />
+              <TicketCheck className="w-8 h-8 md:w-10 md:h-10 text-white" />
               <span className="text-3xl md:text-4xl font-bold text-white">
-                24/7
+                100+
               </span>
             </div>
-            <p className="text-white mt-4 font-medium">Hazard Monitoring</p>
+            <p className="text-white mt-4 font-medium">Certified & Qualified staff</p>
           </div>
           
           <div className="bg-primary-300 bg-opacity-20 backdrop-filter backdrop-blur-lg p-6">
             <div className="flex justify-between items-center">
-              <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-white" />
+              <ShieldAlert className="w-8 h-8 md:w-10 md:h-10 text-white" />
               <span className="text-3xl md:text-4xl font-bold text-white">
-                100%
+                24/7
               </span>
             </div>
-            <p className="text-white mt-4 font-medium">Paperwork Compliance</p>
+            <p className="text-white mt-4 font-medium">Emergency Response</p>
           </div>
         </div>
       </div>

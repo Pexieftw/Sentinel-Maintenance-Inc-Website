@@ -18,7 +18,7 @@ import BreadCrumbsSection from '../utils/BreadCrumbsSection';
 
 const TeamworkCulture = () => {
   // Animation for stats with proper target values
-  const stats = { clients: 30 , support: 24, staff: 15 };
+  const stats = { clients: 35 , support: 24, staff: 15 };
 
   const Section = ({ icon: Icon, title, children, animationDirection }) => (
     <div 
@@ -86,7 +86,7 @@ const TeamworkCulture = () => {
                 {[
                   {
                     label: "Client Contact",
-                    content: "We prioritize transparent communication with our clients to align expectations, share timely updates, and proactively address any concerns. This ongoing dialogue helps build lasting trust and ensures clients remain fully informed every step of the way."
+                    content: "We prioritize transparent communication with our clients to align expectations, share timely updates, and address any concerns. This ongoing dialogue helps build lasting trust and ensures clients remain fully informed every step of the way."
                   },
                   {
                     label: "Employee Communication",
@@ -131,7 +131,7 @@ const TeamworkCulture = () => {
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
                 {[
-                  { value: stats.clients, label: "Proven Industry Experience", suffix: " Years", icon: (
+                  { value: stats.clients, label: "Proven Industry Experience", suffix: "+ Years", icon: (
                     <div className="h-8 w-8 relative">
                       <Image 
                         src={Expert} 

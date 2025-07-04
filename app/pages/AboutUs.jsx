@@ -76,8 +76,8 @@ const AboutUs = () => {
               <div className="bg-gradient-to-r from-slate-50 to-white p-4 md:p-6 shadow-sm border border-slate-100">
                 <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
 
-                  <span className="font-bold">Sentinel Maintenance Inc. (SMI) </span>
-                  is a proudly Canadian-owned and operated property services company, headquartered in Toronto, Ontario. Founded in Regina, Saskatchewan in 1989, SMI has grown from its Prairie roots into an international presence, with established operations across North America.
+                  <span className="font-bold">Sentinel Maintenance Inc. (SMI)</span>
+                  , a proudly Canadian-owned and operated property services company, headquartered in Toronto, Ontario. Founded in Regina, Saskatchewan in 1989, SMI has grown from its Prairie roots into an international presence, with established operations across North America.
                 </p>
                 <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
                   We take pride in delivering dependable, high-quality services built on integrity, professionalism, and attention to detail. Our experienced team—from local managers to on-site staff—is committed to maintaining safe, clean, and well-functioning spaces for the clients and communities we serve. 
@@ -149,7 +149,7 @@ const AboutUs = () => {
                   <span className="font-bold">SMI</span> embodies the Canadian values of integrity, reliability, and teamwork in our well-organized, people-oriented approach. True to our roots, our commitment to quality service begins with senior management and extends through every position in our organization. We provide key management personnel across our offices nationwide to ensure consistent, high-quality service that our clients have come to expect from a leading enterprise.
                   </p>
                   <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
-                  Our exceptional quality standards reflect the strong work ethic embraced by our dedicated staff. Throughout North America, our team takes tremendous pride in their work. We maintain these standards through continuous training and instruction, including regular staff meetings where we share innovations developed in our research facilities alongside the latest industry techniques, methods, and equipment.
+                  Our exceptional quality standards reflect the strong work ethic embraced by our dedicated staff. Throughout North America, our team takes tremendous pride in their work. We maintain these standards through continuous training and instruction, including regular staff meetings where we share the latest industry techniques, methods and equipement.
                   </p>
                   <p className="text-slate-700 leading-relaxed text-sm md:text-base">
                   With our well-known focus on quality, our management team ensures that all standards are met through regular inspections, client feedback sessions, and performance evaluations. This unwavering commitment to excellence—combining meticulous attention to detail with genuine care for our clients' needs—is what distinguishes SMI as a proudly Canadian leader in the North American property services industry.

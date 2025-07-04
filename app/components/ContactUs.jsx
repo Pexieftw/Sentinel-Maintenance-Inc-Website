@@ -143,7 +143,7 @@ const ContactUs = () => {
                     <h3 className="text-xl font-bold text-gray-900">Call Us</h3>
                   </div>
                   <div className="flex-grow">
-                    <p className="text-gray-600 mb-2">Toll-free support line available during business hours.</p>
+                    <p className="text-gray-600 mb-2">Our support line is available 24/7</p>
                   </div>
                   <div className="mt-auto">
                     <a href="tel:14163408765" className="text-primary-300 font-medium hover:text-primary-400 inline-flex items-center group-hover:translate-x-1 transition-transform duration-300">
@@ -167,12 +167,18 @@ const ContactUs = () => {
                     <h3 className="text-xl font-bold text-gray-900">Corporate Headquarters</h3>
                   </div>
                   <div className="flex-grow">
-                    <p className="text-gray-600 mb-2">Located in the heart of Toronto’s creative district</p>
+                    <p className="text-gray-600 mb-2">Located in the heart of Toronto’s fashion district</p>
                   </div>
-                  <div className="mt-auto">
-                    <address className="text-primary-300 font-medium not-italic">
-                      401 Richmond St W #222, Toronto, ON M5V 3A8, Canada
-                    </address>
+                  <div className="hover:underline decoration-primary-300 mt-auto">
+                    <Link
+                      href="https://maps.google.com/?q=401+Richmond+St+W+%23222,+Toronto,+ON+M5V+3A8,+Canada"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <address className="text-primary-300 font-medium not-italic">
+                        401 Richmond St W #222, Toronto, ON M5V 3A8, Canada
+                      </address>
+                    </Link>
                   </div>
                 </div>
 

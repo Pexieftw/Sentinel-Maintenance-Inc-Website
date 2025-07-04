@@ -20,7 +20,7 @@ export const services = {
       'Carpet Cleaning',
       'COVID-19 Cleaning',
       'Graffiti Removal',
-      'Hand Stone Staining for Colour Matching',
+      'Stone Staining for Colour Matching',
       'Natural Stone Restoration',
       'Tile & Grout Cleaning & Colour Sealing',
     ],
@@ -175,7 +175,7 @@ export const areas = [
   },
   {
     name: 'Markham',
-    description: 'Full coverage across Markham with specialized teams for both residential and commercial clients.',
+    description: 'Full coverage across Markham with specialized teams for commercial clients.',
     imageSrc: markham
   },
   {
@@ -770,15 +770,15 @@ export const serviceCategories = [
         seasonalNote: "Spring and summer see increased outdoor vandalism activities"
       },
       {
-        name: 'Hand Stone Staining for Colour Matching',
-        slug: 'hand-stone-staining-for-colour-matching',
+        name: 'Stone Staining for Colour Matching',
+        slug: 'stone-staining-for-colour-matching',
         header: {
-          title: "Hand Stone Staining for Colour Matching in Toronto & GTA",
-          description: "Sentinel Maintenance Inc (SMI) offers precise hand stone staining services tailored for seamless color correction and restoration on natural stone surfaces. Whether you're addressing inconsistencies in stone slabs, enhancing faded tones, or restoring uniformity after repairs, our experts use customized, hand-applied staining methods that preserve the texture and character of the original stone. We begin with an in-depth color consultation to ensure an exact match, then apply long-lasting pigments that bond with the stone while maintaining breathability and integrity. Ideal for both residential and commercial applications, our service is trusted by designers, contractors, and homeowners across Toronto and the GTA. Choose SMI to bring harmony and visual consistency to stone counters, walls, tiles, or floors—backed by expert care and professional results.",
+          title: "Stone Staining for Colour Matching in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers precise stone staining services tailored for seamless color correction and restoration on natural stone surfaces. Whether you're addressing inconsistencies in stone slabs, enhancing faded tones, or restoring uniformity after repairs, our experts use customized, hand-applied staining methods that preserve the texture and character of the original stone. We begin with an in-depth color consultation to ensure an exact match, then apply long-lasting pigments that bond with the stone while maintaining breathability and integrity. Ideal for both residential and commercial applications, our service is trusted by designers, contractors, and homeowners across Toronto and the GTA. Choose SMI to bring harmony and visual consistency to stone counters, walls, tiles, or floors—backed by expert care and professional results.",
         },
         description: 'Precise stone staining and color restoration services.',
         image: stoneStaining,
-        fullDescription: 'Our hand stone staining service provides expert color matching and restoration for natural stone surfaces, ensuring seamless and precise color integration.',
+        fullDescription: 'Our stone staining service provides expert color matching and restoration for natural stone surfaces, ensuring seamless and precise color integration.',
         keyFeatures: [
           'Customized color matching',
           'Hand-applied techniques',
@@ -1801,7 +1801,7 @@ export const teamStructureData = [
   {
     id: 2,
     title: "Area Supervisor",
-    description: "The Area Supervisors are responsible for projects within a defined geographical area, and they maintain daily contact with the Job Foreperson to ensure all activities at the job site are being performed at the highest level.",
+    description: "The Area Supervisors are responsible for projects within a defined geographical area, They maintain daily contact with the Job Foreperson to ensure all activities at the job site are being performed at the highest level.",
     icon: <Users size={40} className="text-white" />,
     positionNumber: "ii",
     image: areaSupervisor,

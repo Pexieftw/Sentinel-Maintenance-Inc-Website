@@ -136,7 +136,7 @@ const HealthSafety = () => {
                   
                   <div className="text-gray-600 space-y-4">
                     <p>
-                      At SMI, we take the safety of our staff, subcontractors, and clients with the utmost seriousness. As part of our commitment to maintaining a safe and compliant work environment, <span className="font-semibold">every new team member undergoes mandatory safety training from day one</span>. This includes the four core safety programs required by industry and provincial regulations:
+                      At SMI, we take the safety of our staff, subcontractors, and clients with the utmost seriousness. As part of our commitment to maintaining a safe and compliant work environment, <span className="font-semibold">every new team member undergoes mandatory safety training from day one</span>. This includes the four core safety programs:
                     </p>
                     
                     <ul className="ml-2 space-y-1">
@@ -206,7 +206,7 @@ const HealthSafety = () => {
                   </div>
                   <h4 className="text-xl font-semibold text-gray-800 mb-3">Documentation</h4>
                   <p className="text-gray-600">
-                    Full access to Material Safety Data Sheets for all materials used in our operations
+                    Full access to Material Safety Data Sheets for all products used in our operations
                   </p>
                 </div>
                 
@@ -224,7 +224,7 @@ const HealthSafety = () => {
                   </div>
                   <h4 className="text-xl font-semibold text-gray-800 mb-3">Education</h4>
                   <p className="text-gray-600">
-                    Comprehensive training ensuring all staff exceed the 80% certification requirement
+                    Comprehensive training ensuring all staff met certification requirement
                   </p>
                 </div>
                 

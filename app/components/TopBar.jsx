@@ -11,7 +11,8 @@ export const topBarSections = [
   },
   { 
     icon: <MapPin className="stroke-current" size={16} />, 
-    text: "401 Richmond St W" 
+    text: "401 Richmond St W",
+    href: "https://maps.google.com/?q=401+Richmond+St+W+%23222,+Toronto,+ON+M5V+3A8,+Canada"
   },
   { 
     icon: <Mail className="stroke-current" size={16} />, 
@@ -73,6 +74,8 @@ const TopBar = () => {
                       {section.href ? (
                         <a 
                           href={section.href}
+                          target={section.href.startsWith('https://maps.google.com') ? "_blank" : undefined}
+                          rel={section.href.startsWith('https://maps.google.com') ? "noopener noreferrer" : undefined}
                           className={`text-xs font-medium ${isActive ? 'text-gray-800 hover:underline' : 'text-white'} transition-colors duration-300`}
                         >
                           {section.text}
@@ -100,6 +103,8 @@ const TopBar = () => {
                   {section.href ? (
                     <a 
                       href={section.href}
+                      target={section.href.startsWith('https://maps.google.com') ? "_blank" : undefined}
+                      rel={section.href.startsWith('https://maps.google.com') ? "noopener noreferrer" : undefined}
                       className="ml-2 hover:underline transition-colors duration-300"
                     >
                       {section.text}

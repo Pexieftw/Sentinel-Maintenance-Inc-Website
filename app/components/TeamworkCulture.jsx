@@ -12,7 +12,7 @@ const ModernTeamworkSection = () => {
     {
       icon: <MessageSquare className="w-8 h-8 text-primary-500" />,
       title: "Communication",
-      content: "At SMI, we believe effective teamwork starts with clear, open communication. Our teams operate with transparency—both internally and with clients—ensuring expectations are aligned, updates are timely, and any concerns are addressed proactively. This approach builds trust and keeps everyone on the same page."
+      content: "At SMI, we believe effective teamwork starts with clear, open communication. Our teams operate with transparency—both internally and with clients—ensuring expectations are aligned, updates are timely, and any concerns are addressed immediately. This approach builds trust and keeps everyone on the same page."
     },
     {
       icon: <Users className="w-8 h-8 text-primary-500" />,
@@ -22,7 +22,7 @@ const ModernTeamworkSection = () => {
     {
       icon: <Handshake className="w-8 h-8 text-primary-500" />,
       title: "Respect & Inclusion",
-      content: "Our work culture is rooted in mutual respect, where every individual—regardless of role—is valued. We foster an inclusive environment where diverse perspectives are welcomed and collaboration thrives. This respectful culture reflects in how we work together and in how we serve our clients."
+      content: "Our work culture is rooted in mutual respect where every individual—regardless of role—is valued. We foster an inclusive environment where diverse perspectives are welcomed and collaboration thrives. This respectful culture reflects in how we work together and in how we serve our clients."
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-primary-500" />,

@@ -57,8 +57,8 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Sentinel Maintenance Inc. (SMI) is a proudly 100% Canadian, full-service Property Services Company established in 1989. 
-              Based in Canada and serving Canadian communities for over three decades
+              Sentinel Maintenance Inc. (SMI) is a proudly Canadian owned Property Services Company established in 1989. 
+              Based in Canada and serving our clients and communities for over three decades
             </p>
 
             <div>
