@@ -94,7 +94,7 @@ const TopBar = () => {
         </div>
 
         {/* Desktop View */}
-        <div className="hidden md:flex justify-between items-center px-4 lg:px-0">
+        <div className="hidden md:flex justify-between items-center px-4 sm:px-6 lg:px-8 xl:px-0">
           <div className="flex items-center">
             {topBarSections.map((section, index) => (
               <React.Fragment key={index}>

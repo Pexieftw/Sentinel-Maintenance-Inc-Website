@@ -89,8 +89,8 @@ export default function BlogPage() {
   }
   
   return (
-    <div className="bg-gray-50">
-      <div className="container mx-auto max-w-7xl px-4 lg:px-0 py-12">
+    <div className="">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-0 py-12">
         {/* Hero section */}
         <div className="z-0 bg-gradient-to-r from-primary-100 to-primary-300 text-white p-8 mb-12 shadow-lg relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">

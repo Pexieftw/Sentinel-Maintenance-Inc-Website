@@ -35,7 +35,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary-500 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:py-16 lg:px-6 xl:px-0">
+      <div className="max-w-7xl mx-auto py-12 lg:py-16 px-4 sm:px-6 lg:px-8 xl:px-0">
         {/* Company Info and Services Grid */}
         <div className="flex flex-col text-center md:grid md:grid-cols-6 md:gap-8 md:text-left">
           {/* Company Info - Left Side*/}

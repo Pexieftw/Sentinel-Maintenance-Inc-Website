@@ -81,7 +81,7 @@ export default function ServicesPage() {
         ]}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 py-8 sm:py-16">
         <div className="text-center mb-8 sm:mb-16" data-aos="fade-down">
           <h1 className="text-4xl sm:text-5xl font-bold uppercase tracking-tight text-gray-900 mb-4 sm:mb-6">
             Reliable Cleaning Solutions

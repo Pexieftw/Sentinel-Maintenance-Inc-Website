@@ -32,7 +32,7 @@ export default async function ServiceDetailPage({ params }) {
       
       {/* Modern Header Section */}
       <div className="bg-gradient-to-b from-white to-gray-100">
-        <div className="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 py-16 md:py-24 max-w-7xl">
           <div className="text-center lg:text-left grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content Area */}
             <div className="space-y-8">
@@ -63,14 +63,15 @@ export default async function ServiceDetailPage({ params }) {
             <div className="h-full relative w-full space-y-8">
               <div className="h-full flex flex-col gap-8 justify-center items-center md:items-end"> 
                 {/* Image */}
-                <div className="relative h-auto">
-                  <div className="relative h-full overflow-hidden shadow-xl">
+                <div className="relative w-full max-w-4xl">
+                  <div className="relative w-full overflow-hidden shadow-xl">
                     <div className="absolute inset-0 bg-primary-300/10"></div>
                     <Image 
                       src={service.image} 
                       alt={service.name} 
-                      width={800}
-                      height={600} 
+                      width={0}
+                      height={0}
+                      sizes="100vw"
                       className="w-full h-auto"
                       priority
                     />
@@ -79,7 +80,6 @@ export default async function ServiceDetailPage({ params }) {
                     </div>
                   </div>
                 </div>
-
                 {/* Text content */}
                 <div className="bg-primary-300 p-12 shadow-xl flex items-center">
                   <div>
@@ -109,7 +109,7 @@ export default async function ServiceDetailPage({ params }) {
       </div>
       
       <div className="bg-gradient-to-b from-gray-100 to-white">
-        <div className="container mx-auto px-4 pb-24 max-w-7xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 pb-24 max-w-7xl">
           <div className="space-y-32">
 
             {/* Key Features */}
@@ -165,7 +165,7 @@ export default async function ServiceDetailPage({ params }) {
                   <h2 className="text-4xl font-bold text-gray-900">Aftercare Tips</h2>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {service.aftercareTips.map((tip, index) => (
                     <div 
                       key={index} 

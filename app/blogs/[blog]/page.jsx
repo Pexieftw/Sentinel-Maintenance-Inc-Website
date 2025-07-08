@@ -36,7 +36,7 @@ export default function BlogPost() {
 
   return (
     <div className="pb-16">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-0 py-12">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-0 py-12">
         {/* Breadcrumb */}
         <div className="mb-8">
           <Link href="/blogs" className="text-primary-300 hover:text-primary-400 hover:underline transition-colors flex items-center text-sm font-medium">

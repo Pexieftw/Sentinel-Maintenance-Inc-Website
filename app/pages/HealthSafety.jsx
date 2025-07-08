@@ -17,7 +17,7 @@ const HealthSafety = () => {
         imageSrc="/breadcrumbs-bg.jpg"
         imageAlt="Custom Cleaning Background"
       />
-      <section className="bg-white py-20 px-4 md:px-8 lg:px-0 shadow-lg">
+      <section className="bg-white py-20 px-4 sm:px-6 lg:px-8 xl:px-0 shadow-lg">
         <div className="max-w-7xl mx-auto">
           <div 
             className="flex flex-col items-center mb-16 text-center"
@@ -136,7 +136,7 @@ const HealthSafety = () => {
                   
                   <div className="text-gray-600 space-y-4">
                     <p>
-                      At SMI, we take the safety of our staff, subcontractors, and clients with the utmost seriousness. As part of our commitment to maintaining a safe and compliant work environment, <span className="font-semibold">every new team member undergoes mandatory safety training from day one</span>. This includes the four core safety programs:
+                      At SMI, we take the safety of our staff, subcontractors, and clients with the upmost seriousness. As part of our commitment to maintaining a safe and compliant work environment, <span className="font-semibold">every new team member undergoes mandatory safety training from day one</span>. This includes the four core safety programs:
                     </p>
                     
                     <ul className="ml-2 space-y-1">
@@ -224,7 +224,7 @@ const HealthSafety = () => {
                   </div>
                   <h4 className="text-xl font-semibold text-gray-800 mb-3">Education</h4>
                   <p className="text-gray-600">
-                    Comprehensive training ensuring all staff met certification requirement
+                    Comprehensive training ensuring all staff meet certification requirement
                   </p>
                 </div>
                 

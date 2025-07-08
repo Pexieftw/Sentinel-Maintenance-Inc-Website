@@ -86,7 +86,7 @@ const ContactUs = () => {
         data-aos="fade-down" // Add AOS animation
       />
 
-      <section className="px-4 md:px-8 bg-gradient-to-b from-gray-50 to-white py-16 mb-16">
+      <section className="px-4 sm:px-6 lg:px-8 xl:px-0 bg-gradient-to-b from-gray-50 to-white py-16 mb-16">
         <div className="container mx-auto max-w-7xl">
           <SectionHeader
             icon={<Mail size={40} className="text-primary-500" />} 
