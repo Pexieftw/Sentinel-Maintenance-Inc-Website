@@ -27,7 +27,7 @@ const ModernTeamworkSection = () => {
     {
       icon: <TrendingUp className="w-8 h-8 text-primary-500" />,
       title: "Continuous Improvement & Training",
-      content: "We’re committed to ongoing learning and development. Through regular training sessions, safety refreshers, and team meetings, our staff stay up to date with the latest best practices and innovations in the industry. This culture of continuous improvement ensures the highest level of service for our clients."
+      content: "We’re committed to ongoing learning and development. Through regular training sessions, safety refreshers, and team meetings, our staff stays up to date with the latest best practices and innovations in the industry. This culture of continuous improvement ensures the highest level of service for our clients."
     }
   ];
 

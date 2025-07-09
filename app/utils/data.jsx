@@ -420,7 +420,7 @@ export const serviceCategories = [
           'Use appropriate cleaning products for different surfaces',
           'Regularly inspect and maintain cleaning equipment'
         ],
-        seasonalNote: 'Winter and summer car show seasons demand extra attention to showroom and vehicle presentation'
+        seasonalNote: 'Winter and summer car showcase seasons demand extra attention to showroom and vehicle presentation'
       },
       {
         name: 'Institutional Cleaning',
@@ -1792,7 +1792,7 @@ export const teamStructureData = [
   {
     id: 1,
     title: "Senior Management",
-    description: "The Senior Management team is responsible for all administrative and strategic decision making. The Senior Management also coordinates the firm's marketing as well as attending industry meetings and workshops to stay abreast of the changes and improvements occurring within the industry.",
+    description: "The Senior Management team is responsible for all administrative and strategic decision making. Senior Management also coordinates the firm's marketing as well as attending industry meetings and workshops to stay abreast of the changes and improvements occurring within the industry.",
     icon: <Award size={40} className="text-white" />,
     positionNumber: "i",
     image: seniorManagement,

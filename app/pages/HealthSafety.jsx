@@ -224,7 +224,7 @@ const HealthSafety = () => {
                   </div>
                   <h4 className="text-xl font-semibold text-gray-800 mb-3">Education</h4>
                   <p className="text-gray-600">
-                    Comprehensive training ensuring all staff meet certification requirement
+                    Comprehensive training ensuring all staff meet certification requirements
                   </p>
                 </div>
                 

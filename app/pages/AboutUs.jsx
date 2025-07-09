@@ -87,7 +87,7 @@ const AboutUs = () => {
                   <Link href="/services" className="font-bold text-primary-100 hover:underline">
                     services
                   </Link>
-                  . These range from daily janitorial solutions to a variety of specialized services including carpet and upholstery cleaning, window washing, post-construction clean-ups as well as various property requirements including 24 hour emergency responses.
+                  . These range from daily janitorial solutions to a variety of specialized services including carpet and upholstery cleaning, window washing, post-construction cleanups as well as various property requirements including 24-hour emergency responses.
                 </p>
                 <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
                   Whether it's day-to-day upkeep or urgent support, we bring the same level of care and reliability to every project—backed by decades of proven performance.
@@ -149,7 +149,7 @@ const AboutUs = () => {
                   <span className="font-bold">SMI</span> embodies the Canadian values of integrity, reliability, and teamwork in our well-organized, people-oriented approach. True to our roots, our commitment to quality service begins with senior management and extends through every position in our organization. We provide key management personnel across our offices nationwide to ensure consistent, high-quality service that our clients have come to expect from a leading enterprise.
                   </p>
                   <p className="text-slate-700 mb-4 leading-relaxed text-sm md:text-base">
-                  Our exceptional quality standards reflect the strong work ethic embraced by our dedicated staff. Throughout North America, our team takes tremendous pride in their work. We maintain these standards through continuous training and instruction, including regular staff meetings where we share the latest industry techniques, methods and equipement.
+                  Our exceptional quality standards reflect the strong work ethic embraced by our dedicated staff. Throughout North America, our team takes tremendous pride in their work. We maintain these standards through continuous training and instruction, including regular staff meetings where we share the latest industry techniques, methods and equipment.
                   </p>
                   <p className="text-slate-700 leading-relaxed text-sm md:text-base">
                   With our well-known focus on quality, our management team ensures that all standards are met through regular inspections, client feedback sessions, and performance evaluations. This unwavering commitment to excellence—combining meticulous attention to detail with genuine care for our clients' needs—is what distinguishes SMI as a proudly Canadian leader in the North American property services industry.

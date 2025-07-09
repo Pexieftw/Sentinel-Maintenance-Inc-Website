@@ -212,7 +212,7 @@ const TeamworkCulture = () => {
           <Section icon={Target} title="Continuous Improvement & Training" animationDirection="right">
             <div className="space-y-6">
               <p className="text-gray-700 text-lg">
-                We're committed to ongoing learning and development. Through regular training sessions, safety refreshers, and team meetings, our staff stay up to date with the latest best practices and innovations in the industry. This culture of continuous improvement ensures the highest level of service for our clients.
+                We're committed to ongoing learning and development. Through regular training sessions, safety refreshers, and team meetings, our staff stays up to date with the latest best practices and innovations in the industry. This culture of continuous improvement ensures the highest level of service for our clients.
               </p>
               
               <div 
@@ -223,7 +223,7 @@ const TeamworkCulture = () => {
                 <h4 className="text-xl font-semibold text-white mb-5">Our Approach to Excellence</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
-                    'Routine Training and Developement',
+                    'Routine Training and Development',
                     'Innovation and Industry Insights',
                     'Safety and Compliance Refreshers',
                     'Client-centered Service Mindset'
