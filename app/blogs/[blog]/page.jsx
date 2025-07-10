@@ -1,6 +1,4 @@
-"use client";
-
-import { useParams } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -14,15 +12,45 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { cleaningBlogs } from "../../utils/data";
-import { notFound } from 'next/navigation';
 
 function titleToSlug(title) {
   return title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
 }
 
-export default function BlogPost() {
-  const params = useParams();
-  const { blog } = params;
+export async function generateStaticParams() {
+  
+  const params = cleaningBlogs.map((post) => ({
+    blog: titleToSlug(post.title),
+  }));
+  
+  return params;
+}
+
+// Add generateMetadata for better SEO
+export async function generateMetadata({ params }) {
+  const { blog } = await params;
+  const blogPost = cleaningBlogs.find(post => titleToSlug(post.title) === blog);
+  
+  if (!blogPost) {
+    return {
+      title: 'Blog Post Not Found',
+      description: 'The requested blog post could not be found.',
+    };
+  }
+
+  return {
+    title: blogPost.title,
+    description: blogPost.excerpt || `Read about ${blogPost.title}`,
+    openGraph: {
+      title: blogPost.title,
+      description: blogPost.excerpt || `Read about ${blogPost.title}`,
+      images: [blogPost.image],
+    },
+  };
+}
+
+export default async function BlogPost({ params }) {
+  const { blog } = await params;
   
   const blogPost = cleaningBlogs.find(post => titleToSlug(post.title) === blog);
 

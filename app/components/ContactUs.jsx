@@ -7,6 +7,7 @@ import BreadCrumbsSection from '../utils/BreadCrumbsSection';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css'; 
 import Link from 'next/link';
+
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -43,10 +44,14 @@ const ContactUs = () => {
     setFormStatus({ isSubmitting: true, isSubmitted: false, error: null });
     
     try {
-      const response = await fetch('/api/contact', {
+      // Get the Formcarry endpoint from environment variable
+      const formcarryEndpoint = process.env.NEXT_PUBLIC_FORMCARRY_ENDPOINT || 'https://formcarry.com/s/94SQDpST0Gm';
+      
+      const response = await fetch(formcarryEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify(formData),
       });
@@ -167,7 +172,7 @@ const ContactUs = () => {
                     <h3 className="text-xl font-bold text-gray-900">Corporate Headquarters</h3>
                   </div>
                   <div className="flex-grow">
-                    <p className="text-gray-600 mb-2">Located in the heart of Toronto’s fashion district</p>
+                    <p className="text-gray-600 mb-2">Located in the heart of Toronto's fashion district</p>
                   </div>
                   <div className="hover:underline decoration-primary-300 mt-auto">
                     <Link
