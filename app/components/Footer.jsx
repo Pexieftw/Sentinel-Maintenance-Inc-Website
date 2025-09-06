@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Linkedin, Instagram } from 'lucide-react';
 import { services } from '../utils/data'; 
 
 import SmiLogoMini from '@/public/icons/SMI-LOGO-MINI.svg';
@@ -35,7 +36,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary-500 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:py-16 lg:px-6 xl:px-0">
+      <div className="max-w-7xl mx-auto py-12 lg:py-16 px-4 sm:px-6 lg:px-8 xl:px-0">
         {/* Company Info and Services Grid */}
         <div className="flex flex-col text-center md:grid md:grid-cols-6 md:gap-8 md:text-left">
           {/* Company Info - Left Side*/}
@@ -56,10 +57,35 @@ const Footer = () => {
                 className="hidden md:block brightness-0 invert"
               />
             </div>
-            <p className="text-gray-300 mb-4 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed">
               Sentinel Maintenance Inc. (SMI) is a proudly Canadian owned Property Services Company established in 1989. 
               Based in Canada and serving our clients and communities for over three decades
             </p>
+
+            {/* Social Media Links */}
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-3 text-gray-100">Follow Us</h3>
+              <div className="flex justify-center md:justify-start space-x-4">
+                <a
+                  href="https://www.linkedin.com/company/sentinel-maintenance-inc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 border border-gray-400 rounded-full hover:border-white hover:bg-white hover:text-primary-500 transition-all duration-300 group"
+                  aria-label="Visit our LinkedIn page"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.instagram.com/smitoronto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 border border-gray-400 rounded-full hover:border-white hover:bg-white hover:text-primary-500 transition-all duration-300 group"
+                  aria-label="Visit our Instagram page"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
 
             <div>
               <h3 className="text-lg font-semibold mb-4 text-gray-100">Areas Serviced</h3>
@@ -93,7 +119,7 @@ const Footer = () => {
                   <ul>
                     {servicesToShow.map((service, index) => (
                       <li key={index} className="mb-2">
-                        <Link href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`} className="text-gray-400 hover:text-primary-100 text-sm transition-colors">
+                        <Link href={`/services/${service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`} className="text-gray-400 hover:text-primary-100 text-sm transition-colors">
                           {service}
                         </Link>
                       </li>

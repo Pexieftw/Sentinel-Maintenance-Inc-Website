@@ -32,8 +32,8 @@ const AboutUs = () => {
           </span>
         </h2>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           {/* Left side image - stacks on mobile */}
           <div className="relative w-full md:w-2/5 mb-8 md:mb-0" data-aos="fade-right">
             <div className="">
@@ -110,9 +110,11 @@ const AboutUs = () => {
                 <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
                   Junk Removal
                 </div>
-                <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm">
-                  And More
-                </div>
+                <Link href="/services">
+                  <div className="bg-primary-300 p-2 md:p-3 shadow-sm text-center text-white font-medium text-xs md:text-sm cursor-pointer hover:bg-primary-400 transition-color duration-300">
+                    And More
+                  </div>
+                </Link>
                 </div>
               </div>
             </div>
@@ -133,7 +135,7 @@ const AboutUs = () => {
             The Sentinel Maintenance Team
           </span>
         </h2>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             {/* Left side content */}
             <div className="w-full md:w-3/5" data-aos="fade-right">
@@ -223,14 +225,14 @@ const AboutUs = () => {
                   data-aos="fade-up"
                 >
                   <div className="flex flex-col md:flex-row h-full">
-                    <div className="w-full md:w-1/4 h-48 md:h-full bg-primary-300 relative overflow-hidden aspect-square">
+                    <div className="w-full md:w-1/4 h-48 md:h-full relative overflow-hidden aspect-square">
                       <Image 
                         src={item.image} 
                         alt={item.imageAlt} 
                         fill 
                         loading="lazy"
                         placeholder="blur" 
-                        className="object-cover opacity-70" 
+                        className="object-cover" 
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 flex items-center justify-center">

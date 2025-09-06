@@ -20,7 +20,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="pt-10 md:pt-20 px-4 py-20 sm:px-6 lg:px-8 bg-gradient-to-t from-white to-gray-100">
+    <section className="pt-10 md:pt-20 py-20 bg-gradient-to-t from-white to-gray-100 px-4 sm:px-6 lg:px-8 xl:px-0 ">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16" data-aos="fade-up">
           {/* Icon */}

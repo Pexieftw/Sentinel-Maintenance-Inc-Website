@@ -90,9 +90,9 @@ export default function BlogPage() {
   
   return (
     <div className="bg-gray-50">
-      <div className="container mx-auto max-w-7xl px-4 lg:px-0 py-12">
+      <div className="container mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 xl:px-0">
         {/* Hero section */}
-        <div className="z-0 bg-gradient-to-r from-primary-100 to-primary-300 text-white p-8 mb-12 shadow-lg relative overflow-hidden">
+        <div className="z-0 bg-gradient-to-r from-primary-200 to-primary-300 text-white p-8 mb-12 shadow-lg relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <Image 
               src={office} 
@@ -103,26 +103,26 @@ export default function BlogPage() {
               placeholder="blur"
             />
           </div>
-          <div className="text-center md:text-left relative z-10">
+          <div className="text-center lg:text-left relative z-10">
             <h1 className="text-4xl font-bold mb-4">SMI Cleaning Services Blog</h1>
             <p className="text-lg max-w-2xl">
               Expert insights, tips, and industry news about commercial cleaning, 
               specialized services, and property maintenance across the GTA.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/" className="bg-white text-gray-800 px-5 py-2 w-full md:w-auto font-medium hover:bg-gray-200 transition-colors">
+              <Link href="/" className="bg-white text-gray-800 px-5 py-2 w-full lg:w-auto font-medium hover:bg-gray-200 transition-colors">
                 Overview
               </Link>
-              <Link href="/services" className="bg-transparent border border-white w-full md:w-auto text-white px-5 py-2  font-medium hover:bg-white hover:text-gray-800 transition-colors">
+              <Link href="/services" className="bg-transparent border border-white w-full lg:w-auto text-white px-5 py-2  font-medium hover:bg-white hover:text-gray-800 transition-colors">
                 Our Services
               </Link>
             </div>
           </div>
         </div>
         
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           {/* Main content */}
-          <div id="blogs" className="w-full md:w-2/3">
+          <div id="blogs" className="w-full lg:w-2/3">
             {/* Active filters */}
             {(filter.category || filter.tag || filter.readTime || filter.search) && (
               <div className="bg-white p-4  shadow-sm mb-6 flex flex-wrap items-center gap-2">
@@ -205,7 +205,7 @@ export default function BlogPage() {
                 </div>
                 <div className="p-6">
 
-                  <div className="flex flex-col md:flex-row gap-2 items-start text-sm text-gray-500 mb-2">
+                  <div className="flex flex-col lg:flex-row gap-2 items-start text-sm text-gray-500 mb-2">
                     <span className="bg-primary-300 text-white text-xs px-2 py-1 font-medium">
                       Commercial
                     </span>
@@ -249,7 +249,7 @@ export default function BlogPage() {
             )}
             
             {/* Sort options */}
-            <div className="hidden md:flex justify-between items-center mb-6">
+            <div className="hidden lg:flex justify-between items-center mb-6">
               <div className="text-gray-700">
                 <span className="font-medium">{filteredBlogs.length}</span> Articles found
               </div>
@@ -273,9 +273,9 @@ export default function BlogPage() {
               {currentBlogs.length > 0 ? (
                 currentBlogs.map((blog) => (
                   <div key={blog.id} className="bg-white  shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
-                    <div className="md:flex">
-                      <div className="md:w-1/3 relative">
-                        <div className="h-48 md:h-full w-full relative">
+                    <div className="lg:flex">
+                      <div className="lg:w-1/3 relative">
+                        <div className="h-48 lg:h-full w-full relative">
                           <Image 
                             src={blog.image} 
                             alt={blog.title} 
@@ -292,8 +292,8 @@ export default function BlogPage() {
                           )}
                         </div>
                       </div>
-                      <div className="p-6 md:w-2/3">
-                        <div className="flex flex-col md:flex-row gap-2 items-start text-sm text-gray-500 mb-2">
+                      <div className="p-6 lg:w-2/3">
+                        <div className="flex flex-col lg:flex-row gap-2 items-start text-sm text-gray-500 mb-2">
                           <span 
                             onClick={() => setFilter({...filter, category: blog.category})}
                             className="bg-primary-300 text-white text-xs px-2 py-1 font-medium cursor-pointer hover:bg-primary-400"
@@ -428,7 +428,7 @@ export default function BlogPage() {
           </div>
           
           {/* Sidebar */}
-          <div className="w-full md:w-1/3">
+          <div className="w-full lg:w-1/3">
             <div className="lg:sticky lg:top-6 space-y-6">
               {/* Search */}
               <div className="bg-white p-6  shadow-md">
@@ -558,7 +558,7 @@ export default function BlogPage() {
       </div>
       
       {/* Mobile filter button */}
-      <div className="md:hidden fixed bottom-6 right-6">
+      <div className="lg:hidden fixed bottom-6 right-6">
         <button 
           onClick={() => setOpenFilter(!openFilter)}
           className="bg-primary-300 text-white p-4  shadow-lg flex items-center justify-center"

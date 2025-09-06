@@ -18,7 +18,7 @@ const HealthSafety = () => {
 
   return (
     <section className="py-10 md:py-20" data-aos="fade-up">
-      <div className="w-full max-w-7xl container mx-auto px-4 lg:px-0">
+      <div className="w-full max-w-7xl container mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
         {/* Icon */}
         <SectionHeader
           icon={<HeartPulse className="sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-primary-300" />} 

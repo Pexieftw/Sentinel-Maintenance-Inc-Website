@@ -17,7 +17,7 @@ const HealthSafety = () => {
         imageSrc="/breadcrumbs-bg.jpg"
         imageAlt="Custom Cleaning Background"
       />
-      <section className="bg-white py-20 px-4 md:px-8 lg:px-0 shadow-lg">
+      <section className="bg-white py-20 px-4 sm:px-6 lg:px-8 xl:px-0 shadow-lg">
         <div className="max-w-7xl mx-auto">
           <div 
             className="flex flex-col items-center mb-16 text-center"

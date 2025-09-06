@@ -27,7 +27,7 @@ const AreasWeServe = () => {
 
   return (
     <div className="h-7xl bg-gradient-to-b from-white to-slate-100 py-16 relative overflow-hidden">
-      <div className="container mx-auto px-4 lg:px-0 max-w-7xl md:max-w-7xl relative z-10">
+      <div className="container mx-auto max-w-7xl relative z-10 px-4 sm:px-6 lg:px-8 xl:px-0">
 
         {/* Icon */}
         <SectionHeader

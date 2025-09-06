@@ -19,7 +19,7 @@ const MinimizedContactUs = () => {
 
   return (
     <section className="bg-gradient-to-b from-slate-100 to-white pb-16" data-aos="fade-up">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0"  data-aos="fade-up">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0"  data-aos="fade-up">
         <div className="bg-primary-300 shadow-xl overflow-hidden">
           <div className="relative z-10 px-6 py-12 md:p-16">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between relative z-10">

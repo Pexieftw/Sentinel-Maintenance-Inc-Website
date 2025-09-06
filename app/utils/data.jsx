@@ -4,11 +4,11 @@ export const services = {
     'Commercial Janitorial Cleaning',
     'Office Cleaning',
     'Condominium Cleaning',
-    'Medical Office Cleaning',
     'Dealership Cleaning',
+    'Medical Office Cleaning',
     'Institutional Cleaning',
-    'Construction Cleaning',
-    'New Condominium Construction Cleaning'
+    'New Condominium Construction Cleaning',
+    'Construction Cleaning'
   ],
   'Specialized Services': {
     column1: [
@@ -27,20 +27,20 @@ export const services = {
     column2: [
       'Landscaping',
       'Snow Removal',
-      'Lobby and Entrance Walk-off Matting Installation',
       'Animal Control and Deterrents',
+      'Lobby and Entrance Walk-off Matting Installation',
       'HVAC Cleaning',
       'Fan Coil Cleaning',
       'Laundry and Kitchen Exhaust Fan Cleaning',
       'Industrial Kitchen Vent Cleaning',
-      'Moving Services',
-      'Junk Removal'
+      'Junk Removal',
+      'Moving Services'
     ]
   },
   'Restoration': [
     'Flood Cleanup',
-    'Fire Restoration',
     'Odour Control',
+    'Fire Restoration',
     'Applied Microbial (Mould & Sewage) Remediation (AMRT)'
   ]
 };
@@ -361,37 +361,6 @@ export const serviceCategories = [
         seasonalNote: 'Spring and fall seasons require additional deep cleaning and maintenance of outdoor and indoor shared spaces'
       },
       {
-        name: 'Medical Office Cleaning',
-        slug: 'medical-office-cleaning',
-        header: {
-          title: "Medical Office Cleaning Services in Toronto & GTA",
-          description: "Medical and healthcare environments demand a higher level of cleanliness to protect patients, staff, and visitors from cross-contamination and infection risks. At Sentinel Maintenance Inc (SMI), our medical office cleaning services are designed to exceed strict healthcare regulations. We use hospital-grade disinfectants, color-coded tools to avoid cross-use, and rigorous sanitation techniques that comply with industry protocols. From examination rooms and waiting areas to surgical suites and restrooms, our cleaning professionals are trained to handle sensitive environments with precision. We maintain full confidentiality, uphold sterilization best practices, and follow infection prevention standards backed by years of experience. In a time when hygiene is paramount, clinics, dental offices, and medical labs throughout Toronto and the GTA rely on SMI for cleaning services that prioritize health, safety, and compliance above all else."
-        },        
-        description: 'Specialized cleaning for healthcare facilities with strict hygiene standards.',
-        image: medicalOfficeCleaning,
-        fullDescription: 'Our medical office cleaning service provides meticulous, sanitized cleaning that meets the highest healthcare industry standards. We understand the critical importance of infection control and patient safety.',
-        keyFeatures: [
-          'Hospital-grade disinfection',
-          'Compliance with healthcare cleaning regulations',
-          'Specialized medical facility training',
-          'Biohazard waste handling protocols'
-        ],
-        serviceDetails: [
-          'Sterilization of medical equipment areas',
-          'Waiting room and patient room deep cleaning',
-          'Certified infection control procedures'
-        ],
-        aftercareTips: [
-          'Maintain strict hand hygiene protocols',
-          'Use disposable protective coverings',
-          'Implement immediate spill and contamination response',
-          'Regularly calibrate and maintain medical equipment',
-          'Train staff on ongoing cleanliness standards',
-          'Use color-coded cleaning tools to prevent cross-contamination'
-        ],
-        seasonalNote: 'Flu and virus seasons require enhanced disinfection and preventive cleaning measures'
-      },
-      {
         name: 'Dealership Cleaning',
         slug: 'dealership-cleaning',
         header: {
@@ -421,6 +390,37 @@ export const serviceCategories = [
           'Regularly inspect and maintain cleaning equipment'
         ],
         seasonalNote: 'Winter and summer car show seasons demand extra attention to showroom and vehicle presentation'
+      },
+      {
+        name: 'Medical Office Cleaning',
+        slug: 'medical-office-cleaning',
+        header: {
+          title: "Medical Office Cleaning Services in Toronto & GTA",
+          description: "Medical and healthcare environments demand a higher level of cleanliness to protect patients, staff, and visitors from cross-contamination and infection risks. At Sentinel Maintenance Inc (SMI), our medical office cleaning services are designed to exceed strict healthcare regulations. We use hospital-grade disinfectants, color-coded tools to avoid cross-use, and rigorous sanitation techniques that comply with industry protocols. From examination rooms and waiting areas to surgical suites and restrooms, our cleaning professionals are trained to handle sensitive environments with precision. We maintain full confidentiality, uphold sterilization best practices, and follow infection prevention standards backed by years of experience. In a time when hygiene is paramount, clinics, dental offices, and medical labs throughout Toronto and the GTA rely on SMI for cleaning services that prioritize health, safety, and compliance above all else."
+        },        
+        description: 'Specialized cleaning for healthcare facilities with strict hygiene standards.',
+        image: medicalOfficeCleaning,
+        fullDescription: 'Our medical office cleaning service provides meticulous, sanitized cleaning that meets the highest healthcare industry standards. We understand the critical importance of infection control and patient safety.',
+        keyFeatures: [
+          'Hospital-grade disinfection',
+          'Compliance with healthcare cleaning regulations',
+          'Specialized medical facility training',
+          'Biohazard waste handling protocols'
+        ],
+        serviceDetails: [
+          'Sterilization of medical equipment areas',
+          'Waiting room and patient room deep cleaning',
+          'Certified infection control procedures'
+        ],
+        aftercareTips: [
+          'Maintain strict hand hygiene protocols',
+          'Use disposable protective coverings',
+          'Implement immediate spill and contamination response',
+          'Regularly calibrate and maintain medical equipment',
+          'Train staff on ongoing cleanliness standards',
+          'Use color-coded cleaning tools to prevent cross-contamination'
+        ],
+        seasonalNote: 'Flu and virus seasons require enhanced disinfection and preventive cleaning measures'
       },
       {
         name: 'Institutional Cleaning',
@@ -454,37 +454,6 @@ export const serviceCategories = [
         seasonalNote: 'Back-to-school and exam periods require intensive cleaning and sanitization'
       },
       {
-        name: 'Construction Cleaning',
-        slug: 'construction-cleaning',
-        header: {
-          title: "Post Construction Cleaning Services in Toronto & GTA",
-          description: "When your construction or renovation project wraps up, Sentinel Maintenance Inc (SMI) is ready to handle the final stage—comprehensive post-construction cleaning. We turn dusty, debris-filled spaces into clean, safe, and presentable environments for occupancy or inspection. Our trained crew removes leftover materials, vacuums and mops floors, cleans walls and windows, and sanitizes surfaces using professional-grade tools and precision. From residential developments to large-scale commercial projects, we ensure every inch is polished and move-in ready. Our team works efficiently within your project timelines and budget, providing reliable cleanup that meets building codes and presentation standards. Serving clients across Toronto and the GTA, SMI helps construction professionals transition smoothly from build to business-ready with expert post-construction cleaning services.",
-        },
-        description: 'Comprehensive cleanup services for newly constructed or renovated spaces.',
-        image: postConstructionCleaning,
-        fullDescription: 'Our post-construction cleaning service transforms construction sites into clean, move-in ready spaces. We handle debris removal, dust elimination, and thorough surface cleaning.',
-        keyFeatures: [
-          'Complete debris and dust removal',
-          'Detailed surface cleaning',
-          'Preparation for final inspection',
-          'Quick turnaround times'
-        ],
-        serviceDetails: [
-          'Interior and exterior site cleaning',
-          'Window and surface detailing',
-          'Preparation for final walkthrough'
-        ],
-        aftercareTips: [
-          'Protect newly cleaned surfaces from immediate dirt',
-          'Implement strict debris management',
-          'Use protective coverings on finished surfaces',
-          'Maintain clean pathways during move-in',
-          'Conduct final detailed inspection',
-          'Follow manufacturer guidelines for new surface care'
-        ],
-        seasonalNote: 'Spring and fall construction seasons require efficient and thorough cleaning services'
-      },
-      {
         name: 'New Condominium Construction Cleaning',
         slug: 'new-condominium-construction-cleaning',
         header: {
@@ -514,6 +483,37 @@ export const serviceCategories = [
           'Offer initial maintenance support to new residents'
         ],
         seasonalNote: 'Summer and early fall are peak periods for new condominium move-ins and require comprehensive cleaning services'
+      },
+      {
+        name: 'Construction Cleaning',
+        slug: 'construction-cleaning',
+        header: {
+          title: "Post Construction Cleaning Services in Toronto & GTA",
+          description: "When your construction or renovation project wraps up, Sentinel Maintenance Inc (SMI) is ready to handle the final stage—comprehensive post-construction cleaning. We turn dusty, debris-filled spaces into clean, safe, and presentable environments for occupancy or inspection. Our trained crew removes leftover materials, vacuums and mops floors, cleans walls and windows, and sanitizes surfaces using professional-grade tools and precision. From residential developments to large-scale commercial projects, we ensure every inch is polished and move-in ready. Our team works efficiently within your project timelines and budget, providing reliable cleanup that meets building codes and presentation standards. Serving clients across Toronto and the GTA, SMI helps construction professionals transition smoothly from build to business-ready with expert post-construction cleaning services.",
+        },
+        description: 'Comprehensive cleanup services for newly constructed or renovated spaces.',
+        image: postConstructionCleaning,
+        fullDescription: 'Our post-construction cleaning service transforms construction sites into clean, move-in ready spaces. We handle debris removal, dust elimination, and thorough surface cleaning.',
+        keyFeatures: [
+          'Complete debris and dust removal',
+          'Detailed surface cleaning',
+          'Preparation for final inspection',
+          'Quick turnaround times'
+        ],
+        serviceDetails: [
+          'Interior and exterior site cleaning',
+          'Window and surface detailing',
+          'Preparation for final walkthrough'
+        ],
+        aftercareTips: [
+          'Protect newly cleaned surfaces from immediate dirt',
+          'Implement strict debris management',
+          'Use protective coverings on finished surfaces',
+          'Maintain clean pathways during move-in',
+          'Conduct final detailed inspection',
+          'Follow manufacturer guidelines for new surface care'
+        ],
+        seasonalNote: 'Spring and fall construction seasons require efficient and thorough cleaning services'
       }
     ]
   },
@@ -925,37 +925,6 @@ export const serviceCategories = [
         seasonalNote: "Late autumn preparations are crucial for effective winter snow management"
       },
       {
-        name: 'Lobby and Entrance Walk-off Matting Installation',
-        slug: 'lobby-and-entrance-walk-off-matting-installation',
-        header: {
-          title: "Lobby and Entrance Walk-off Matting Installation in Toronto & GTA",
-          description: "Sentinel Maintenance Inc (SMI) installs high-performance walk-off matting systems that protect your building’s interior from dirt, moisture, and seasonal wear. Tailored for high-traffic commercial entrances, our custom matting solutions help extend floor life, reduce cleaning costs, and improve safety with slip-resistant materials. We offer a wide selection of styles and sizes, including logo-branded options that reinforce your company image while maintaining cleanliness. Whether for office buildings, retail environments, or condo lobbies, our mats serve both functional and aesthetic purposes. Proper matting reduces maintenance demands and captures debris before it spreads through your facility. Serving Toronto and the GTA, SMI delivers precise installation and durable solutions that work hard behind the scenes, season after season.",
-        },
-        description: 'Professional entrance matting solutions for commercial spaces.',
-        image: mattingInstallation,
-        fullDescription: 'Our walk-off matting installation service provides customized entrance solutions that reduce dirt, moisture, and wear in high-traffic areas, maintaining cleanliness and safety.',
-        keyFeatures: [
-          'Custom mat sizing',
-          'Multiple material options',
-          'Branded mat designs',
-          'Slip-resistant technologies'
-        ],
-        serviceDetails: [
-          'Commercial building entrances',
-          'Customized branding options',
-          'Performance and aesthetic solutions'
-        ],
-        aftercareTips: [
-          "Vacuum or shake mats regularly",
-          "Clean mats according to material specifications",
-          "Rotate mats to ensure even wear",
-          "Replace mats when signs of significant wear appear",
-          "Keep backup mats for heavy traffic periods",
-          "Monitor mat effectiveness periodically"
-        ],
-        seasonalNote: "Rainy spring and snowy winter months increase mat importance"
-      },
-      {
         name: 'Animal Control and Deterrents',
         slug: 'animal-control-and-deterrents',
         header: {
@@ -985,6 +954,37 @@ export const serviceCategories = [
           "Conduct periodic professional inspections"
         ],
         seasonalNote: "Spring and autumn wildlife migrations increase potential for property intrusions"
+      },
+      {
+        name: 'Lobby and Entrance Walk-off Matting Installation',
+        slug: 'lobby-and-entrance-walk-off-matting-installation',
+        header: {
+          title: "Lobby and Entrance Walk-off Matting Installation in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) installs high-performance walk-off matting systems that protect your building’s interior from dirt, moisture, and seasonal wear. Tailored for high-traffic commercial entrances, our custom matting solutions help extend floor life, reduce cleaning costs, and improve safety with slip-resistant materials. We offer a wide selection of styles and sizes, including logo-branded options that reinforce your company image while maintaining cleanliness. Whether for office buildings, retail environments, or condo lobbies, our mats serve both functional and aesthetic purposes. Proper matting reduces maintenance demands and captures debris before it spreads through your facility. Serving Toronto and the GTA, SMI delivers precise installation and durable solutions that work hard behind the scenes, season after season.",
+        },
+        description: 'Professional entrance matting solutions for commercial spaces.',
+        image: mattingInstallation,
+        fullDescription: 'Our walk-off matting installation service provides customized entrance solutions that reduce dirt, moisture, and wear in high-traffic areas, maintaining cleanliness and safety.',
+        keyFeatures: [
+          'Custom mat sizing',
+          'Multiple material options',
+          'Branded mat designs',
+          'Slip-resistant technologies'
+        ],
+        serviceDetails: [
+          'Commercial building entrances',
+          'Customized branding options',
+          'Performance and aesthetic solutions'
+        ],
+        aftercareTips: [
+          "Vacuum or shake mats regularly",
+          "Clean mats according to material specifications",
+          "Rotate mats to ensure even wear",
+          "Replace mats when signs of significant wear appear",
+          "Keep backup mats for heavy traffic periods",
+          "Monitor mat effectiveness periodically"
+        ],
+        seasonalNote: "Rainy spring and snowy winter months increase mat importance"
       },
       {
         name: 'HVAC Cleaning',
@@ -1111,38 +1111,6 @@ export const serviceCategories = [
         seasonalNote: "Peak restaurant seasons increase ventilation system stress and cleaning requirements"
       },
       {
-        name: 'Moving Services',
-        slug: 'moving-services',
-        header: {
-          title: "Moving Services in Toronto & GTA",
-          description: "Sentinel Maintenance Inc (SMI) offers full-service moving solutions for both residential and commercial clients across Toronto and the GTA. Whether relocating a home, office, or retail space, we manage every detail of the move—from careful packing and furniture disassembly to transportation, unloading, and placement. Our team uses secure handling techniques and climate-controlled trucks to protect your belongings, including fragile, oversized, and high-value items. We also offer partial packing, storage coordination, and specialized handling upon request. With an emphasis on efficiency, safety, and professionalism, SMI ensures a stress-free relocation experience tailored to your schedule and needs. From short-distance moves to full-scale commercial transitions, we are your trusted partner in getting you from point A to point B—safely, swiftly, and smoothly.",
-        },
-        description: 'Professional relocation solutions for homes and businesses.',
-        image: movingServices,
-        fullDescription: 'Our comprehensive moving services handle every aspect of your relocation, from careful packing and secure transportation to efficient unpacking and placement at your new location.',
-        keyFeatures: [
-          'Custom packing solutions for delicate items',
-          'Climate-controlled transportation options',
-          'Professional furniture assembly/disassembly',
-          'Secure loading and unloading protocols'
-        ],
-        serviceDetails: [
-          'Residential and commercial relocations',
-          'Local and long-distance moving capabilities',
-          'Full-service or partial packing options',
-          'Specialized handling for high-value items'
-        ],
-        aftercareTips: [
-          "Inspect items immediately after delivery",
-          "Allow 48 hours for furniture to acclimate to new environment",
-          "Keep moving inventory for reference",
-          "Schedule post-move cleaning for both locations",
-          "Check utilities and appliance connections",
-          "Test smoke detectors and security systems after setup"
-        ],
-        seasonalNote: "Summer months require earlier scheduling due to peak moving season demand"
-      },
-      {
         name: 'Junk Removal',
         slug: 'junk-removal',
         header: {
@@ -1173,6 +1141,38 @@ export const serviceCategories = [
           "Request documentation of donation or recycling for tax purposes"
         ],
         seasonalNote: "Spring cleaning season and year-end holidays typically see increased demand for junk removal services"
+      },
+      {
+        name: 'Moving Services',
+        slug: 'moving-services',
+        header: {
+          title: "Moving Services in Toronto & GTA",
+          description: "Sentinel Maintenance Inc (SMI) offers full-service moving solutions for both residential and commercial clients across Toronto and the GTA. Whether relocating a home, office, or retail space, we manage every detail of the move—from careful packing and furniture disassembly to transportation, unloading, and placement. Our team uses secure handling techniques and climate-controlled trucks to protect your belongings, including fragile, oversized, and high-value items. We also offer partial packing, storage coordination, and specialized handling upon request. With an emphasis on efficiency, safety, and professionalism, SMI ensures a stress-free relocation experience tailored to your schedule and needs. From short-distance moves to full-scale commercial transitions, we are your trusted partner in getting you from point A to point B—safely, swiftly, and smoothly.",
+        },
+        description: 'Professional relocation solutions for homes and businesses.',
+        image: movingServices,
+        fullDescription: 'Our comprehensive moving services handle every aspect of your relocation, from careful packing and secure transportation to efficient unpacking and placement at your new location.',
+        keyFeatures: [
+          'Custom packing solutions for delicate items',
+          'Climate-controlled transportation options',
+          'Professional furniture assembly/disassembly',
+          'Secure loading and unloading protocols'
+        ],
+        serviceDetails: [
+          'Residential and commercial relocations',
+          'Local and long-distance moving capabilities',
+          'Full-service or partial packing options',
+          'Specialized handling for high-value items'
+        ],
+        aftercareTips: [
+          "Inspect items immediately after delivery",
+          "Allow 48 hours for furniture to acclimate to new environment",
+          "Keep moving inventory for reference",
+          "Schedule post-move cleaning for both locations",
+          "Check utilities and appliance connections",
+          "Test smoke detectors and security systems after setup"
+        ],
+        seasonalNote: "Summer months require earlier scheduling due to peak moving season demand"
       }
     ]
   },
@@ -1209,34 +1209,6 @@ export const serviceCategories = [
         seasonalNote: "Spring and autumn flood seasons require proactive prevention"
       },
       {
-        name: "Fire Restoration",
-        slug: "fire-restoration",
-        header: {
-          title: "Fire Damage Restoration Services in Toronto & GTA",
-          description: "At Sentinel Maintenance Inc (SMI), we deliver comprehensive fire restoration services that support full recovery from fire and smoke damage. Our certified technicians respond quickly to stabilize your property, assess structural integrity, and initiate smoke, soot, and odor removal using advanced tools and techniques. We also specialize in salvaging valuable contents, documenting losses, and working directly with insurance providers to streamline claims. From cleanup and demolition to full reconstruction and air purification, our end-to-end fire restoration process helps restore both safety and peace of mind. Serving homes and businesses across Toronto and the GTA, SMI is your trusted partner in navigating the aftermath of fire-related emergencies.",
-        },        
-        description: "Comprehensive recovery and restoration after fire damage.",
-        image: fireRestoration,
-        fullDescription: "Our fire restoration service provides complete recovery solutions, from smoke and soot removal to structural repairs and content restoration.",
-        keyFeatures: [
-          "Immediate emergency stabilization within 2 hours",
-          "Advanced smoke and soot removal techniques",
-          "Precision structural damage assessment",
-          "Specialized content salvage and restoration",
-          "Comprehensive insurance claim documentation support",
-          "Ozone and hydroxyl decontamination processes"
-        ],
-        aftercareTips: [
-          "Avoid cleaning treated surfaces for 48hrs",
-          "Use HEPA air purifiers",
-          "Replace HVAC filters",
-          "Seal off treated areas from children and pets",
-          "Conduct regular air quality checks",
-          "Use gentle, non-abrasive cleaning methods"
-        ],
-        seasonalNote: "Winter holiday decorations increase fire risk, preventative restoration recommended"
-      },
-      {
         name: "Odour Control",
         slug: "odour-control",
         header: {
@@ -1263,6 +1235,34 @@ export const serviceCategories = [
           "Conduct follow-up assessments"
         ],
         seasonalNote: "Summer humidity worsens organic odors, proactive treatment recommended"
+      },
+      {
+        name: "Fire Restoration",
+        slug: "fire-restoration",
+        header: {
+          title: "Fire Damage Restoration Services in Toronto & GTA",
+          description: "At Sentinel Maintenance Inc (SMI), we deliver comprehensive fire restoration services that support full recovery from fire and smoke damage. Our certified technicians respond quickly to stabilize your property, assess structural integrity, and initiate smoke, soot, and odor removal using advanced tools and techniques. We also specialize in salvaging valuable contents, documenting losses, and working directly with insurance providers to streamline claims. From cleanup and demolition to full reconstruction and air purification, our end-to-end fire restoration process helps restore both safety and peace of mind. Serving homes and businesses across Toronto and the GTA, SMI is your trusted partner in navigating the aftermath of fire-related emergencies.",
+        },        
+        description: "Comprehensive recovery and restoration after fire damage.",
+        image: fireRestoration,
+        fullDescription: "Our fire restoration service provides complete recovery solutions, from smoke and soot removal to structural repairs and content restoration.",
+        keyFeatures: [
+          "Immediate emergency stabilization within 2 hours",
+          "Advanced smoke and soot removal techniques",
+          "Precision structural damage assessment",
+          "Specialized content salvage and restoration",
+          "Comprehensive insurance claim documentation support",
+          "Ozone and hydroxyl decontamination processes"
+        ],
+        aftercareTips: [
+          "Avoid cleaning treated surfaces for 48hrs",
+          "Use HEPA air purifiers",
+          "Replace HVAC filters",
+          "Seal off treated areas from children and pets",
+          "Conduct regular air quality checks",
+          "Use gentle, non-abrasive cleaning methods"
+        ],
+        seasonalNote: "Winter holiday decorations increase fire risk, preventative restoration recommended"
       },
       {
         name: "Applied Microbial (Mould & Sewage) Remediation (AMRT)",

@@ -71,8 +71,8 @@ const ModernTeamworkSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-primary-300">
-      <div className="container mx-auto px-4">
+    <section ref={sectionRef} className="py-24 bg-primary-300 px-4 sm:px-6 lg:px-8 xl:px-0 ">
+      <div className="container mx-auto max-w-7xl">
 
         {/* Header Section */}
         <div className="text-center mb-16" data-aos="fade-up">

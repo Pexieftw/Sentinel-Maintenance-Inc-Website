@@ -1,0 +1,163 @@
+[21-Aug-2025 06:35:04 UTC] [2025-08-21 06:35:04] CONFIG: Loaded environment file: D:\Websites\Sentinel-Maintenance-Inc-Website\public\php/.env.production
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_HOST: smtp.gmail.com
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_PORT: 587
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_USER: kevvero619@gmail.com
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_PASSWORD: SET (length: 16)
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_RECIPIENT: alopex600@gmail.com
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_SECURE: false
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: Configuration validation: PASSED
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: WARNING: OpenSSL extension not loaded - SSL/TLS connections will fail
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: Generated 1 SMTP configurations
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: Config 0: mail.smtp.gmail.com:25 (none)
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: Loaded environment file: D:\Websites\Sentinel-Maintenance-Inc-Website\public\php/.env.production
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_HOST: smtp.gmail.com
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_PORT: 587
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_USER: kevvero619@gmail.com
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_PASSWORD: SET (length: 16)
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_RECIPIENT: alopex600@gmail.com
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: EMAIL_SECURE: false
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: Configuration validation: PASSED
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: WARNING: OpenSSL extension not loaded - SSL/TLS connections will fail
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: Generated 1 SMTP configurations
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: Config 0: mail.smtp.gmail.com:25 (none)
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] Received input: {"name":"John Doe","address":"123 Main","email":"alopex600@gmail.com","subject":"TEST ","message":"TESTING"}
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] CONFIG: WARNING: OpenSSL extension not loaded - SSL/TLS connections will fail
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] Trying SMTP: mail.smtp.gmail.com:25
+[21-Aug-2025 06:35:05 UTC] PHP Warning:  stream_socket_client(): php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu in D:\Websites\Sentinel-Maintenance-Inc-Website\public\php\contact-form-handler.php on line 375
+[21-Aug-2025 06:35:05 UTC] PHP Warning:  stream_socket_client(): Unable to connect to tcp://mail.smtp.gmail.com:25 (php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu) in D:\Websites\Sentinel-Maintenance-Inc-Website\public\php\contact-form-handler.php on line 375
+[21-Aug-2025 06:35:05 UTC] [2025-08-21 06:35:05] SMTP failed (mail.smtp.gmail.com): Failed to connect to tcp://mail.smtp.gmail.com:25: php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu (0)
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Loaded environment file: D:\Websites\Sentinel-Maintenance-Inc-Website\public\php/.env.production
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_HOST: smtp.gmail.com
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_PORT: 587
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_USER: kevvero619@gmail.com
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_PASSWORD: SET (length: 16)
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_RECIPIENT: alopex600@gmail.com
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_SECURE: false
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Configuration validation: PASSED
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Generated 4 SMTP configurations
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Config 0: mail.smtp.gmail.com:587 (tls)
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Config 1: smtp.gmail.com:587 (tls)
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Config 2: smtp.gmail.com:587 (tls)
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Config 3: mail.smtp.gmail.com:25 (none)
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Loaded environment file: D:\Websites\Sentinel-Maintenance-Inc-Website\public\php/.env.production
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_HOST: smtp.gmail.com
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_PORT: 587
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_USER: kevvero619@gmail.com
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_PASSWORD: SET (length: 16)
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_RECIPIENT: alopex600@gmail.com
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: EMAIL_SECURE: false
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Configuration validation: PASSED
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Generated 4 SMTP configurations
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Config 0: mail.smtp.gmail.com:587 (tls)
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Config 1: smtp.gmail.com:587 (tls)
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Config 2: smtp.gmail.com:587 (tls)
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] CONFIG: Config 3: mail.smtp.gmail.com:25 (none)
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] Received input: {"name":"John Doe","address":"123 Main","email":"alopex600@gmail.com","subject":"TEST #1","message":"TESTING"}
+[21-Aug-2025 06:37:26 UTC] [2025-08-21 06:37:26] Trying SMTP: mail.smtp.gmail.com:587
+[21-Aug-2025 06:37:27 UTC] PHP Warning:  stream_socket_client(): php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu in D:\Websites\Sentinel-Maintenance-Inc-Website\public\php\contact-form-handler.php on line 375
+[21-Aug-2025 06:37:27 UTC] PHP Warning:  stream_socket_client(): Unable to connect to tcp://mail.smtp.gmail.com:587 (php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu) in D:\Websites\Sentinel-Maintenance-Inc-Website\public\php\contact-form-handler.php on line 375
+[21-Aug-2025 06:37:27 UTC] [2025-08-21 06:37:27] SMTP failed (mail.smtp.gmail.com): Failed to connect to tcp://mail.smtp.gmail.com:587: php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu (0)
+[21-Aug-2025 06:37:27 UTC] [2025-08-21 06:37:27] Trying SMTP: smtp.gmail.com:587
+[21-Aug-2025 06:37:30 UTC] [2025-08-21 06:37:30] Email sent successfully using smtp.gmail.com
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Loaded environment file: D:\Websites\Sentinel-Maintenance-Inc-Website\public\php/.env.production
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_HOST: smtp.gmail.com
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_PORT: 587
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_USER: SMI.cform@gmail.com
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_PASSWORD: SET (length: 16)
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_RECIPIENT: info@smi.ca
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_SECURE: false
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Configuration validation: PASSED
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Generated 4 SMTP configurations
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Config 0: mail.smtp.gmail.com:587 (tls)
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Config 1: smtp.gmail.com:587 (tls)
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Config 2: smtp.gmail.com:587 (tls)
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Config 3: mail.smtp.gmail.com:25 (none)
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Loaded environment file: D:\Websites\Sentinel-Maintenance-Inc-Website\public\php/.env.production
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_HOST: smtp.gmail.com
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_PORT: 587
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_USER: SMI.cform@gmail.com
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_PASSWORD: SET (length: 16)
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_RECIPIENT: info@smi.ca
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: EMAIL_SECURE: false
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Configuration validation: PASSED
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Generated 4 SMTP configurations
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Config 0: mail.smtp.gmail.com:587 (tls)
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Config 1: smtp.gmail.com:587 (tls)
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Config 2: smtp.gmail.com:587 (tls)
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] CONFIG: Config 3: mail.smtp.gmail.com:25 (none)
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] Received input: {"name":"John Doe","address":"123 Main St, City, Postal Code","email":"test@gmail.com","subject":"Form Testing","message":"Did this message reach info@smi.ca?"}
+[21-Aug-2025 10:30:56 UTC] [2025-08-21 10:30:56] Trying SMTP: mail.smtp.gmail.com:587
+[21-Aug-2025 10:30:58 UTC] PHP Warning:  stream_socket_client(): php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu in D:\Websites\Sentinel-Maintenance-Inc-Website\public\php\contact-form-handler.php on line 375
+[21-Aug-2025 10:30:58 UTC] PHP Warning:  stream_socket_client(): Unable to connect to tcp://mail.smtp.gmail.com:587 (php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu) in D:\Websites\Sentinel-Maintenance-Inc-Website\public\php\contact-form-handler.php on line 375
+[21-Aug-2025 10:30:58 UTC] [2025-08-21 10:30:58] SMTP failed (mail.smtp.gmail.com): Failed to connect to tcp://mail.smtp.gmail.com:587: php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu (0)
+[21-Aug-2025 10:30:58 UTC] [2025-08-21 10:30:58] Trying SMTP: smtp.gmail.com:587
+[21-Aug-2025 10:31:01 UTC] [2025-08-21 10:31:01] Email sent successfully using smtp.gmail.com
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Loaded environment file: D:\Websites\Sentinel-Maintenance-Inc-Website\public\php/.env.production
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_HOST: smtp.gmail.com
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_PORT: 587
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_USER: SMI.cform@gmail.com
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_PASSWORD: SET (length: 16)
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_RECIPIENT: info@smi.ca,tarek@smi.ca
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_SECURE: false
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Configuration validation: PASSED
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Generated 4 SMTP configurations
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Config 0: mail.smtp.gmail.com:587 (tls)
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Config 1: smtp.gmail.com:587 (tls)
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Config 2: smtp.gmail.com:587 (tls)
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Config 3: mail.smtp.gmail.com:25 (none)
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Loaded environment file: D:\Websites\Sentinel-Maintenance-Inc-Website\public\php/.env.production
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_HOST: smtp.gmail.com
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_PORT: 587
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_USER: SMI.cform@gmail.com
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_PASSWORD: SET (length: 16)
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_RECIPIENT: info@smi.ca,tarek@smi.ca
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: EMAIL_SECURE: false
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Configuration validation: PASSED
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Generated 4 SMTP configurations
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Config 0: mail.smtp.gmail.com:587 (tls)
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Config 1: smtp.gmail.com:587 (tls)
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Config 2: smtp.gmail.com:587 (tls)
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] CONFIG: Config 3: mail.smtp.gmail.com:25 (none)
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] Received input: {"name":"John Doe","address":"123 Main St, City, Postal Code","email":"test@gmail.com","subject":"Test #2","message":"did this reach both greg@smi.ca and tarek@smi.ca?"}
+[21-Aug-2025 13:08:04 UTC] [2025-08-21 13:08:04] Trying SMTP: mail.smtp.gmail.com:587
+[21-Aug-2025 13:08:05 UTC] PHP Warning:  stream_socket_client(): php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu in D:\Websites\Sentinel-Maintenance-Inc-Website\public\php\contact-form-handler.php on line 375
+[21-Aug-2025 13:08:05 UTC] PHP Warning:  stream_socket_client(): Unable to connect to tcp://mail.smtp.gmail.com:587 (php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu) in D:\Websites\Sentinel-Maintenance-Inc-Website\public\php\contact-form-handler.php on line 375
+[21-Aug-2025 13:08:05 UTC] [2025-08-21 13:08:05] SMTP failed (mail.smtp.gmail.com): Failed to connect to tcp://mail.smtp.gmail.com:587: php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu (0)
+[21-Aug-2025 13:08:05 UTC] [2025-08-21 13:08:05] Trying SMTP: smtp.gmail.com:587
+[21-Aug-2025 13:08:07 UTC] [2025-08-21 13:08:07] SMTP failed (smtp.gmail.com): SMTP Error: Expected 250, got 553 - 553 5.1.3 specifications. ffacd0b85a97d-3c0771c19fbsm11715442f8f.41 - gsmtp
+
+[21-Aug-2025 13:08:07 UTC] [2025-08-21 13:08:07] Trying SMTP: smtp.gmail.com:587
+[21-Aug-2025 13:08:11 UTC] [2025-08-21 13:08:11] SMTP failed (smtp.gmail.com): SMTP Error: Expected 250, got 553 - 553 5.1.3 specifications. 5b1f17b1804b1-45b4dbfe2ecsm27458415e9.13 - gsmtp
+
+[21-Aug-2025 13:08:11 UTC] [2025-08-21 13:08:11] Trying SMTP: mail.smtp.gmail.com:25
+[21-Aug-2025 13:08:11 UTC] PHP Warning:  stream_socket_client(): php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu in D:\Websites\Sentinel-Maintenance-Inc-Website\public\php\contact-form-handler.php on line 375
+[21-Aug-2025 13:08:11 UTC] PHP Warning:  stream_socket_client(): Unable to connect to tcp://mail.smtp.gmail.com:25 (php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu) in D:\Websites\Sentinel-Maintenance-Inc-Website\public\php\contact-form-handler.php on line 375
+[21-Aug-2025 13:08:11 UTC] [2025-08-21 13:08:11] SMTP failed (mail.smtp.gmail.com): Failed to connect to tcp://mail.smtp.gmail.com:25: php_network_getaddresses: getaddrinfo for mail.smtp.gmail.com failed: Hôte inconnu (0)
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: Loaded environment file: D:\Websites\Sentinel-Maintenance-Inc-Website\public\php/.env.production
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_HOST: smtp.gmail.com
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_PORT: 587
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_USER: SMI.cform@gmail.com
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_PASSWORD: SET (length: 16)
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_RECIPIENT: info@smi.ca,tarek@smi.ca
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_RECIPIENTS (parsed): info@smi.ca, tarek@smi.ca
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_SECURE: tls
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: Configuration validation: PASSED
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: Generated 2 SMTP configurations
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: Config 0: smtp.gmail.com:587 (tls)
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: Config 1: smtp.gmail.com:465 (ssl)
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: Loaded environment file: D:\Websites\Sentinel-Maintenance-Inc-Website\public\php/.env.production
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_HOST: smtp.gmail.com
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_PORT: 587
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_USER: SMI.cform@gmail.com
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_PASSWORD: SET (length: 16)
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_RECIPIENT: info@smi.ca,tarek@smi.ca
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_RECIPIENTS (parsed): info@smi.ca, tarek@smi.ca
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: EMAIL_SECURE: tls
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: Configuration validation: PASSED
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: Generated 2 SMTP configurations
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: Config 0: smtp.gmail.com:587 (tls)
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] CONFIG: Config 1: smtp.gmail.com:465 (ssl)
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] Received input: {"name":"John Doe","address":"123 Main St, City, Postal Code","email":"test@gmail.com","subject":"Test #2","message":"did this reach greg@smi.ca and tarek@smi.ca?"}
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] Sending to recipients: info@smi.ca, tarek@smi.ca
+[21-Aug-2025 13:56:07 UTC] [2025-08-21 13:56:07] Trying SMTP: smtp.gmail.com:587
+[21-Aug-2025 13:56:10 UTC] [2025-08-21 13:56:10] Email sent successfully using smtp.gmail.com to: info@smi.ca, tarek@smi.ca

@@ -32,7 +32,7 @@ export default async function ServiceDetailPage({ params }) {
       
       {/* Modern Header Section */}
       <div className="bg-gradient-to-b from-white to-gray-100">
-        <div className="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
+        <div className="container mx-auto py-16 md:py-24 max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-0">
           <div className="text-center lg:text-left grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content Area */}
             <div className="space-y-8">
@@ -109,7 +109,7 @@ export default async function ServiceDetailPage({ params }) {
       </div>
       
       <div className="bg-gradient-to-b from-gray-100 to-white">
-        <div className="container mx-auto px-4 pb-24 max-w-7xl">
+        <div className="container mx-auto pb-24 max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-0">
           <div className="space-y-32">
 
             {/* Key Features */}

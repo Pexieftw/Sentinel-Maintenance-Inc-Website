@@ -1,0 +1,61 @@
+# /public/php/.htaccess
+# Protect configuration files
+
+# Deny access to config.php
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Deny access to .env files
+<Files ".env*">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Deny access to backup files
+<Files "*.bak">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Deny access to log files
+<Files "*.log">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Only allow access to the contact form handler
+<Files "contact-form-handler.php">
+    Order deny,allow
+    Allow from all
+</Files>
+
+# Block access to all other PHP files by default
+<Files "*.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Re-allow the contact form handler
+<Files "contact-form-handler.php">
+    Order deny,allow
+    Allow from all
+</Files>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Disable server signature
+ServerSignature Off
+
+# Prevent access to sensitive files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

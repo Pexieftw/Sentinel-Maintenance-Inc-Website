@@ -26,7 +26,7 @@ const AboutUs = () => {
 
   return (
     <section className="pt-4 md:pt-4 bg-gradient-to-b from-white to-gray-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 ">
         <div className="relative mb-4 flex items-center gap-4 justify-center md:justify-start"  data-aos="fade-up">
           <div className="relative">
             <Image 

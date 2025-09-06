@@ -81,7 +81,7 @@ export default function ServicesPage() {
         ]}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+      <div className="max-w-7xl mx-auto py-8 sm:py-16 px-4 sm:px-6 lg:px-8 xl:px-0">
         <div className="text-center mb-8 sm:mb-16" data-aos="fade-down">
           <h1 className="text-4xl sm:text-5xl font-bold uppercase tracking-tight text-gray-900 mb-4 sm:mb-6">
             Reliable Cleaning Solutions
@@ -140,7 +140,7 @@ export default function ServicesPage() {
 
         {/* Active Category Title */}
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold text-gray-800">
+          <h2 className="text-2xl font-semibold text-gray-800" data-aos="fade-down">
             {activeCategory} Services
             {searchTerm && (
               <span className="text-lg font-normal text-gray-500 ml-2">
