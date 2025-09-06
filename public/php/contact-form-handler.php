@@ -4,15 +4,12 @@ ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/contact_form_errors.log');
 error_reporting(E_ALL);
 
-// Set JSON header early
 header("Content-Type: application/json");
 
-// Function to safely log errors
 function logError($message) {
     error_log('[' . date('Y-m-d H:i:s') . '] ' . $message);
 }
 
-// Function to send JSON response and exit
 function sendResponse($data, $statusCode = 200) {
     http_response_code($statusCode);
     echo json_encode($data);
@@ -20,21 +17,17 @@ function sendResponse($data, $statusCode = 200) {
 }
 
 try {
-    // Check if config file exists
     $configFile = __DIR__ . '/config.php';
     if (!file_exists($configFile)) {
         logError("Config file not found: $configFile");
         sendResponse(['error' => 'Configuration file not found'], 500);
     }
 
-    // Load configuration
     require_once $configFile;
 
-    // Enable CORS for your domain
     $allowed_origins = [
         'https://smi.ca',
         'https://www.smi.ca',
-        'http://localhost:3000'
     ];
 
     $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
@@ -45,24 +38,20 @@ try {
     header("Access-Control-Allow-Methods: POST, OPTIONS");
     header("Access-Control-Allow-Headers: Content-Type, Accept");
 
-    // Handle preflight requests
     if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
         sendResponse(['message' => 'CORS preflight successful']);
     }
 
-    // Only allow POST requests
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
         sendResponse(['error' => 'Method not allowed'], 405);
     }
 
-    // Get the JSON input
     $input = file_get_contents('php://input');
     
     if (empty($input)) {
         sendResponse(['error' => 'No input data received'], 400);
     }
     
-    // Log the input for debugging
     logError("Received input: " . $input);
     
     $data = json_decode($input, true);
@@ -72,7 +61,6 @@ try {
         sendResponse(['error' => 'Invalid JSON: ' . json_last_error_msg()], 400);
     }
     
-    // Validate required fields
     $required_fields = ['name', 'address', 'email', 'subject', 'message'];
     $errors = [];
 
@@ -86,25 +74,21 @@ try {
         sendResponse(['error' => 'Validation failed', 'details' => $errors], 400);
     }
 
-    // Sanitize input data
     $name = htmlspecialchars(trim($data['name']));
     $address = htmlspecialchars(trim($data['address']));
     $email = htmlspecialchars(trim($data['email']));
     $subject = htmlspecialchars(trim($data['subject']));
     $message = htmlspecialchars(trim($data['message']));
 
-    // Basic email validation
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         sendResponse(['error' => 'Invalid email address format'], 400);
     }
 
-    // Validate email configuration
     if (!defined('EMAIL_HOST') || !defined('EMAIL_USER') || !defined('EMAIL_PASSWORD')) {
         logError('Email configuration constants not defined');
         sendResponse(['error' => 'Email configuration error'], 500);
     }
 
-    // Get email recipients
     $recipients = getEmailRecipients();
     if (empty($recipients)) {
         logError('No valid email recipients configured');
@@ -113,14 +97,12 @@ try {
 
     logError("Sending to recipients: " . implode(', ', $recipients));
 
-    // Get SMTP configuration
     $smtp_configs = getSMTPConfigs();
     if (empty($smtp_configs)) {
         logError('No SMTP configurations available');
         sendResponse(['error' => 'Email service unavailable'], 500);
     }
 
-    // Create email content
     $htmlEmail = createHTMLEmail($name, $address, $email, $subject, $message);
     $email_subject = "New Contact Form Submission: " . $subject;
     $email_body = createPlainTextEmail($name, $address, $email, $subject, $message);
@@ -220,7 +202,7 @@ try {
     sendResponse(['error' => 'Internal server error'], 500);
 }
 
-// Function to create modern HTML email template
+// HTML Template
 function createHTMLEmail($name, $address, $email, $subject, $message) {
     $timestamp = date('F j, Y \a\t g:i A');
     $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown';
@@ -337,7 +319,7 @@ function createHTMLEmail($name, $address, $email, $subject, $message) {
     ';
 }
 
-// Function to create plain text email
+// Plain text
 function createPlainTextEmail($name, $address, $email, $subject, $message) {
     $timestamp = date('F j, Y \a\t g:i A');
     $ipAddress = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
@@ -374,7 +356,6 @@ function createPlainTextEmail($name, $address, $email, $subject, $message) {
     return $email_body;
 }
 
-// NEW: SMTP function that handles multiple recipients
 function sendSMTPEmailToMultiple($host, $port, $username, $password, $from, $recipients, $subject, $textBody, $htmlBody, $secure = 'tls') {
     $socket = null;
     $successful = [];

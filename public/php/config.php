@@ -1,11 +1,9 @@
 <?php
 
-// Function to safely log configuration errors
 function logConfigError($message) {
     error_log('[' . date('Y-m-d H:i:s') . '] CONFIG: ' . $message);
 }
 
-// Load environment variables from .env file
 function loadEnvFile($path) {
     if (!file_exists($path)) {
         return false;
@@ -19,7 +17,7 @@ function loadEnvFile($path) {
         
         foreach ($lines as $line) {
             if (strpos($line, '#') === 0) {
-                continue; // Skip comments
+                continue; 
             }
             
             if (strpos($line, '=') !== false) {
@@ -27,7 +25,6 @@ function loadEnvFile($path) {
                 $key = trim($key);
                 $value = trim($value);
                 
-                // Remove quotes if present
                 if (preg_match('/^"(.*)"$/', $value, $matches)) {
                     $value = $matches[1];
                 } elseif (preg_match("/^'(.*)'$/", $value, $matches)) {
@@ -47,7 +44,6 @@ function loadEnvFile($path) {
     }
 }
 
-// Try to load .env file from multiple locations
 $envPaths = [
     __DIR__ . '/.env.production',
 ];
@@ -65,12 +61,9 @@ if (!$envLoaded) {
     logConfigError("No environment file found. Searched paths: " . implode(', ', $envPaths));
 }
 
-// Helper function to get environment variable with fallback
 function getEnvVar($key, $default = null) {
-    // Check $_ENV first, then getenv(), then default
     $value = $_ENV[$key] ?? getenv($key);
     
-    // If still null/false, use default
     if ($value === null || $value === false) {
         return $default;
     }
@@ -78,7 +71,6 @@ function getEnvVar($key, $default = null) {
     return $value;
 }
 
-// Define constants from environment variables
 define('EMAIL_HOST', getEnvVar('EMAIL_HOST', 'smtp.gmail.com'));
 define('EMAIL_PORT', intval(getEnvVar('EMAIL_PORT', '587')));
 define('EMAIL_SECURE', getEnvVar('EMAIL_SECURE', 'tls') === 'tls' ? 'tls' : (getEnvVar('EMAIL_SECURE', 'tls') === 'ssl' ? 'ssl' : false));
@@ -88,11 +80,9 @@ define('EMAIL_FROM', getEnvVar('EMAIL_FROM', getEnvVar('EMAIL_USER', 'SMI.cform@
 define('EMAIL_FROM_NAME', getEnvVar('EMAIL_FROM_NAME', 'Sentinel Maintenance Inc'));
 define('EMAIL_RECIPIENT_RAW', getEnvVar('EMAIL_RECIPIENT', 'info@smi.ca'));
 
-// Optional settings
 define('DEBUG_MODE', getEnvVar('DEBUG_MODE', 'false') === 'true');
 define('ENABLE_FALLBACK_MAIL', getEnvVar('ENABLE_FALLBACK_MAIL', 'true') === 'true');
 
-// Parse and validate email recipients
 function parseEmailRecipients($recipientString) {
     $recipients = [];
     $rawRecipients = explode(',', $recipientString);
@@ -109,10 +99,8 @@ function parseEmailRecipients($recipientString) {
     return $recipients;
 }
 
-// Define EMAIL_RECIPIENTS as an array of validated emails
 define('EMAIL_RECIPIENTS', parseEmailRecipients(EMAIL_RECIPIENT_RAW));
 
-// Security validation
 if (empty(EMAIL_PASSWORD)) {
     logConfigError('CRITICAL: EMAIL_PASSWORD not set in environment variables');
 }
@@ -125,8 +113,7 @@ if (empty(EMAIL_RECIPIENTS)) {
     logConfigError('CRITICAL: No valid EMAIL_RECIPIENTS found');
 }
 
-// Debug logging (only in debug mode)
-if (DEBUG_MODE || true) { // Always log for debugging this issue
+if (DEBUG_MODE || true) { 
     logConfigError("EMAIL_HOST: " . EMAIL_HOST);
     logConfigError("EMAIL_PORT: " . EMAIL_PORT);
     logConfigError("EMAIL_USER: " . EMAIL_USER);
@@ -136,27 +123,23 @@ if (DEBUG_MODE || true) { // Always log for debugging this issue
     logConfigError("EMAIL_SECURE: " . EMAIL_SECURE);
 }
 
-// Function to get SMTP configurations - Fixed for Gmail
 function getSMTPConfigs() {
     $configs = [];
     
-    // Validate that EMAIL_HOST is not empty
     if (empty(EMAIL_HOST)) {
         logConfigError('ERROR: EMAIL_HOST is empty');
         return $configs;
     }
     
-    // Check if password is set
     if (empty(EMAIL_PASSWORD)) {
         logConfigError('ERROR: EMAIL_PASSWORD is empty');
         return $configs;
     }
     
-    // Check if OpenSSL is available
     $sslSupported = extension_loaded('openssl');
     if (!$sslSupported) {
         logConfigError('WARNING: OpenSSL extension not loaded - SSL/TLS connections will fail');
-        return $configs; // Don't try any configs without SSL for Gmail
+        return $configs; 
     }
     
     // Gmail-specific configurations (remove the invalid mail.smtp.gmail.com)
@@ -180,12 +163,10 @@ function getSMTPConfigs() {
     return $configs;
 }
 
-// Function to get email recipients (for use in your contact handler)
 function getEmailRecipients() {
     return EMAIL_RECIPIENTS;
 }
 
-// Validate configuration
 function validateConfig() {
     $required = [
         'EMAIL_HOST' => EMAIL_HOST,
@@ -214,10 +195,8 @@ function validateConfig() {
     return true;
 }
 
-// Validate configuration on load
 $configValid = validateConfig();
 
-// Log configuration status
 logConfigError("Configuration validation: " . ($configValid ? 'PASSED' : 'FAILED'));
 
 // Test if we can create a simple SMTP config
